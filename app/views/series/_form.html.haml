@@ -1,0 +1,11 @@
+= simple_form_for(@series) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name
+    = f.fields_for :episodes do |episode|
+      = render partial: 'episode_fields', locales: {f: f}
+    = link_to_add_fields "Add Episode", f, :episodes
+
+  .form-actions
+    = f.button :submit
