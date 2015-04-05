@@ -7,21 +7,31 @@
 
 %h1 Listing series
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th
-      %th
-      %th
 
-  %tbody
-    - @series.each do |series|
-      %tr
-        %td= series.name
-        %td= link_to 'Show', series
-        %td= link_to 'Edit', edit_series_path(series)
-        %td= link_to 'Destroy', series, :method => :delete, :data => { :confirm => 'Are you sure?' }
+- @series.each do |series|
+
+  %div.publication
+    .square-element{style: 'background-color: #fff;padding:25px;height:535px;'}
+      .name{style: 'font-size:20px;font-weight:bold'}= series.name
+      .date{style: 'vertical-align:middle'}= series.created_at
+      .col-lg-3{style: 'height: 383px; background-image: url("http://fs35.www.ex.ua/show/67027129/67027129.jpg?800");background-size:100%;'}
+      .col-lg-9{style: 'font-size:16px;font-weight:normal;padding:35px'}
+        На межі двох світів живе вісім мільйонів богів, мертві духи, які служать богам, та інші духи, які допомагають людям, втручаючись у їхня життя. Мила учениця середніх класів Хійорі Ікі постійно потерпає від знущань однокласників. Після цього вона йде плакатися до туалету. Але одного дня на стіні у вбиральні вона побачила напис – “Я вирішу твої проблеми” та номер телефону. Після дзвінка вона зустрічає безробітного волоцюгу Ято, який називає себе Богом. Ято - грубий, примхливий, ледачий, пихатий… але тим не менш, у нього є право бути Богом. Так і розпочинається казкова та захоплююча історія
+      .clearfix
+      .col-lg-3 15.245 views
+      .col-lg-9
+        %span.label.label-default Default
+        %span.label.label-default Default
+        %span.label.label-default Default
+        %span.label.label-default Default
+        %span.label.label-default Default
+
+
+  %tr
+    %td= series.name
+    %td= link_to 'Show', series
+    %td= link_to 'Edit', edit_series_path(series)
+    %td= link_to 'Destroy', series, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
