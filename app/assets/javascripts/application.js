@@ -13,8 +13,13 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require bootstrap-sprockets
-//= require_tree .
+//= require_directory ./bootstrap
+//= require_directory ./material
+
+$(document).ready(function(){
+    $.material.init()
+})
+
 
 function removeFields(link) {
     $(link).prev("input[type=hidden]").val("1");

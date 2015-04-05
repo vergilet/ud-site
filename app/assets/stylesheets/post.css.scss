@@ -1,0 +1,121 @@
+.post {
+  .label {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .description-limiter {
+
+    .additional {
+
+      padding-top: 15px;
+
+    }
+
+    .accurate {
+      min-height: 250px;
+    }
+
+    .description {
+      min-height: 100px;
+      text-align: justify;
+    }
+    .ellipsis {
+      overflow: hidden;
+      height: 100px;
+    }
+    .ellipsis:before {
+      content: "";
+      float: left;
+      height: 100px;
+    }
+
+  }
+  .cover {
+  }
+
+  .update-time, .author {
+    display: inline;
+    i {
+      display: inline-block;
+      .text {
+        font-size: 13px !important;
+        display: inline-block;
+        vertical-align: top;
+        padding-top: 4px;
+      }
+    }
+  }
+  .quality {
+    i {
+      display: inline-block;
+      font-size: 34px!important;
+      .text {
+        display: inline-block;
+        font-size: 18px;
+        vertical-align: top;
+        padding-top: 6px;
+        margin-left: -20px;
+      }
+    }
+  }
+
+  .completeness {
+    button {
+      max-width: 200px!important;
+      width: 200px;
+
+      .badge {
+        div {
+          display: inline-block;
+        }
+        .grey {
+          color: #a0a0a0;
+        }
+        .main {
+
+        }
+      }
+    }
+  }
+  .tech-info {
+    height: 111px;
+    padding: 20px;
+
+    i {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 14px !important;
+      vertical-align: top;
+    }
+
+  }
+
+  .details{
+    padding-top: 42px;
+    padding-bottom: 25px;
+    padding-right: 0px;
+    margin-left: -10px;
+    text-align: right;
+    i {
+      font-size: 16px;
+    }
+
+    span {
+      font-size: 14px !important;
+      vertical-align: top;
+    }
+
+
+    .reviews {    }
+    .rating {
+      width: 136px;
+      margin-top: 10px;
+      i {
+        font-size: 24px!important;
+      }
+
+    }
+  }
+}

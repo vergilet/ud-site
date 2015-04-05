@@ -1,30 +1,58 @@
-%ul.breadcrumb
-  %li
-    %a{href: root_path} Home
-  %li
-    %a{href: series_index_path} Series
-  %li.active Data
-
-%h1 Listing series
-
-
 - @series.each do |series|
+  .panel.panel-default
+    .panel-body
+      .post
+        .media
+          .media-left
+            %a{:href => "#"}
+              = image_tag series.cover, height:'280', class: 'media-object img-rounded cover'
+              .completeness
+                %button.btn.btn-primary{:type => "button"}
+                  Episode
+                  %span.badge
+                    %div.main= series.episodes.count
 
-  %div.publication
-    .square-element{style: 'background-color: #fff;padding:25px;height:535px;'}
-      .name{style: 'font-size:20px;font-weight:bold'}= series.name
-      .date{style: 'vertical-align:middle'}= series.created_at
-      .col-lg-3{style: 'height: 383px; background-image: url("http://fs35.www.ex.ua/show/67027129/67027129.jpg?800");background-size:100%;'}
-      .col-lg-9{style: 'font-size:16px;font-weight:normal;padding:35px'}
-        На межі двох світів живе вісім мільйонів богів, мертві духи, які служать богам, та інші духи, які допомагають людям, втручаючись у їхня життя. Мила учениця середніх класів Хійорі Ікі постійно потерпає від знущань однокласників. Після цього вона йде плакатися до туалету. Але одного дня на стіні у вбиральні вона побачила напис – “Я вирішу твої проблеми” та номер телефону. Після дзвінка вона зустрічає безробітного волоцюгу Ято, який називає себе Богом. Ято - грубий, примхливий, ледачий, пихатий… але тим не менш, у нього є право бути Богом. Так і розпочинається казкова та захоплююча історія
-      .clearfix
-      .col-lg-3 15.245 views
-      .col-lg-9
-        %span.label.label-default Default
-        %span.label.label-default Default
-        %span.label.label-default Default
-        %span.label.label-default Default
-        %span.label.label-default Default
+          .media-body.description-limiter
+            .accurate
+              .col-sm-9
+                %h2.media-heading= link_to series.name, series
+                .update-time
+                  %i.mdi-device-access-time
+                    .text= series.edited_date
+
+                .description.ellipsis
+                  = series.description
+                  \..
+              .col-sm-3.col-md
+                .quality.pull-right.visible-sm.visible-md.visible-lg
+                  %i.mdi-av-high-quality
+                    .text 720p
+                .details.visible-sm.visible-md.visible-lg
+                  .author
+                    %i.mdi-social-person-outline
+                      %a
+                        %span= series.author_name
+                  %p
+                    %span.label.label-primary.btn-sm torrent
+                    %span.label.label-warning.btn-sm online
+
+              .clearfix
+              .tech-info.visible-sm.visible-md.visible-lg
+                .reviews
+                  %i.mdi-action-visibility
+                    %span= pluralize(series.views, 'view')
+                  .clearfix
+                  %i.mdi-file-cloud-download
+                    %span= pluralize(series.downloads, 'load')
+            .col-sm-9
+              .tags.visible-sm.visible-md.visible-lg
+                %i.mdi-action-loyalty
+                %span.label.label-success.btn-sm Comedy
+                %span.label.label-success.btn-sm Romantic
+                %span.label.label-success.btn-sm School
+
+            .col-sm-3
+              = link_to 'Learn more', series, class: 'btn btn-info btn-lg pull-right'
 
 
   %tr
@@ -34,5 +62,7 @@
     %td= link_to 'Destroy', series, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
+
+
 
 = link_to 'New Series', new_series_path

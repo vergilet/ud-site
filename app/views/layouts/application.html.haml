@@ -8,11 +8,21 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header
+    %header.header-decorator
+      = render 'layouts/site_top'
       = render 'layouts/navigation'
-    .slider
-      = render 'visitors/slider'
     %main{:role => "main"}
       .container
         = render 'layouts/messages'
-        = yield
+        .col-lg-8
+          = yield
+        .col-lg-4
+          = render 'layouts/sidebar'
+
+        .clearfix
+
+    .center-block.top-me-please{style: 'width:56px;margin-top:40px;margin-bottom: -28px'}
+      %a.btn.btn-info.btn-fab.btn-raised.mdi-navigation-expand-less{:href => "#"}
+    %footer
+      %div{style: 'background-color: #385762;height: 125px;width:100%;'}
+        .container

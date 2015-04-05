@@ -1,28 +1,33 @@
-.row
-  .col-sm-6.col-md-4
-    .thumbnail
-      %img{:alt => "...", :src => "http://placehold.it/425x604.jpg"}
-        .caption
-          %h3 Thumbnail label
-          %p ...
-          %p
-            %a.btn.btn-primary{:href => "#", :role => "button"} Button
-            %a.btn.btn-default{:href => "#", :role => "button"} Button
-  .col-sm-6.col-md-4
-    .thumbnail
-      %img{:alt => "...", :src => "http://placehold.it/425x604.jpg"}
-        .caption
-          %h3 Thumbnail label
-          %p ...
-          %p
-            %a.btn.btn-primary{:href => "#", :role => "button"} Button
-            %a.btn.btn-default{:href => "#", :role => "button"} Button
-  .col-sm-6.col-md-4
-    .thumbnail
-      %img{:alt => "...", :src => "http://placehold.it/425x604.jpg"}
-        .caption
-          %h3 Thumbnail label
-          %p ...
-          %p
-            %a.btn.btn-primary{:href => "#", :role => "button"} Button
-            %a.btn.btn-default{:href => "#", :role => "button"} Button
+
+= render 'visitors/slider'
+.panel.panel-default
+  .panel-body
+    %h3 Jumbotron
+    %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+    %p
+      %a.btn.btn-primary.btn-lg Learn more
+
+.panel.panel-default
+  .panel-body
+    %h3 Jumbotron
+    %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+    %p
+      %a.btn.btn-primary.btn-lg Learn more
+
+.center-block{style: 'width:256px;'}
+  %ul.pagination.pagination-sm
+    %li.disabled
+      %a{:href => "javascript:void(0)"} «
+    %li.active
+      %a{:href => "javascript:void(0)"} 1
+    %li
+      %a{:href => "javascript:void(0)"} 2
+    %li
+      %a{:href => "javascript:void(0)"} 3
+    %li
+      %a{:href => "javascript:void(0)"} 4
+    %li
+      %a{:href => "javascript:void(0)"} 5
+    %li
+      %a{:href => "javascript:void(0)"} »
+

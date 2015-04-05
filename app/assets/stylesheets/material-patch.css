@@ -1,0 +1,31 @@
+.btn-fab {
+    border-radius: 100%!important;
+}
+
+.btn-white {
+    background-color: #fff!important;
+    color: #51636C!important;
+}
+
+.big-form-control {
+    padding-left: 5px!important;
+    height: auto!important;
+    font-size: 48px!important;
+    color: #fff!important;
+}
+
+.form-group .form-control:focus,
+.form-group-white .form-control:focus {
+    background-image: linear-gradient(#fff, #fff), linear-gradient(#d2d2d2, #d2d2d2);
+}
+
+.white-plate {
+    background-color: #fff;
+    padding: 19px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    border: 0;
+    -webkit-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.29)!important;
+    -moz-box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.29)!important;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.29)!important;
+}
