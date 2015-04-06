@@ -22,7 +22,7 @@ $(document).ready(function(){
 
 
 function removeFields(link) {
-    $(link).prev("input[type=hidden]").val("1");
+    $(link).closest(".field").find("input[type=hidden]").val("1");
     $(link).closest(".field").hide();
 }
 
