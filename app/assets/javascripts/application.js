@@ -17,7 +17,8 @@
 //= require_directory ./material
 
 $(document).ready(function(){
-    $.material.init()
+    $.material.init();
+    $("[data-toggle='tooltip']").tooltip();
 })
 
 

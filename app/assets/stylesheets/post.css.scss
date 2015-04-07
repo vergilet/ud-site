@@ -1,10 +1,13 @@
 .post {
+
+  .round-sizer {
+    top:12px;
+  }
+
   .panel {
     height: 354px;
 
   }
-
-
   .post-image {
     display: table-cell!important;
     padding-left: 0px;
@@ -24,6 +27,7 @@
     vertical-align: top;
 
     .post-heading {
+      border-left: 2px solid #eee;
       min-height: 60px;
       padding: 20px;
       font-size: 17px;
@@ -38,8 +42,20 @@
 
     }
     .post-body {
-      height: 310px;
       padding: 20px;
+      padding-top: 35px;
+      height: 310px;
+
+      .ellipsis {
+        overflow: hidden;
+        height: 200px;
+      }
+      .labels {
+        i {
+          vertical-align:  middle;
+        }
+        padding-top: 20px;
+      }
     }
   }
 }
@@ -63,13 +79,24 @@
       .post-heading, i {
         font-size: 16px!important;
       }
+
+      .post-body {
+        .ellipsis {
+          height: 156px;
+        }
+      }
     }
   }
 }
 
 @media (max-width: 767px) {
   .post {
-
+    .round-sizer {
+      top: 17px;
+      padding: 10px;
+      height: 45px;
+      width: 45px
+    }
     .panel {
       height: 180px;
 
@@ -84,6 +111,16 @@
     .post-content {
       .post-heading, i {
         font-size: 12px!important;
+      }
+
+      .post-body {
+        font-size: 10px!important;
+        padding-top: 25px;
+
+        .ellipsis {
+          height: 56px;
+        }
+
       }
     }
 
@@ -108,6 +145,17 @@
     .post-content {
       .post-heading, i {
         font-size: 10px!important;
+        line-height: 10px;
+      }
+      .post-body {
+        padding-top: 25px;
+        line-height: 10px;
+        font-size: 10px!important;
+
+        .ellipsis {
+          height: 38px;
+        }
+
       }
     }
 

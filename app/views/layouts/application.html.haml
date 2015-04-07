@@ -9,8 +9,8 @@
     = csrf_meta_tags
   %body
     %header.header-decorator
-      = render 'layouts/site_top'
       = render 'layouts/navigation'
+      -#= render 'layouts/site_top'
     %main{:role => "main"}
       .container
         = render 'layouts/messages'
@@ -21,8 +21,8 @@
 
         .clearfix
 
-    .center-block.top-me-please{style: 'width:56px;margin-top:40px;margin-bottom: -28px'}
-      %a.btn.btn-info.btn-fab.btn-raised.mdi-navigation-expand-less{:href => "#"}
-    %footer
+    %footer.footer
       %div{style: 'background-color: #385762;height: 125px;width:100%;'}
         .container
+          .center-block.top-me-please{style: 'width:56px;margin-top:-26px;'}
+            %a.btn.btn-info.btn-fab.btn-raised.mdi-navigation-expand-less{:href => "#"}
