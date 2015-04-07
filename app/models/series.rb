@@ -7,7 +7,7 @@ class Series < ActiveRecord::Base
   end
 
   def cover
-    'http://www.gogoanime.com/images/oregairu.jpg'
+    'http://media.senscritique.com/media/000006545005/source_big/Yahari_Ore_no_Seishun_Love_Come_wa_Machigatteiru.jpg'
   end
 
   def views

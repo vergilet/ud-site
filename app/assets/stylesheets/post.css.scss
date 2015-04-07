@@ -1,121 +1,116 @@
 .post {
-  .label {
-    font-size: 14px;
-    line-height: 26px;
-  }
-  .description-limiter {
-
-    .additional {
-
-      padding-top: 15px;
-
-    }
-
-    .accurate {
-      min-height: 250px;
-    }
-
-    .description {
-      min-height: 100px;
-      text-align: justify;
-    }
-    .ellipsis {
-      overflow: hidden;
-      height: 100px;
-    }
-    .ellipsis:before {
-      content: "";
-      float: left;
-      height: 100px;
-    }
-
-  }
-  .cover {
-  }
-
-  .update-time, .author {
-    display: inline;
-    i {
-      display: inline-block;
-      .text {
-        font-size: 13px !important;
-        display: inline-block;
-        vertical-align: top;
-        padding-top: 4px;
-      }
-    }
-  }
-  .quality {
-    i {
-      display: inline-block;
-      font-size: 34px!important;
-      .text {
-        display: inline-block;
-        font-size: 18px;
-        vertical-align: top;
-        padding-top: 6px;
-        margin-left: -20px;
-      }
-    }
-  }
-
-  .completeness {
-    button {
-      max-width: 200px!important;
-      width: 200px;
-
-      .badge {
-        div {
-          display: inline-block;
-        }
-        .grey {
-          color: #a0a0a0;
-        }
-        .main {
-
-        }
-      }
-    }
-  }
-  .tech-info {
-    height: 111px;
-    padding: 20px;
-
-    i {
-      font-size: 16px;
-    }
-
-    span {
-      font-size: 14px !important;
-      vertical-align: top;
-    }
+  .panel {
+    height: 354px;
 
   }
 
-  .details{
-    padding-top: 42px;
-    padding-bottom: 25px;
+
+  .post-image {
+    display: table-cell!important;
+    padding-left: 0px;
     padding-right: 0px;
-    margin-left: -10px;
-    text-align: right;
-    i {
-      font-size: 16px;
+    .image {
+      height:354px;
+      width:250px;
+      background-size:cover;
+      background-repeat: no-repeat;
     }
 
-    span {
-      font-size: 14px !important;
-      vertical-align: top;
-    }
+  }
+  .post-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    display: table-cell!important;
+    vertical-align: top;
 
+    .post-heading {
+      min-height: 60px;
+      padding: 20px;
+      font-size: 17px;
+      font-weight: bold;
+      background: #eee;
+      line-height: 15px;
 
-    .reviews {    }
-    .rating {
-      width: 136px;
-      margin-top: 10px;
-      i {
-        font-size: 24px!important;
+      .title, .additional {
+        padding-left: 0;
+        padding-right: 0;
       }
 
+    }
+    .post-body {
+      height: 310px;
+      padding: 20px;
     }
   }
 }
+
+
+@media (max-width: 991px) {
+  .post {
+
+    .panel {
+      height: 300px;
+
+    }
+
+    .post-image {
+      .image {
+        height: 300px;
+        width: 200px;
+      }
+    }
+    .post-content {
+      .post-heading, i {
+        font-size: 16px!important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .post {
+
+    .panel {
+      height: 180px;
+
+    }
+
+    .post-image {
+      .image {
+        height: 180px;
+        width: 120px;
+      }
+    }
+    .post-content {
+      .post-heading, i {
+        font-size: 12px!important;
+      }
+    }
+
+  }
+}
+
+@media (max-width: 479px) {
+  .container {
+    padding-right: 0px!important;
+    padding-left: 0px!important;
+  }
+  .post {
+    .panel {
+      height: 160px;
+    }
+    .post-image {
+      .image {
+        height: 160px;
+        width: 100px;
+      }
+    }
+    .post-content {
+      .post-heading, i {
+        font-size: 10px!important;
+      }
+    }
+
+  }
+}
+
