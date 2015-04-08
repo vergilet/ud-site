@@ -1,14 +1,14 @@
 .post
   .panel.panel-default
     .post-image
-      %a{:href => "#"}
+      = link_to series_path(series) do
         .image{style: "background-image: url('#{series.cover}')"}
     .post-content
       .post-heading
         .title.col-xs-11
-          %a= series.name
+          = link_to series.name, series_path(series)
         .additional.col-xs-1
-          %a.btn.btn-white.btn-fab.btn-raised.mdi-av-play-arrow.pull-right.round-sizer{href: 'javascript:void(0)'}
+          = link_to '', series_path(series), class: 'btn btn-white btn-fab btn-raised mdi-av-play-arrow pull-right round-sizer'
       .post-body
         .episode
           %i.mdi-av-movie.mdi-material-grey-700

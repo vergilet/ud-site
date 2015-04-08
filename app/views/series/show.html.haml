@@ -1,11 +1,16 @@
-%ul.breadcrumb
-  %li
-    %a{:href => "#"} Home
-  %li
-    %a{:href => "#"} Library
-  %li.active Data
-
-%p#notice= notice
+#notice= notice
+.open-post
+  .panel.panel-default.top-round
+    .post-image.top-round
+      .image.top-round{style: "background-image: url('#{@series.admit}')"}
+    .post-content
+      .panel-body
+        %h3 Jumbotron
+        %p
+          %div{style: 'height: 500px'}
+            %iframe{:allowfullscreen => "", :frameborder => "0", :height => "100%", :mozallowfullscreen => "", :scrolling => "no", :src => "http://video.meta.ua/iframe/7403292/", :webkitallowfullscreen => "", :width => "100%"}
+        %p
+          %a.btn.btn-primary.btn-lg Learn more
 
 %p
   %b Name:

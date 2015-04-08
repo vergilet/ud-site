@@ -18,8 +18,31 @@
  *= require site-top
  *= require placeholders
  *= require post
+ *= require open-post
  */
 
+.navbar .nav > li > a:before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  left: 0;
+  height: 2px;
+  bottom: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
+
+.navbar .nav > li > a:hover:before {
+  transform: scaleX(1);
+  -webkit-transition: -webkit-transform 0.2s ease-out;
+  -o-transition: -o-transform 0.2s ease-out;
+  -moz-transition: -moz-transform 0.2s ease-out;
+  transition: transform 0.2s ease-out;
+}
 
 html{position:relative;min-height:100%;}
 body{margin-bottom:125px;}

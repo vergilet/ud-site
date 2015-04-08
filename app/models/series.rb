@@ -10,6 +10,10 @@ class Series < ActiveRecord::Base
     'http://media.senscritique.com/media/000006545005/source_big/Yahari_Ore_no_Seishun_Love_Come_wa_Machigatteiru.jpg'
   end
 
+  def admit
+    'http://img3.goodfon.su/original/1680x1050/0/cb/anime-art-dvoe-oregairu.jpg'
+  end
+
   def views
     1750
   end
