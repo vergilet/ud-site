@@ -3,10 +3,8 @@
   .round-sizer {
     top:12px;
   }
-
   .panel {
     height: 354px;
-
   }
   .post-image {
     display: table-cell!important;
@@ -43,12 +41,20 @@
     }
     .post-body {
       padding: 20px;
-      padding-top: 35px;
+      padding-top: 25px;
+      padding-right: 45px;
       height: 310px;
-
+      .episode {
+        padding-bottom: 10px;
+        i {
+          vertical-align: middle;
+        }
+      }
       .ellipsis {
         overflow: hidden;
-        height: 200px;
+        height: 174px;
+        text-align: justify;
+        position: relative;
       }
       .labels {
         i {
@@ -59,7 +65,6 @@
     }
   }
 }
-
 
 @media (max-width: 991px) {
   .post {
@@ -74,18 +79,20 @@
       }
     }
     .post-content {
-      .post-heading, i {
+      .post-heading {
         font-size: 16px!important;
       }
       .post-body {
+        padding-right: 25px;
         .ellipsis {
-          height: 120px;
+          height: 110px;
         }
         .labels {
           i {
             vertical-align:  middle;
+            font-size: 16px!important;
           }
-          padding-top: 45px;
+          padding-top: 35px;
         }
       }
     }
@@ -95,10 +102,10 @@
 @media (max-width: 767px) {
   .post {
     .round-sizer {
-      top: 17px;
-      padding: 10px;
-      height: 45px;
-      width: 45px
+      top: 20px;
+      padding: 8px;
+      height: 42px;
+      width: 42px;
     }
     .panel {
       height: 180px;
@@ -112,20 +119,22 @@
       }
     }
     .post-content {
-      .post-heading, i {
+      .post-heading {
         font-size: 12px!important;
+        line-height: 12px;
       }
 
       .post-body {
         font-size: 10px!important;
-        padding-top: 25px;
+        padding-top: 10px;
 
         .ellipsis {
-          height: 56px;
+          height: 38px;
         }
         .labels {
           i {
             vertical-align:  middle;
+            font-size: 12px!important;
           }
           padding-top: 15px;
         }
@@ -142,6 +151,13 @@
     padding-left: 0px!important;
   }
   .post {
+    .round-sizer {
+      top: 8px;
+      padding: 4px;
+      height: 30px;
+      width: 30px;
+      font-size: 20px;
+    }
     .panel {
       height: 160px;
     }
@@ -152,21 +168,26 @@
       }
     }
     .post-content {
-      .post-heading, i {
+      .post-heading {
         font-size: 10px!important;
         line-height: 10px;
+        padding:10px;
+        min-height: 34px;
       }
       .post-body {
-        padding-top: 25px;
+        padding-top: 10px;
+        padding-right: 15px;
         line-height: 12px;
         font-size: 10px!important;
 
         .ellipsis {
-          height: 36px;
+          height: 48px;
         }
         .labels {
           i {
             vertical-align:  middle;
+            font-size: 10px!important;
+            line-height: 10px;
           }
           padding-top: 15px;
         }

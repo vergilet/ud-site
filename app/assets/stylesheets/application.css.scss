@@ -33,6 +33,12 @@ main {
   margin-bottom: 165px;
 }
 
+.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+  margin-right: 0px!important;
+  margin-left: 0px!important;
+}
+
+
 
 @media (min-width: 0px) {
   .container {
