@@ -2,7 +2,8 @@
 .open-post
   .panel.panel-default.top-round
     .post-image.top-round
-      .image.top-round{style: "background-image: url('#{@series.admit}')"}
+      .sup=image_tag @series.cover, height: 350
+      -#.image.top-round{style: "background-image: url('#{@series.admit}')"}
     .post-content
       .panel-body
         %h3 Jumbotron
@@ -19,3 +20,50 @@
 = link_to 'Edit', edit_series_path(@series)
 \|
 = link_to 'Back', series_index_path
+
+.panel.panel-default
+  :javascript
+    window.___gcfg = {lang: '{{ site.lang }}'};
+
+    (function() {
+      function _getComputedStyle(el, cssprop){
+       if (el.currentStyle) {
+        // for IE
+        return el.currentStyle[cssprop]
+       } else if (document.defaultView && document.defaultView.getComputedStyle) {
+        // Any other normal brwoser (like Chrome, Firefox)
+        return document.defaultView.getComputedStyle(el, "")[cssprop]
+       } else {
+        // Try get inline style
+        return el.style[cssprop]
+        }
+      }
+
+
+      var script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.async = true;
+      script.onload = function() {
+        if (gapi && gapi['comments'] && gapi.comments['render']) {
+          var gPlusComments = document.getElementById('gpluscomments');
+          gapi.comments.render(
+            'gpluscomments',
+            {
+              href: gPlusComments.getAttribute('data-href'),
+              view_type: gPlusComments.getAttribute('data-viewtype'),
+              first_party_property: "BLOGGER",
+              width: parseInt(_getComputedStyle(gPlusComments, "width"), 10)
+            }
+          );
+        }
+      };
+      script.src = 'https://apis.google.com/js/plusone.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(script, s);
+    })();
+  #gpluscomments{"data-href" => "http://google.com", "data-viewtype" => "FILTERED_POSTMOD"}
+
+:javascript
+  $('#gpluscomments iframe').contents().find('.yJa').css({margin: 0, border: 'none'});
+
+
