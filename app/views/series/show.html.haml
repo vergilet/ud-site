@@ -14,45 +14,68 @@
               .row
                 .col-sm-12
                   .col-sm-12
-                    %p
-                      %h3= @series.name
-                      %div{style: 'height:30px'}
-                  .col-md-4.col-sm-6
-                    %h5 Жанр
-                    %span фантастика, комедія
-                  .col-md-4.col-sm-6
-                    %h5 Серій
+                    %h3= @series.name
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Жанр:
+                  .col-sm-9
+                    %span
+                      ="#{link_to ' фантастика', '#'},".html_safe
+                      ="#{link_to 'комедія', '#'}".html_safe
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Серій:
+                  .col-sm-9
                     %span 13 з 14 - (~45:00)
-
-                  .col-md-4.col-sm-6
-                    %h5 Рік виходу
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Рік виходу:
+                  .col-sm-9
                     %span 2013
-                  .col-md-4.col-sm-6
-                    %h5 Режисер
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Режисер:
+                  .col-sm-9
                     %span Алекс Хардкастл
-                  .col-md-4.col-sm-6
-                    %h5 Студія
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Студія:
+                  .col-sm-9
                     %span UFO Table
 
-                  .col-md-4.col-sm-6
-                    %h5 Переклад
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Переклад:
+                  .col-sm-9
                     %span bills_spirit
-                  .col-md-4.col-sm-6
-                    %h5 Текст читали
-                    %span Ater Katta, Deity, Cast77iel, Русалка, Vergil
-                  .col-md-4.col-sm-6
-                    %h5 Робота зі звуком
-                    %span Deity
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Текст читали:
+                  .col-sm-9
+                    %span
+                      ="#{link_to 'Ater Katta', '#'},".html_safe
+                      ="#{link_to 'Deity', '#'},".html_safe
+                      ="#{link_to 'Cast77iel', '#'},".html_safe
+                      ="#{link_to 'Русалка', '#'},".html_safe
+                      ="#{link_to 'Vergil', '#'}".html_safe
+                .col-sm-12
+                  .col-sm-3
+                    %span.titles Робота зі звуком:
+                  .col-sm-9
+                    %span
+                      ="#{link_to 'Deity', '#'}".html_safe
 
-                  .col-sm-12.text-justify
-                    %p &nbsp;
-                    %p
-                      %h5 Опис
+                .col-sm-12.text-justify
+                  %p &nbsp;
+                  %p
+                    .col-sm-12
+                      %p
+                        %span.titles Опис:
                       %span У магічному королівстві живуть дві сестри-відьми, які накладають і знімають закляття а також проклинають. Магія стала їх ремеслом. Але одного разу з магічним королівством сталася біда, нізвідки почали з'являтися незрозумілі будівлі з іншого світу. Старша сестра Йойо потрапляє в інший світ де знайомиться з 2-ма хлопцями і їх маленькою родичкою Акі, і звідки вона не може повернутися у магічне королівство. В той час батьки хлопців перетворилися в магічних створінь. На плечі сестер-відьом лягла ще одна справа, яку вони мають розплутати. Розгадати цю таємничу і магічну загадку пропонує вам колектив UkrDub`у.
 
           %p.clearfix
           .video-content
-            .col-sm-8.plotter-right
+            .col-sm-8.plotter-right.plotter-left-5
               - ep = @episodes.first
               - uri = URI.parse(ep.content)
               #task-form
@@ -79,13 +102,8 @@
 
 
   .comments
-    .panel.panel-default
-      .post-content
-        .panel-body
-          коменти будуть тут
-
+    = render 'layouts/last_comments'
 
 
 .col-lg-3
-  = render 'series/settings_panel'
   = render 'series/downloads_panel'
