@@ -66,10 +66,12 @@
   .describe-items {
     .row {
       margin-bottom: 10px;
+      line-height: 18px;
 
       h4 {
         margin-bottom: 0px;
       }
+
       span {
         color: #a4a4a4;
         font-size: 15px;
@@ -89,4 +91,46 @@
 
 .plotter-left-5 {
   padding-left: 5px;
+}
+
+
+.settings-panel {
+  .panel {
+    .panel-body {
+      .list-group-item {
+        padding-top: 5px;
+      }
+      height: 380px;
+      .row-action-primary {
+        i {
+          font-size: 48px;
+        }
+      }
+    }
+  }
+
+}
+
+.download-panel {
+
+  .special-button {
+    text-transform: initial;
+    text-align: left;
+    width: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .panel {
+    .panel-body {
+      .list-group-item {
+        padding-top: 5px;
+      }
+      .row-action-primary {
+        i {
+          font-size: 48px;
+        }
+      }
+    }
+  }
 }

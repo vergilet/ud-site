@@ -1,7 +1,10 @@
-- @series.each do |series|
-  = render 'series/single_post', series: series
-%br
+.col-lg-8
+  - @series.each do |series|
+    = render 'series/single_post', series: series
+  %br
+  = link_to 'New Series', new_series_path
 
 
 
-= link_to 'New Series', new_series_path
+.col-lg-4
+  = render 'layouts/last_comments'

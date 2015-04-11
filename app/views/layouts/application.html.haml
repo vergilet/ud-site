@@ -14,10 +14,7 @@
     %main{:role => "main"}
       .container
         = render 'layouts/messages'
-        .col-lg-8
-          = yield
-        .col-lg-4
-          = render 'layouts/sidebar'
+        = yield
 
         .clearfix
 

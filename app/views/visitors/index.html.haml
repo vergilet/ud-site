@@ -1,33 +1,36 @@
+.col-lg-8
+  = render 'visitors/slider'
+  .panel.panel-default
+    .panel-body
+      %h3 Jumbotron
+      %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+      %p
+        %a.btn.btn-primary.btn-lg Learn more
 
-= render 'visitors/slider'
-.panel.panel-default
-  .panel-body
-    %h3 Jumbotron
-    %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-    %p
-      %a.btn.btn-primary.btn-lg Learn more
+  .panel.panel-default
+    .panel-body
+      %h3 Jumbotron
+      %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+      %p
+        %a.btn.btn-primary.btn-lg Learn more
 
-.panel.panel-default
-  .panel-body
-    %h3 Jumbotron
-    %p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
-    %p
-      %a.btn.btn-primary.btn-lg Learn more
+  .center-block{style: 'width:256px;'}
+    %ul.pagination.pagination-sm
+      %li.disabled
+        %a{:href => "javascript:void(0)"} «
+      %li.active
+        %a{:href => "javascript:void(0)"} 1
+      %li
+        %a{:href => "javascript:void(0)"} 2
+      %li
+        %a{:href => "javascript:void(0)"} 3
+      %li
+        %a{:href => "javascript:void(0)"} 4
+      %li
+        %a{:href => "javascript:void(0)"} 5
+      %li
+        %a{:href => "javascript:void(0)"} »
 
-.center-block{style: 'width:256px;'}
-  %ul.pagination.pagination-sm
-    %li.disabled
-      %a{:href => "javascript:void(0)"} «
-    %li.active
-      %a{:href => "javascript:void(0)"} 1
-    %li
-      %a{:href => "javascript:void(0)"} 2
-    %li
-      %a{:href => "javascript:void(0)"} 3
-    %li
-      %a{:href => "javascript:void(0)"} 4
-    %li
-      %a{:href => "javascript:void(0)"} 5
-    %li
-      %a{:href => "javascript:void(0)"} »
 
+.col-lg-4
+  = render 'layouts/last_comments'

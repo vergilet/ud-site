@@ -1,0 +1,30 @@
+.settings-panel
+  .panel.panel-info
+    .panel-body
+      %h4 Series settings
+      .list-group
+        .list-group-item
+          .row-action-primary.checkbox
+            %label
+              %input{:type => "checkbox", checked: false, disabled: true}/
+          .row-content
+            %h5.list-group-item-heading Плейлист?
+            %p.list-group-item-text Автоматичне перемикання на наступну серію
+        .list-group-separator
+        .list-group-item
+          .row-action-primary.checkbox
+            %label
+              %input{:type => "checkbox", checked: true, disabled: true}/
+          .row-content
+            %h5.list-group-item-heading Пропускати вступ і титри
+            %p.list-group-item-text Плеєр автоматично перескакуватиме через опенінг та ендінг
+        .list-group-separator
+        .list-group-item
+          .row-action-primary.checkbox
+            %label
+              %input{:type => "checkbox", checked: false, disabled: false}/
+          .row-content
+            %h5.list-group-item-heading Улюблене
+            %p.list-group-item-text Закріпити в профілі
+        .list-group-separator
+
