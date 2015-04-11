@@ -151,6 +151,16 @@
     .panel-body {
       .list-group-item {
         padding-top: 5px;
+        .list-group-item-heading {
+          font-size: 14px;
+          font-weight: bold;
+        }
+
+        .list-group-item-text {
+          font-size: 12px;
+        }
+
+
       }
       .row-action-primary {
         i {
