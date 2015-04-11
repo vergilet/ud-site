@@ -10,7 +10,7 @@
           .col-sm-8
             - @series.episodes.each do |ep|
               - uri = URI.parse(ep.content)
-              %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "http://video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
+              %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "//video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
           .col-sm-4
             .ger{style: 'height:50px;width:50px;background:red;margin-bottom:5px;'}
             .ger{style: 'height:50px;width:50px;background:red;margin-bottom:5px;'}
