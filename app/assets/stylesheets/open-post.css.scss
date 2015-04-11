@@ -29,6 +29,38 @@
     }
 
   }
+  .video-content {
+    .list-of-episodes {
+      border-bottom: 1px solid #e4e4e4;
+      border-top: 1px solid #e4e4e4;
+      a, a:hover {
+        text-decoration: none!important;
+        color: inherit!important;
+      }
+
+      padding: 5px;
+      max-height: 428px;
+      overflow-y: scroll;
+      .panel {
+        height: 70px;
+        margin-bottom: 5px;
+      }
+
+
+      .media {
+        .media-body{
+          line-height: 10px;
+          .media-heading{
+            padding-top: 5px;
+          }
+          span {
+            font-size: 10px;
+          }
+        }
+      }
+
+    }
+  }
 
   .describe-items {
     .row {
@@ -39,9 +71,21 @@
       }
       span {
         color: #a4a4a4;
-        font-size: 18px;
+        font-size: 15px;
       }
     }
 
+
   }
+}
+
+.plotter-right {
+  padding-right: 0px;
+}
+.plotter-left {
+  padding-left: 0px;
+}
+
+.plotter-left-5 {
+  padding-left: 5px;
 }

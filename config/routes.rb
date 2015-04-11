@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  resources :episodes
   resources :series
   resources :users
   root to: 'visitors#index'

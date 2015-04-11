@@ -7,48 +7,60 @@
     .post-content
       .panel-body
         .video-content
-          .col-sm-8
-            - @series.episodes.each do |ep|
-              - uri = URI.parse(ep.content)
+          .col-sm-8.plotter-right
+            - ep = @episodes.first
+            - uri = URI.parse(ep.content)
+            #task-form
               %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "//video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
-          .col-sm-4
-            .ger{style: 'height:50px;width:50px;background:red;margin-bottom:5px;'}
-            .ger{style: 'height:50px;width:50px;background:red;margin-bottom:5px;'}
-            .ger{style: 'height:50px;width:50px;background:red;margin-bottom:5px;'}
-            .ger{style: 'height:50px;width:50px;background:red;margin-bottom:5px;'}
-        .describe-items.container
-          .row
-            .col-md-4
-              %h4 Жанр
-              %span фантастика, комедія
-            .col-md-4
-              %h4 Серій
-              %span 13 з 14 - (~45:00)
-            .col-md-4
-          .row
-            .col-md-4
-              %h4 Рік виходу
-              %span 2013
-            .col-md-4
-              %h4 Режисер
-              %span Алекс Хардкастл
-            .col-md-4
-              %h4 Студія
-              %span UFO Table
-          .row
-            .col-md-4
-              %h4 Переклад
-              %span bills_spirit
-            .col-md-4
-              %h4 Текст читали
-              %span Ater Katta, Deity, Cast77iel, Русалка, Vergil
-            .col-md-4
-              %h4 Робота зі звуком
-              %span Deity
-          .row
-            .col-md-12.text-justify
-              %h4 Опис
-              %span У магічному королівстві живуть дві сестри-відьми, які накладають і знімають закляття а також проклинають. Магія стала їх ремеслом. Але одного разу з магічним королівством сталася біда, нізвідки почали з'являтися незрозумілі будівлі з іншого світу. Старша сестра Йойо потрапляє в інший світ де знайомиться з 2-ма хлопцями і їх маленькою родичкою Акі, і звідки вона не може повернутися у магічне королівство. В той час батьки хлопців перетворилися в магічних створінь. На плечі сестер-відьом лягла ще одна справа, яку вони мають розплутати. Розгадати цю таємничу і магічну загадку пропонує вам колектив UkrDub`у.
+          .col-sm-4.plotter-left
+            .list-of-episodes
+              - @episodes.each_with_index do |ep, index|
+                = link_to(episode_path(ep), remote: true) do
+                  .panel.panel-default
+                    .media
+                      .media-left
+                        %img.media-object{:alt => "...", :src => "http://placehold.it/85x70"}
+                      .media-body
+                        %h6.media-heading= "Episode ##{index+1}"
+                        %span Який класний момент я вибрав, щоб зізнатись в чомусь дуже класному
+        %p.clearfix
+        .col-sm-8
+          .describe-items
+            .row
+              .col-sm-12
+                .col-md-4.col-sm-6
+                  %h4 Жанр
+                  %span фантастика, комедія
+                .col-md-4.col-sm-6
+                  %h4 Серій
+                  %span 13 з 14 - (~45:00)
+
+                .col-md-4.col-sm-6
+                  %h4 Рік виходу
+                  %span 2013
+                .col-md-4.col-sm-6
+                  %h4 Режисер
+                  %span Алекс Хардкастл
+                .col-md-4.col-sm-6
+                  %h4 Студія
+                  %span UFO Table
+
+                .col-md-4.col-sm-6
+                  %h4 Переклад
+                  %span bills_spirit
+                .col-md-4.col-sm-6
+                  %h4 Текст читали
+                  %span Ater Katta, Deity, Cast77iel, Русалка, Vergil
+                .col-md-4.col-sm-6
+                  %h4 Робота зі звуком
+                  %span Deity
+
+                .col-sm-12.text-justify
+                  %h4 Опис
+                  %span У магічному королівстві живуть дві сестри-відьми, які накладають і знімають закляття а також проклинають. Магія стала їх ремеслом. Але одного разу з магічним королівством сталася біда, нізвідки почали з'являтися незрозумілі будівлі з іншого світу. Старша сестра Йойо потрапляє в інший світ де знайомиться з 2-ма хлопцями і їх маленькою родичкою Акі, і звідки вона не може повернутися у магічне королівство. В той час батьки хлопців перетворилися в магічних створінь. На плечі сестер-відьом лягла ще одна справа, яку вони мають розплутати. Розгадати цю таємничу і магічну загадку пропонує вам колектив UkrDub`у.
+        .col-sm-4.plotter-left-5
+          = image_tag @series.cover, width: '100%'
+
 %p
   %b Name:
   = @series.name
