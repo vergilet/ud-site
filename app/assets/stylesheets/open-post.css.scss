@@ -65,16 +65,19 @@
 
   .describe-items {
     .row {
-      margin-bottom: 10px;
-      line-height: 18px;
+      margin-bottom: 15px;
+      line-height: 16px;
+      div {
+        margin-bottom: 10px;
+      }
 
-      h4 {
+      h5 {
         margin-bottom: 0px;
       }
 
       span {
         color: #a4a4a4;
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 

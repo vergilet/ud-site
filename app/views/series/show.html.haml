@@ -3,7 +3,7 @@
     .panel.panel-default.top-round
       .post-image.top-round
         -#.sup=image_tag @series.cover, height: 350
-        .image.top-round{style: "background-image: url('#{@series.admit}')"}
+        -#.image.top-round{style: "background-image: url('#{@series.admit}')"}
           .sign= @series.name
       .post-content
         .panel-body
@@ -13,37 +13,41 @@
             .describe-items
               .row
                 .col-sm-12
+                  .col-sm-12
+                    %p
+                      %h3= @series.name
+                      %div{style: 'height:30px'}
                   .col-md-4.col-sm-6
-                    %h4 Жанр
+                    %h5 Жанр
                     %span фантастика, комедія
                   .col-md-4.col-sm-6
-                    %h4 Серій
+                    %h5 Серій
                     %span 13 з 14 - (~45:00)
 
                   .col-md-4.col-sm-6
-                    %h4 Рік виходу
+                    %h5 Рік виходу
                     %span 2013
                   .col-md-4.col-sm-6
-                    %h4 Режисер
+                    %h5 Режисер
                     %span Алекс Хардкастл
                   .col-md-4.col-sm-6
-                    %h4 Студія
+                    %h5 Студія
                     %span UFO Table
 
                   .col-md-4.col-sm-6
-                    %h4 Переклад
+                    %h5 Переклад
                     %span bills_spirit
                   .col-md-4.col-sm-6
-                    %h4 Текст читали
+                    %h5 Текст читали
                     %span Ater Katta, Deity, Cast77iel, Русалка, Vergil
                   .col-md-4.col-sm-6
-                    %h4 Робота зі звуком
+                    %h5 Робота зі звуком
                     %span Deity
 
                   .col-sm-12.text-justify
                     %p &nbsp;
                     %p
-                      %h4 Опис
+                      %h5 Опис
                       %span У магічному королівстві живуть дві сестри-відьми, які накладають і знімають закляття а також проклинають. Магія стала їх ремеслом. Але одного разу з магічним королівством сталася біда, нізвідки почали з'являтися незрозумілі будівлі з іншого світу. Старша сестра Йойо потрапляє в інший світ де знайомиться з 2-ма хлопцями і їх маленькою родичкою Акі, і звідки вона не може повернутися у магічне королівство. В той час батьки хлопців перетворилися в магічних створінь. На плечі сестер-відьом лягла ще одна справа, яку вони мають розплутати. Розгадати цю таємничу і магічну загадку пропонує вам колектив UkrDub`у.
 
           %p.clearfix
@@ -72,6 +76,14 @@
   = link_to 'Edit', edit_series_path(@series)
   \|
   = link_to 'Back', series_index_path
+
+
+  .comments
+    .panel.panel-default
+      .post-content
+        .panel-body
+          коменти будуть тут
+
 
 
 .col-lg-3
