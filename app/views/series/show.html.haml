@@ -39,6 +39,11 @@
                     %span 2013
                 .col-sm-12
                   .col-sm-3
+                    %span.titles Студія:
+                  .col-sm-9
+                    %span UFO Table
+                .col-sm-12
+                  .col-sm-3
                     %span.titles Відео:
                   .col-sm-9
                     %span x264, 1280x720, 23.976fps, ~1500 kbps
@@ -47,11 +52,6 @@
                     %span.titles Звук:
                   .col-sm-9
                     %span AAC, 48.0 khz; 2.0ch; 192kbps
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Студія:
-                  .col-sm-9
-                    %span UFO Table
 
                 .col-sm-12
                   .col-sm-3
@@ -91,9 +91,6 @@
               - uri = URI.parse(ep.content)
               #task-form
                 %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "//video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
-              .btn-group.btn-group-justified
-                %a.btn.btn-default{:href => "javascript:void(0)", disabled: true} « Попередня
-                %a.btn.btn-default{:href => "javascript:void(0)"} Наступна »
             .col-sm-4.plotter-left
               .list-of-episodes
                 - @episodes.each_with_index do |ep, index|
