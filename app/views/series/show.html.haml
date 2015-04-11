@@ -18,6 +18,8 @@
                       %a
                         %b
                           = @series.name
+                    %span.pull-right
+                      = link_to 'Edit', edit_series_path(@series) if current_user
                 .col-sm-12
                   .col-sm-3
                     %span.titles Жанр:
@@ -89,11 +91,14 @@
               - uri = URI.parse(ep.content)
               #task-form
                 %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "//video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
+              .btn-group.btn-group-justified
+                %a.btn.btn-default{:href => "javascript:void(0)", disabled: true} « Попередня
+                %a.btn.btn-default{:href => "javascript:void(0)"} Наступна »
             .col-sm-4.plotter-left
               .list-of-episodes
                 - @episodes.each_with_index do |ep, index|
                   = link_to(episode_path(ep), remote: true) do
-                    .panel.panel-default
+                    .panel.panel-default.btn
                       .media
                         .media-left
                           %img.media-object{:alt => "...", :src => "http://placehold.it/85x70"}
@@ -101,13 +106,6 @@
                           %h6.media-heading= "Episode ##{index+1}"
                           %span Який класний момент я вибрав, щоб зізнатись в чомусь дуже класному
 
-  %p
-    %b Name:
-    = @series.name
-
-  = link_to 'Edit', edit_series_path(@series)
-  \|
-  = link_to 'Back', series_index_path
 
 
   .comments
