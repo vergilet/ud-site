@@ -11,7 +11,7 @@ class Series < ActiveRecord::Base
   end
 
   def admit
-    'http://img3.goodfon.su/original/1680x1050/0/cb/anime-art-dvoe-oregairu.jpg'
+    'http://www.animexis.com.br/wp-content/uploads/2014/11/OreGairu-Kono-Light-novel-ga-Sugoi-2015-2.jpg?f41465'
   end
 
   def views
