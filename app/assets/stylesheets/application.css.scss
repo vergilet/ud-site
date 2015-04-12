@@ -20,7 +20,12 @@
  *= require post
  *= require open-post
  *= require series-edit
+ *= require bootstrap-tagsinput
  */
+
+abbr[title="required"] {
+  display: none;
+}
 
 .navbar .nav > li > a:before {
   position: absolute;

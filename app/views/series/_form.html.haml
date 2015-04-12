@@ -1,27 +1,141 @@
 .well.bs-component
-  = simple_form_for @series, html: { class: 'form-horizontal' } do |f|
+  = simple_form_for @series, html: { class: 'form-horizontal', :multipart => true } do |f|
     %fieldset
       = f.error_notification
       %legend Series Form
       .form-group
-        = f.label :name, class: 'col-lg-2 control-label'
-        .col-lg-10
-          = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
-        = f.label :description, class: 'col-lg-2 control-label'
-        .col-lg-10
-          = f.text_area :description, class: 'form-control', placeholder: 'Series description', label: false, rows: 10
+        .col-sm-9
+          %p
+            = f.label :name, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
+            .clearfix
+          %p
+            = f.label :description, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.text_area :description, class: 'form-control', placeholder: 'Series description', label: false, rows: 5
+            .clearfix
+          %p
+            = f.label :tag_list, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.text_field :tag_list, class: 'form-control', placeholder: 'Series description', label: false, "data-role" => "tagsinput"
+            .clearfix
+          %p &nbsp;
+          %p
+            = f.label :episodes_amount, class: 'col-lg-2 control-label'
+            .col-sm-10
+              .col-sm-2.select-delimiter
+                = f.select :episodes_amount, 1..50, {}, {class: 'form-control', placeholder: 'Загальна кількість серій', label: false }
+              .col-sm-10.select-delimiter
+                = f.label :episode_time, class: 'col-sm-2 control-label pull-left select-delimiter'
+                .col-sm-4.select-delimiter
+                  = f.input :episode_time, class: 'form-control', placeholder: 'Продовжуваність однієї серії', label: false
+            .clearfix
+          %p
+            = f.label :year, class: 'col-lg-2 control-label'
+            .col-sm-10
+              .col-sm-2.select-delimiter
+                = f.select :year, (1980..Date.current.year).to_a.reverse, {}, {class: 'form-control', placeholder: 'Рік виходу', label: false }
+            .clearfix
+          %p
+            = f.label :studio_name, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :studio_name, class: 'form-control', placeholder: 'Назва студії', label: false
+            .clearfix
+          %p
+            = f.label :video_info, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :video_info, class: 'form-control', placeholder: 'Відео формат', label: false
+            .clearfix
+          %p
+            = f.label :audio_info, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :audio_info, class: 'form-control', placeholder: 'Аудіо формат', label: false
+            .clearfix
+          %p
+            = f.label :translator, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :translator, class: 'form-control', placeholder: 'Переклад', label: false
+            .clearfix
+          %p
+            = f.label :actors, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :actors, class: 'form-control', placeholder: 'Текст читали', label: false
+            .clearfix
+          %p
+            = f.label :sound_maker, class: 'col-lg-2 control-label'
+            .col-sm-10
+              = f.input :sound_maker, class: 'form-control', placeholder: 'Робота зі звуком', label: false
+            .clearfix
 
-      .col-sm-12
-        .col-sm-2
-        .col-sm-10
-          .fields.form-group
-            = f.fields_for :episodes do |builder|
-              = render 'episode_fields', f: builder
-          .form-group
-            .col-lg-10
-              = link_to_add_fields 'Add Episode', f, :episodes
+        .col-sm-3
+          .col-sm-12
+            .poster-holder
+              %p
+                %b Оберіть постер
+              %p
+                .upload-preview
+                  = image_tag (@series.cover.url)
+              %p
+                = f.file_field :cover, placeholder: 'Select the cover'
+          .clearfix
+          .col-sm-12
+            .poster-holder
+              %hr
+              %p
+                %b Торент файл
+              %p
+                .torrent-preview
+                  = image_tag (@series.torrent.presence ? asset_path('success.png') : asset_path('torrent_empty.jpg') ), size: '36x36'
+              %p
+                = f.file_field :torrent, placeholder: 'Torrent file'
+        .clearfix
+        .col-sm-12
+          .col-sm-1
+          .col-sm-8
+            %h4 Episodes:
+            .fields.form-group
+              = f.fields_for :episodes do |builder|
+                = render 'episode_fields', f: builder
+            %hr
+            .form-group
+              .col-sm-8
+                = link_to_add_fields 'Add Episode', f, :episodes
+            %hr
 
       .form-group
-        .col-lg-10.col-lg-offset-2
-          = button_tag 'Reset', type: :reset, class: 'btn btn-default'
-          = f.button :submit, 'Apply', class: 'btn btn-primary'
+        .col-sm-8
+          .buttons-holder.pull-right
+            = link_to 'Назад', series_index_path, class: 'btn btn-default'
+            = f.button :submit, 'Зберегти', class: 'btn btn-primary'
+
+:javascript
+  $(document).ready(function(){
+    var preview = $(".upload-preview img");
+
+    $("#series_cover").change(function(event){
+       var input = $(event.currentTarget);
+       var file = input[0].files[0];
+       var reader = new FileReader();
+       reader.onload = function(e){
+           image_base64 = e.target.result;
+           preview.attr("src", image_base64);
+       };
+       reader.readAsDataURL(file);
+    });
+  });
+
+  $(document).ready(function(){
+    var preview = $(".torrent-preview img");
+
+    $("#series_torrent").change(function(event){
+       var input = $(event.currentTarget);
+       var file = input[0].files[0];
+       var reader = new FileReader();
+       reader.onload = function(e){
+           image_base64 = e.target.result;
+           preview.attr("src", '#{asset_path("success.png")}');
+       };
+       reader.readAsDataURL(file);
+    });
+  });

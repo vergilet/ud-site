@@ -19,6 +19,7 @@
 $(document).ready(function(){
     $.material.init();
     $("[data-toggle='tooltip']").tooltip();
+    initHelperForTagInput();
 })
 
 
@@ -31,4 +32,12 @@ function addFields(link, association, content) {
     var new_id = new Date().getTime();
     var regexp = new RegExp("new_" + association, "g")
     $('.fields').append(content.replace(regexp, new_id));
+}
+
+function initHelperForTagInput() {
+    $('.bootstrap-tagsinput input').on('focus', function () {
+        $(this).parent('div').addClass('focused')
+    }).on('blur', function () {
+        $(this).parent('div').removeClass('focused')
+    });
 }

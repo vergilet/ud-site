@@ -47,4 +47,6 @@ group :test do
 end
 
 
-gem 'imgur-api'
+gem "paperclip-dropbox", ">= 1.1.7"
+gem 'rmagick'
+gem 'acts-as-taggable-on'

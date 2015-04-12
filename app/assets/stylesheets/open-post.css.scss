@@ -150,6 +150,25 @@
   .panel {
     .panel-body {
       .list-group-item {
+        .row-action-primary {
+          i {
+            background-color: white;
+            border: 2px solid #e4e4e4;
+            line-height: 50px;
+            padding-top:0;
+          }
+        }
+
+        .torrent {
+          color: #a5d6a7!important;
+        }
+        .ex-ua {
+          color: #c4c4c4;
+        }
+        .vk-com {
+          color: #29b6f6!important;
+        }
+
         padding-top: 5px;
         .list-group-item-heading {
           font-size: 14px;

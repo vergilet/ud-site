@@ -1,0 +1,16 @@
+development:
+  app_key: sjwh947ge3rznu4
+  app_secret: myo3lkvacscwami
+  access_token: d9qg1wr7xngtmwan
+  access_token_secret: yqzy5yboqd8f0j7
+  user_id: 410543911
+  access_type: "app_folder"
+
+
+production:
+  app_key: sjwh947ge3rznu4
+  app_secret: myo3lkvacscwami
+  access_token: d9qg1wr7xngtmwan
+  access_token_secret: yqzy5yboqd8f0j7
+  user_id: 410543911
+  access_type: "app_folder"

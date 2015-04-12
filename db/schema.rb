@@ -11,16 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150411230422) do
+ActiveRecord::Schema.define(version: 20150412153460) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "series_id"
-    t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.string   "episode_number"
+    t.string   "name"
+    t.string   "video_link"
   end
 
   create_table "series", force: :cascade do |t|
@@ -28,7 +30,6 @@ ActiveRecord::Schema.define(version: 20150411230422) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
     t.string   "original_name"
-    t.string   "cover"
     t.text     "description"
     t.string   "episodes_amount"
     t.string   "episode_time"
@@ -39,10 +40,38 @@ ActiveRecord::Schema.define(version: 20150411230422) do
     t.string   "translator"
     t.string   "actors"
     t.string   "sound_maker"
-    t.string   "torrent"
     t.string   "source_mirror"
     t.string   "source_mirror_additional"
+    t.string   "cover_file_name"
+    t.string   "cover_content_type"
+    t.integer  "cover_file_size"
+    t.datetime "cover_updated_at"
+    t.string   "torrent_file_name"
+    t.string   "torrent_content_type"
+    t.integer  "torrent_file_size"
+    t.datetime "torrent_updated_at"
+    t.integer  "season"
   end
+
+  create_table "taggings", force: :cascade do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context",       limit: 128
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
+
+  create_table "tags", force: :cascade do |t|
+    t.string  "name"
+    t.integer "taggings_count", default: 0
+  end
+
+  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name"

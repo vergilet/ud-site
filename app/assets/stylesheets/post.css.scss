@@ -13,12 +13,13 @@
     .image {
       height:354px;
       width:260px;
-      background-size:cover;
+      background-size: 100% 100%;
       background-repeat: no-repeat;
     }
 
   }
   .post-content {
+    width: 100%;
     padding-left: 0px;
     padding-right: 0px;
     display: table-cell!important;

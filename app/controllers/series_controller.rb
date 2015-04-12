@@ -70,6 +70,18 @@ class SeriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def series_params
-      params.require(:series).permit(:name, episodes_attributes: [:id, :content, :_destroy])
+      params.require(:series).permit(
+          :name, :description, :cover,
+          :torrent, :episode_time, :year,
+          :studio_name, :video_info,
+          :audio_info, :translator, :actors,
+          :sound_maker, :source_mirror,
+          :source_mirror_additional,
+          episodes_attributes: episode_params
+      )
+    end
+
+    def episode_params
+      [:id, :episode_number, :name, :video_link, :_destroy]
     end
 end

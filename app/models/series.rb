@@ -1,18 +1,29 @@
 class Series < ActiveRecord::Base
   has_many :episodes, dependent: :destroy
+  acts_as_taggable
   accepts_nested_attributes_for :episodes, allow_destroy: true,  reject_if: lambda { |a| a.blank? }
+  has_attached_file :cover,
+                    styles: { :original => ["373x525>", 'jpeg'] },
+                    storage: :dropbox,
+                    dropbox_credentials: Rails.root.join('config/dropbox.yml'),
+                    dropbox_options: {path: proc { |style| "files/series/#{id}/cover.jpeg" } }
 
-  def description
-    'This romantic comedy revolves around an antisocial high school student named Hikigaya Hachiman with a distorted view on life and no friends or girlfriend. When he sees his classmates talking excitedly about living their adolescent lives, he mutters: "They\'re a bunch of liars." When he is asked about his future dreams, he responds, "Not working." A teacher gets Hachiman to join the "Volunteer Service" club, which happens to have the school\'s prettiest girl, Yukinoshita Yukino.' * 3
-  end
+  has_attached_file :torrent,
+                    storage: :dropbox,
+                    dropbox_credentials: Rails.root.join('config/dropbox.yml'),
+                    dropbox_options: {path: proc { |style| "files/series/#{id}/torrent.torrent" } }
 
-  def cover
-    'http://media.senscritique.com/media/000006545005/source_big/Yahari_Ore_no_Seishun_Love_Come_wa_Machigatteiru.jpg'
-  end
+  validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :torrent, :content_type => 'application/x-bittorrent'
 
-  def admit
-    'http://www.animexis.com.br/wp-content/uploads/2014/11/OreGairu-Kono-Light-novel-ga-Sugoi-2015-2.jpg?f41465'
-  end
+  validates_presence_of(:name, :description, :cover)
+
+  # :original_name, :episodes_amount, :episode_time
+  # :year, :studio_name, :video_info, :audio_info,
+  # :translator, :actors, :sound_maker,
+  # :source_mirror, :source_mirror_additional
+  # :torrent
+
 
   def views
     1750

@@ -14,11 +14,6 @@
     color: #fff!important;
 }
 
-.form-group .form-control:focus,
-.form-group-white .form-control:focus {
-    background-image: linear-gradient(#fff, #fff), linear-gradient(#d2d2d2, #d2d2d2);
-}
-
 .white-plate {
     background-color: #fff;
     padding: 19px;
