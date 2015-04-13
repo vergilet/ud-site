@@ -24,11 +24,11 @@
           %p
             = f.label :episodes_amount, class: 'col-lg-2 control-label'
             .col-sm-10
-              .col-sm-2.select-delimiter
+              .col-sm-3.select-delimiter
                 = f.select :episodes_amount, 1..50, {}, {class: 'form-control', placeholder: 'Загальна кількість серій', label: false }
-              .col-sm-10.select-delimiter
-                = f.label :episode_time, class: 'col-sm-2 control-label pull-left select-delimiter'
-                .col-sm-4.select-delimiter
+              .col-sm-9.select-delimiter
+                = f.label :episode_time, class: 'col-sm-4 control-label pull-left select-delimiter'
+                .col-sm-8.select-delimiter
                   = f.input :episode_time, class: 'form-control', placeholder: 'Продовжуваність однієї серії', label: false
             .clearfix
           %p
