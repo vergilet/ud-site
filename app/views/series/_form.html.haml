@@ -89,6 +89,21 @@
                   = image_tag (@series.torrent.presence ? asset_path('success.png') : asset_path('torrent_empty.jpg') ), size: '36x36'
               %p
                 = f.file_field :torrent, placeholder: 'Torrent file'
+          .col-sm-12
+            .poster-holder
+              %hr
+              %p
+                %b Реліз на Ex.ua
+              %p
+                = f.text_field :source_mirror, class: 'form-control', placeholder: 'Torrent file'
+          .col-sm-12
+            .poster-holder
+              %hr
+              %p
+                %b Реліз в Vk.com
+              %p
+                = f.text_field :source_mirror_additional, class: 'form-control', placeholder: 'Torrent file'
+
         .clearfix
         .col-sm-12
           .col-sm-1
