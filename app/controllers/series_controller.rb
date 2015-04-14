@@ -13,7 +13,7 @@ class SeriesController < ApplicationController
   def show
     @episodes = @series.episodes
     @series_presenter = SeriesPresenter.new(@series)
-    @episodes_presenter = EpisodePresenter.instantiate(@series.episodes.sort_by{ |ep| ep.episode_number.to_i })
+    @episodes_presenter = EpisodePresenter.instantiate(@series.episodes)
   end
 
   # GET /series/new
