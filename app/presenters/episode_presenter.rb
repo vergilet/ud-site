@@ -15,7 +15,8 @@ class EpisodePresenter
     episode.id
   end
 
-  def meta_video
+  def source_video
+    return if episode.blank?
     video_info.embed_url
   end
 
@@ -37,7 +38,6 @@ class EpisodePresenter
   end
   
   def video_info
-    return if episode.blank?
     @video_info ||= VideoInfo.new(episode.video_link)
   end
 

@@ -22,7 +22,7 @@ class SeriesPresenter
   end
 
   def default_meta_video
-    default_episode.meta_video
+    default_episode.source_video
   end
 
   def name
