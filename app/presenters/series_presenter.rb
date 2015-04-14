@@ -6,7 +6,7 @@ class SeriesPresenter
 
   def initialize series
     @series = series
-    @episodes = series.episodes
+    @episodes = EpisodePresenter.sort_my_episodes(series.episodes)
   end
 
   def native
