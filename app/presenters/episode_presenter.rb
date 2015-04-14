@@ -7,7 +7,7 @@ class EpisodePresenter
   end
 
   def self.instantiate episodes
-    sorted_apisodes = sort_my_episodes(episodes)
+    sorted_episodes = sort_my_episodes(episodes)
     sorted_episodes.map{ |episode| EpisodePresenter.new(episode) }
   end
 
@@ -30,7 +30,7 @@ class EpisodePresenter
 
   private
 
-  def sort_my_episodes(episodes)
+  def self.sort_my_episodes(episodes)
     real_eps = episodes.map {|ep| ep if ep.to_i.to_s == ep}.compact.sort_by(&:to_i)
     other = episodes.map {|ep| ep if ep.to_i.to_s != ep}.compact.sort_by(&:to_i)
     real_eps + other
