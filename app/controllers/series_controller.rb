@@ -5,6 +5,7 @@ class SeriesController < ApplicationController
   # GET /series.json
   def index
     @series = Series.all
+    @series_presenter = SeriesPresenter.instantiate(@series)
   end
 
   # GET /series/1

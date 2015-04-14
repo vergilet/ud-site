@@ -9,6 +9,14 @@ class SeriesPresenter
     @episodes = series.episodes
   end
 
+  def native
+    series
+  end
+
+  def self.instantiate few_series
+    few_series.map { |series| SeriesPresenter.new(series) }
+  end
+
   def default_episode
     @default_episode ||= EpisodePresenter.new(episodes.first)
   end
@@ -75,7 +83,7 @@ class SeriesPresenter
   end
 
   def torrent
-    series.torrent
+    series.torrent.presence
   end
 
   def source_mirror
@@ -86,18 +94,18 @@ class SeriesPresenter
     series.source_mirror_additional
   end
 
-  private
-
   def episodes_amount
     series.episodes_amount
   end
 
-  def episode_time
-    series.episode_time
-  end
-
   def episodes_count
     episodes.count
+  end
+
+  private
+
+  def episode_time
+    series.episode_time
   end
 
 end

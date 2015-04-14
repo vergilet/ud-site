@@ -1,31 +1,29 @@
 .post
   .panel.panel-default
     .post-image
-      = link_to series_path(series) do
-        .image{style: "background-image: url('#{series.cover}')"}
+      = link_to series_path(series_presenter.native) do
+        .image{style: "background-image: url('#{series_presenter.cover}')"}
     .post-content
       .post-heading
         .title.col-xs-11
-          = link_to series.name, series_path(series)
+          = link_to series_presenter.name, series_path(series_presenter.native)
         .additional.col-xs-1
-          = link_to '', series_path(series), class: 'btn btn-white btn-fab btn-raised mdi-av-play-arrow pull-right round-sizer'
+          = link_to '', series_path(series_presenter.native), class: 'btn btn-white btn-fab btn-raised mdi-av-play-arrow pull-right round-sizer'
       .post-body
         .episode
           %i.mdi-av-movie.mdi-material-grey-700
           %span
-            %b Episode #3 of 24
+            %b= "Епізод #{series_presenter.episodes_count} з #{series_presenter.episodes_amount}"
           .types.pull-right.visible-sm-inline.visible-md-inline.visible-lg-inline{style: 'padding-top:10px'}
-            %span.label.label-primary.btn-sm torrent
+            %span.label.label-primary.btn-sm= "torrent" if series_presenter.torrent
             %span.label.label-warning.btn-sm online
         .ellipsis
           %p.visible-sm.visible-md.visible-lg
             %b Description:
-          = series.description
+          = series_presenter.description
         .labels
           %i.mdi-action-loyalty.mdi-material-grey-700
-          %span.label.label-success.btn-sm Comedy
-          %span.label.label-success.btn-sm Romantic
-          %span.label.label-success.btn-sm School
+          = series_presenter.categories
 
 -#%tr
   %td= series.name
