@@ -37,6 +37,7 @@ class EpisodePresenter
   end
   
   def video_info
+    return if episode.blank?
     @video_info ||= VideoInfo.new(episode.video_link)
   end
 
