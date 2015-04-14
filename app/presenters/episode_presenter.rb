@@ -15,7 +15,7 @@ class EpisodePresenter
   end
 
   def meta_video
-    "//video.meta.ua/iframe/#{meta_uri}/"
+    video_info.embed_url
   end
 
   def name
@@ -28,11 +28,9 @@ class EpisodePresenter
   end
 
   private
-
-  def meta_uri
-    link = episode.video_link
-    uri = URI.parse(link)
-    uri.path[1..-7]
+  
+  def video_info
+    @video_info ||= VideoInfo.new(episode.video_link)
   end
 
   def not_episode?

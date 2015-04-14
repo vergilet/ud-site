@@ -6,7 +6,7 @@
       .form-group
         .col-sm-9
           %p &nbsp;
-          = f.label :name, class: 'col-lg-2 control-label'
+          = f.label 'Назва публікації *', class: 'col-lg-2 control-label'
           .col-sm-10
             = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
           .clearfix
@@ -16,7 +16,7 @@
             = f.input :original_name, class: 'form-control', placeholder: 'Original name', label: false
           .clearfix
           %p &nbsp;
-          = f.label :description, class: 'col-lg-2 control-label'
+          = f.label 'Опис *', class: 'col-lg-2 control-label'
           .col-sm-10
             = f.text_area :description, class: 'form-control', placeholder: 'Series description', label: false, rows: 5
           .clearfix
@@ -76,11 +76,12 @@
           .col-sm-12
             .poster-holder
               %p
-                %b Оберіть постер
+                %b Постер *
               %p
                 .upload-preview
                   = image_tag (@series.cover.url)
               %p
+                %input.form-control.floating-label{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.cover_name }
                 = f.file_field :cover, placeholder: 'Select the cover'
           .clearfix
           .col-sm-12
@@ -92,6 +93,7 @@
                 .torrent-preview
                   = image_tag (@series.torrent.presence ? asset_path('success.png') : asset_path('torrent_empty.jpg') ), size: '36x36'
               %p
+                %input.form-control.floating-label{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.torrent_name }
                 = f.file_field :torrent, placeholder: 'Torrent file'
           .col-sm-12
             .poster-holder

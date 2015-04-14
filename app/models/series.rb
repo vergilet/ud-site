@@ -25,4 +25,13 @@ class Series < ActiveRecord::Base
   # :torrent
 
 
+  def torrent_name
+    "Змінити торент: #{torrent_file_name}" if torrent.present?
+  end
+
+  def cover_name
+    "Змінити картинку: #{cover_file_name}" if cover.present?
+  end
+
+
 end

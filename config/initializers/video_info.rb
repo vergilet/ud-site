@@ -1,0 +1,1 @@
+VideoInfo::PROVIDERS.push('Meta')
