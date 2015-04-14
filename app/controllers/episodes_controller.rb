@@ -2,6 +2,7 @@ class EpisodesController < ApplicationController
   before_action :set_series, only: :show
 
   def show
+    @episode_presenter = EpisodePresenter.new(@episode)
     respond_to do |format|
       format.html
       format.js

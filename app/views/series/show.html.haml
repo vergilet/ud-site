@@ -8,7 +8,7 @@
       .post-content
         .panel-body
           .col-sm-4.plotter-left-5.plotter-right-5
-            = image_tag @series.cover, width: '100%'
+            = image_tag @series_presenter.cover, width: '100%'
           .col-sm-8
             .describe-items
               .row
@@ -17,7 +17,7 @@
                     %h3
                       %a
                         %b
-                          = @series.name
+                          = @series_presenter.name
                     %span.pull-right
                       = link_to 'Edit', edit_series_path(@series) if current_user
                 .col-sm-12
@@ -25,55 +25,50 @@
                     %span.titles Жанр:
                   .col-sm-9
                     %span
-                      ="#{link_to ' фантастика', '#'},".html_safe
-                      ="#{link_to 'комедія', '#'}".html_safe
+                      = @series_presenter.categories
                 .col-sm-12
                   .col-sm-3
                     %span.titles Серій:
                   .col-sm-9
-                    %span 13 з 14 - (~45:00)
+                    %span= @series_presenter.episodes_amount_and_time
                 .col-sm-12
                   .col-sm-3
                     %span.titles Рік виходу:
                   .col-sm-9
-                    %span 2013
+                    %span= @series_presenter.year
                 .col-sm-12
                   .col-sm-3
                     %span.titles Студія:
                   .col-sm-9
-                    %span UFO Table
+                    %span= @series_presenter.studio_name
                 .col-sm-12
                   .col-sm-3
                     %span.titles Відео:
                   .col-sm-9
-                    %span x264, 1280x720, 23.976fps, ~1500 kbps
+                    %span= @series_presenter.video_info
                 .col-sm-12
                   .col-sm-3
                     %span.titles Звук:
                   .col-sm-9
-                    %span AAC, 48.0 khz; 2.0ch; 192kbps
+                    %span= @series_presenter.audio_info
 
                 .col-sm-12
                   .col-sm-3
                     %span.titles Переклад:
                   .col-sm-9
-                    %span bills_spirit
+                    %span= @series_presenter.translator
                 .col-sm-12
                   .col-sm-3
                     %span.titles Текст читали:
                   .col-sm-9
                     %span
-                      ="#{link_to 'Ater Katta', '#'},".html_safe
-                      ="#{link_to 'Deity', '#'},".html_safe
-                      ="#{link_to 'Cast77iel', '#'},".html_safe
-                      ="#{link_to 'Русалка', '#'},".html_safe
-                      ="#{link_to 'Vergil', '#'}".html_safe
+                      = @series_presenter.actors
                 .col-sm-12
                   .col-sm-3
                     %span.titles Робота зі звуком:
                   .col-sm-9
                     %span
-                      ="#{link_to 'Deity', '#'}".html_safe
+                      = @series_presenter.sound_maker
 
                 .col-sm-12.text-justify
                   %p &nbsp;
@@ -81,27 +76,25 @@
                     .col-sm-12
                       %p
                         %span.titles Опис:
-                      %span У магічному королівстві живуть дві сестри-відьми, які накладають і знімають закляття а також проклинають. Магія стала їх ремеслом. Але одного разу з магічним королівством сталася біда, нізвідки почали з'являтися незрозумілі будівлі з іншого світу. Старша сестра Йойо потрапляє в інший світ де знайомиться з 2-ма хлопцями і їх маленькою родичкою Акі, і звідки вона не може повернутися у магічне королівство. В той час батьки хлопців перетворилися в магічних створінь. На плечі сестер-відьом лягла ще одна справа, яку вони мають розплутати. Розгадати цю таємничу і магічну загадку пропонує вам колектив UkrDub`у.
+                      %span= @series_presenter.description
 
           %p.clearfix
           %hr
           .video-content
             .col-sm-8.plotter-right.plotter-left-5
-              - ep = @episodes.first
-              - uri = URI.parse(ep.content)
               #task-form
-                %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "//video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
+                %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"}
             .col-sm-4.plotter-left
               .list-of-episodes
-                - @episodes.each_with_index do |ep, index|
-                  = link_to(episode_path(ep), remote: true) do
+                - @episodes_presenter.each do |episode|
+                  = link_to(episode_path(episode.id), remote: true) do
                     .panel.panel-default.btn
                       .media
                         .media-left
-                          %img.media-object{:alt => "...", :src => "http://placehold.it/85x70"}
+                          %img.media-object{ :src => "http://placehold.it/85x70" }
                         .media-body
-                          %h6.media-heading= "Episode ##{index+1}"
-                          %span Який класний момент я вибрав, щоб зізнатись в чомусь дуже класному
+                          %h6.media-heading= episode.episode_number
+                          %span= episode.name
 
 
 

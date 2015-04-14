@@ -5,68 +5,72 @@
       %legend Series Form
       .form-group
         .col-sm-9
-          %p
-            = f.label :name, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
-            .clearfix
-          %p
-            = f.label :description, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.text_area :description, class: 'form-control', placeholder: 'Series description', label: false, rows: 5
-            .clearfix
-          %p
-            = f.label :tag_list, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.text_field :tag_list, class: 'form-control', placeholder: 'Series description', label: false, "data-role" => "tagsinput", "data-source" => "[alegory, target]"
-            .clearfix
           %p &nbsp;
-          %p
-            = f.label :episodes_amount, class: 'col-lg-2 control-label'
-            .col-sm-10
-              .col-sm-3.select-delimiter
-                = f.select :episodes_amount, 1..50, {}, {class: 'form-control', placeholder: 'Загальна кількість серій', label: false }
-              .col-sm-9.select-delimiter
-                = f.label :episode_time, class: 'col-sm-4 control-label pull-left select-delimiter'
-                .col-sm-8.select-delimiter
-                  = f.input :episode_time, class: 'form-control', placeholder: 'Продовжуваність однієї серії', label: false
-            .clearfix
-          %p
-            = f.label :year, class: 'col-lg-2 control-label'
-            .col-sm-10
-              .col-sm-2.select-delimiter
-                = f.select :year, (1980..Date.current.year).to_a.reverse, {}, {class: 'form-control', placeholder: 'Рік виходу', label: false }
-            .clearfix
-          %p
-            = f.label :studio_name, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :studio_name, class: 'form-control', placeholder: 'Назва студії', label: false
-            .clearfix
-          %p
-            = f.label :video_info, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :video_info, class: 'form-control', placeholder: 'Відео формат', label: false
-            .clearfix
-          %p
-            = f.label :audio_info, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :audio_info, class: 'form-control', placeholder: 'Аудіо формат', label: false
-            .clearfix
-          %p
-            = f.label :translator, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :translator, class: 'form-control', placeholder: 'Переклад', label: false
-            .clearfix
-          %p
-            = f.label :actors, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :actors, class: 'form-control', placeholder: 'Текст читали', label: false
-            .clearfix
-          %p
-            = f.label :sound_maker, class: 'col-lg-2 control-label'
-            .col-sm-10
-              = f.input :sound_maker, class: 'form-control', placeholder: 'Робота зі звуком', label: false
-            .clearfix
+          = f.label :name, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :original_name, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :original_name, class: 'form-control', placeholder: 'Original name', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :description, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.text_area :description, class: 'form-control', placeholder: 'Series description', label: false, rows: 5
+          .clearfix
+          %p &nbsp;
+          = f.label :tag_list, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.text_field :tag_list, class: 'form-control', placeholder: 'Series description', label: false, "data-role" => "tagsinput", value: @series.tag_list.join(',')
+          .clearfix
+          %p &nbsp;
+          = f.label :episodes_amount, class: 'col-lg-2 control-label'
+          .col-sm-10
+            .col-sm-3.select-delimiter
+              = f.select :episodes_amount, 1..50, {}, {class: 'form-control', placeholder: 'Загальна кількість серій', label: false }
+            .col-sm-9.select-delimiter
+              = f.label :episode_time, class: 'col-sm-4 control-label pull-left select-delimiter'
+              .col-sm-8.select-delimiter
+                = f.input :episode_time, class: 'form-control', placeholder: 'Продовжуваність однієї серії', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :year, class: 'col-lg-2 control-label'
+          .col-sm-10
+            .col-sm-2.select-delimiter
+              = f.select :year, (1980..Date.current.year).to_a.reverse, {}, {class: 'form-control', placeholder: 'Рік виходу', label: false }
+          .clearfix
+          %p &nbsp;
+          = f.label :studio_name, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :studio_name, class: 'form-control', placeholder: 'Назва студії', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :video_info, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :video_info, class: 'form-control', placeholder: 'Відео формат', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :audio_info, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :audio_info, class: 'form-control', placeholder: 'Аудіо формат', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :translator, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :translator, class: 'form-control', placeholder: 'Переклад', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :actors, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :actors, class: 'form-control', placeholder: 'Текст читали', label: false
+          .clearfix
+          %p &nbsp;
+          = f.label :sound_maker, class: 'col-lg-2 control-label'
+          .col-sm-10
+            = f.input :sound_maker, class: 'form-control', placeholder: 'Робота зі звуком', label: false
+          .clearfix
 
         .col-sm-3
           .col-sm-12

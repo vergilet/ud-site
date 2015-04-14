@@ -1,2 +1,1 @@
-- uri = URI.parse(@episode.content)
-%iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "//video.meta.ua/iframe/#{uri.path[1..-7]}/", :webkitallowfullscreen => "", :width => "100%"}
+%iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => @episode_presenter.meta_video, :webkitallowfullscreen => "", :width => "100%"}

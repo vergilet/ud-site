@@ -11,6 +11,8 @@ class SeriesController < ApplicationController
   # GET /series/1.json
   def show
     @episodes = @series.episodes
+    @series_presenter = SeriesPresenter.new(@series)
+    @episodes_presenter = EpisodePresenter.instantiate(@series.episodes.sort_by(&:episode_number))
   end
 
   # GET /series/new
@@ -72,11 +74,13 @@ class SeriesController < ApplicationController
     def series_params
       params.require(:series).permit(
           :name, :description, :cover,
+          :episodes_amount,
           :torrent, :episode_time, :year,
           :studio_name, :video_info,
           :audio_info, :translator, :actors,
           :sound_maker, :source_mirror,
           :source_mirror_additional,
+          :tag_list,
           episodes_attributes: episode_params
       )
     end

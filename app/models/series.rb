@@ -25,28 +25,4 @@ class Series < ActiveRecord::Base
   # :torrent
 
 
-  def views
-    1750
-  end
-
-  def downloads
-    547
-  end
-
-  def episodes_count
-    42
-  end
-
-  def author_name
-    'Mr.Deity'
-  end
-
-  def original_name
-    'Yahari Ore no Seishun Lovecome wa Machigatte Iru'
-  end
-
-  def edited_date
-    '23 Apr, 2015, 15:00'
-  end
-
 end
