@@ -31,8 +31,8 @@ class EpisodePresenter
   private
 
   def self.sort_my_episodes(episodes)
-    real_eps = episodes.map {|ep| ep if ep.to_i.to_s == ep}.compact.sort_by(&:to_i)
-    other = episodes.map {|ep| ep if ep.to_i.to_s != ep}.compact.sort_by(&:to_i)
+    real_eps = episodes.map {|ep| ep if ep.episode_number.to_i.to_s == ep}.compact.sort_by{ |ep| ep.episode_number.to_i }
+    other = episodes.map {|ep| ep if ep.episode_number.to_i.to_s != ep}.compact.sort_by{ |ep| ep.episode_number.to_i }
     real_eps + other
   end
   
