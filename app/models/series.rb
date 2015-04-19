@@ -26,11 +26,11 @@ class Series < ActiveRecord::Base
 
 
   def torrent_name
-    "Змінити торент: #{torrent_file_name}" if torrent.present?
+    "&#8600; #{torrent_file_name}".html_safe if torrent.present?
   end
 
   def cover_name
-    "Змінити картинку: #{cover_file_name}" if cover.present?
+    "&#8600; #{cover_file_name}".html_safe if cover.present?
   end
 
 

@@ -1,37 +1,40 @@
 .download-panel
   .panel.panel-info
     .panel-body
-      %h4 Download
+      %h4 Інші джерела
       .list-group
-        = link_to '#', class: 'btn special-button' do
-          .list-group-item
-            .row-action-primary
-              %i.mdi-file-cloud-circle.torrent
-            .row-content
-              .action-secondary
-                %i.mdi-file-file-download
-              %h4.list-group-item-heading
-                \.torrent
-              %p.list-group-item-text Гуртом.нет
-        .list-group-separator
-        = link_to '#', class: 'btn special-button' do
-          .list-group-item
-            .row-action-primary
-              %i.mdi-notification-folder-special.ex-ua
-            .row-content
-              .action-secondary
-                %i.mdi-file-file-download
-                %i.mdi-action-visibility
-              %h4.list-group-item-heading Ex.ua
-              %p.list-group-item-text онлайн та скачування
-        .list-group-separator
-        = link_to '#', class: 'btn special-button' do
-          .list-group-item
-            .row-action-primary
-              %i.mdi-social-people.vk-com
-            .row-content
-              .action-secondary
-                %i.mdi-action-visibility
-              %h4.list-group-item-heading Vk.com
-              %p.list-group-item-text онлайн перегляд
+        - if @series_presenter.torrent
+          = link_to @series_presenter.torrent_url, class: 'btn special-button', download: true do
+            .list-group-item
+              .row-action-primary
+                %i.mdi-file-cloud-circle.torrent
+              .row-content
+                .action-secondary
+                  %i.mdi-file-file-download
+                %h4.list-group-item-heading
+                  \.torrent
+                %p.list-group-item-text Гуртом.нет
+          .list-group-separator
+        - if @series_presenter.source_mirror
+          = link_to @series_presenter.source_mirror, target: '_blank', class: 'btn special-button' do
+            .list-group-item
+              .row-action-primary
+                %i.mdi-notification-folder-special.ex-ua
+              .row-content
+                .action-secondary
+                  %i.mdi-file-file-download
+                  %i.mdi-action-visibility
+                %h4.list-group-item-heading Ex.ua
+                %p.list-group-item-text онлайн та скачування
+          .list-group-separator
+        - if @series_presenter.source_mirror_additional
+          = link_to @series_presenter.source_mirror_additional, target: '_blank', class: 'btn special-button' do
+            .list-group-item
+              .row-action-primary
+                %i.mdi-social-people.vk-com
+              .row-content
+                .action-secondary
+                  %i.mdi-action-visibility
+                %h4.list-group-item-heading Vk.com
+                %p.list-group-item-text онлайн перегляд
 

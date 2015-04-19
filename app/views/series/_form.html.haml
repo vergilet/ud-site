@@ -6,27 +6,27 @@
       .form-group
         .col-sm-9
           %p &nbsp;
-          = f.label 'Назва публікації *', class: 'col-lg-2 control-label'
+          = f.label 'Назва публікації *', class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
           .clearfix
           %p &nbsp;
-          = f.label :original_name, class: 'col-lg-2 control-label'
+          = f.label :original_name, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :original_name, class: 'form-control', placeholder: 'Original name', label: false
           .clearfix
           %p &nbsp;
-          = f.label 'Опис *', class: 'col-lg-2 control-label'
+          = f.label 'Опис *', class: 'col-sm-2 control-label'
           .col-sm-10
             = f.text_area :description, class: 'form-control', placeholder: 'Series description', label: false, rows: 5
           .clearfix
           %p &nbsp;
-          = f.label :tag_list, class: 'col-lg-2 control-label'
+          = f.label :tag_list, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.text_field :tag_list, class: 'form-control', placeholder: 'Series description', label: false, "data-role" => "tagsinput", value: @series.tag_list.join(',')
           .clearfix
           %p &nbsp;
-          = f.label :episodes_amount, class: 'col-lg-2 control-label'
+          = f.label :episodes_amount, class: 'col-sm-2 control-label'
           .col-sm-10
             .col-sm-3.select-delimiter
               = f.select :episodes_amount, 1..50, {}, {class: 'form-control', placeholder: 'Загальна кількість серій', label: false }
@@ -36,38 +36,38 @@
                 = f.input :episode_time, class: 'form-control', placeholder: 'Продовжуваність однієї серії', label: false
           .clearfix
           %p &nbsp;
-          = f.label :year, class: 'col-lg-2 control-label'
+          = f.label :year, class: 'col-sm-2 control-label'
           .col-sm-10
             .col-sm-2.select-delimiter
               = f.select :year, (1980..Date.current.year).to_a.reverse, {}, {class: 'form-control', placeholder: 'Рік виходу', label: false }
           .clearfix
           %p &nbsp;
-          = f.label :studio_name, class: 'col-lg-2 control-label'
+          = f.label :studio_name, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :studio_name, class: 'form-control', placeholder: 'Назва студії', label: false
           .clearfix
           %p &nbsp;
-          = f.label :video_info, class: 'col-lg-2 control-label'
+          = f.label :video_info, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :video_info, class: 'form-control', placeholder: 'Відео формат', label: false
           .clearfix
           %p &nbsp;
-          = f.label :audio_info, class: 'col-lg-2 control-label'
+          = f.label :audio_info, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :audio_info, class: 'form-control', placeholder: 'Аудіо формат', label: false
           .clearfix
           %p &nbsp;
-          = f.label :translator, class: 'col-lg-2 control-label'
+          = f.label :translator, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :translator, class: 'form-control', placeholder: 'Переклад', label: false
           .clearfix
           %p &nbsp;
-          = f.label :actors, class: 'col-lg-2 control-label'
+          = f.label :actors, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :actors, class: 'form-control', placeholder: 'Текст читали', label: false
           .clearfix
           %p &nbsp;
-          = f.label :sound_maker, class: 'col-lg-2 control-label'
+          = f.label :sound_maker, class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :sound_maker, class: 'form-control', placeholder: 'Робота зі звуком', label: false
           .clearfix
@@ -81,30 +81,27 @@
                 .upload-preview
                   = image_tag (@series.cover.url)
               %p
-                %input.form-control.floating-label{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.cover_name }
-                = f.file_field :cover, placeholder: 'Select the cover'
+                %input.form-control.floating-label.pointer{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.cover_name }
+                = f.file_field :cover, placeholder: 'Select the cover', class: 'pointer'
           .clearfix
           .col-sm-12
             .poster-holder
-              %hr
               %p
                 %b Торент файл
               %p
                 .torrent-preview
                   = image_tag (@series.torrent.presence ? asset_path('success.png') : asset_path('torrent_empty.jpg') ), size: '36x36'
               %p
-                %input.form-control.floating-label{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.torrent_name }
-                = f.file_field :torrent, placeholder: 'Torrent file'
+                %input.form-control.floating-label.pointer{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.torrent_name }
+                = f.file_field :torrent, placeholder: 'Torrent file', class: 'pointer'
           .col-sm-12
             .poster-holder
-              %hr
               %p
                 %b Реліз на Ex.ua
               %p
                 = f.text_field :source_mirror, class: 'form-control', placeholder: 'Torrent file'
           .col-sm-12
             .poster-holder
-              %hr
               %p
                 %b Реліз в Vk.com
               %p

@@ -86,12 +86,16 @@ class SeriesPresenter
     series.torrent.presence
   end
 
+  def torrent_url
+    series.torrent.url
+  end
+
   def source_mirror
-    series.source_mirror
+    series.source_mirror.presence
   end
 
   def source_mirror_additional
-    series.source_mirror_additional
+    series.source_mirror_additional.presence
   end
 
   def episodes_amount

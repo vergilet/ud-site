@@ -14,19 +14,18 @@
  *= require fonts
  *= require_directory ./bootstrap
  *= require_directory ./material
- *= require material-patch
- *= require site-top
- *= require placeholders
- *= require post
- *= require open-post
- *= require series-edit
- *= require bootstrap-tagsinput
- */
+*= require material-patch
+*= require site-top
+*= require placeholders
+*= require post
+*= require open-post
+*= require series-edit
+*= require bootstrap-tagsinput
+//*/
 
 abbr[title="required"] {
   display: none;
 }
-
 .navbar .nav > li > a:before {
   position: absolute;
   content: '';
