@@ -1,10 +1,8 @@
 .col-sm-12
   %ul.breadcrumb
     %li
-      %a{:href => "#"} Home
-    %li
-      %a{:href => "#"} Library
-    %li.active Data
+      = link_to 'Головна', root_path
+    %li.active Аніме
 
 .col-lg-8
   - @series_presenter.each do |series_presenter|
