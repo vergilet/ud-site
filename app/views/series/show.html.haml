@@ -1,3 +1,11 @@
+.col-sm-12
+  %ul.breadcrumb
+    %li
+      %a{:href => "javascript:void(0)"} Головна
+    %li
+      %a{:href => "javascript:void(0)"} Аніме
+    %li.active= @series_presenter.name
+
 .col-lg-9
   .open-post
     .panel.panel-default.top-round
