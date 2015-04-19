@@ -92,7 +92,8 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "javascript:void(0)"} UkrDub.net
+      %a.navbar-brand{:href => "javascript:void(0)", style: 'padding-top: 3px;'}
+        = image_tag 'logo2.png', height: 54
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav
         %li.active
@@ -135,3 +136,4 @@
             %li.divider
             %li
               %a{:href => "javascript:void(0)"} Separated link
+  = render 'layouts/site_top'
