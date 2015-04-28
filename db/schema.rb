@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150412153460) do
+ActiveRecord::Schema.define(version: 20150427195103) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.text     "desc"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "episodes", force: :cascade do |t|
     t.integer  "series_id"
@@ -51,6 +58,7 @@ ActiveRecord::Schema.define(version: 20150412153460) do
     t.integer  "torrent_file_size"
     t.datetime "torrent_updated_at"
     t.integer  "season"
+    t.string   "category_id"
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -79,6 +87,8 @@ ActiveRecord::Schema.define(version: 20150412153460) do
     t.string   "uid"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string   "email"
+    t.string   "avatar"
   end
 
 end

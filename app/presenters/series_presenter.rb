@@ -14,7 +14,7 @@ class SeriesPresenter
   end
 
   def self.instantiate few_series
-    few_series.map { |series| SeriesPresenter.new(series) }
+    few_series.map { |series| SeriesPresenter.new(series) }.sort_by{ |series| last_update(series) }.reverse
   end
 
   def default_episode
@@ -23,6 +23,14 @@ class SeriesPresenter
 
   def default_meta_video
     default_episode.source_video
+  end
+
+  def last_episode
+    @last_episode ||= EpisodePresenter.new(episodes.last)
+  end
+
+  def last_episode_name
+    last_episode.name
   end
 
   def name
@@ -110,6 +118,10 @@ class SeriesPresenter
 
   def episode_time
     series.episode_time
+  end
+
+  def self.last_update(series)
+    series.try(:last_episode).try(:created_at) || series.created_at
   end
 
 end

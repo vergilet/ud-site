@@ -6,6 +6,11 @@
       .form-group
         .col-sm-9
           %p &nbsp;
+          = f.label 'Категорія *', class: 'col-sm-2 control-label'
+          .col-sm-10.col-md-4
+            = f.select :category_id, options_for_select(@categories, f.object.category_id), { prompt: 'Виберіть зі списку...'}, {class: 'form-control', label: false }
+          .clearfix
+          %p &nbsp;
           = f.label 'Назва публікації *', class: 'col-sm-2 control-label'
           .col-sm-10
             = f.input :name, class: 'form-control', placeholder: 'Series name', label: false
@@ -113,7 +118,7 @@
           .col-sm-8
             %h4 Episodes:
             .fields.form-group
-              = f.fields_for :episodes do |builder|
+              = f.fields_for :episodes, f.object.episodes.order(:created_at) do |builder|
                 = render 'episode_fields', f: builder
             %hr
             .form-group

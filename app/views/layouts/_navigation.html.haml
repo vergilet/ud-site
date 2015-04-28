@@ -1,90 +1,3 @@
--#.navbar.navbar-info
-  .container.container-top
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-responsive-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      %a.navbar-brand.visible-xs-block{:href => "javascript:void(0)"} UkrDub
-    .navbar-collapse.collapse.navbar-responsive-collapse
-      .col-lg-9
-        %ul.nav.navbar-nav
-          %li.visible-xs.dropdown
-            = render 'layouts/profile_menu'
-          %li.active
-            %a{:href => "javascript:void(0)"} Home
-          %li
-            %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
-              Anime
-              %b.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "javascript:void(0)"} Action
-              %li
-                %a{:href => "javascript:void(0)"} Another action
-              %li
-                %a{:href => "javascript:void(0)"} Something else here
-              %li.divider
-              %li.dropdown-header Dropdown header
-              %li
-                %a{:href => "javascript:void(0)"} Separated link
-              %li
-                %a{:href => "javascript:void(0)"} One more separated link
-          %li
-            %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
-              Series
-              %b.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "javascript:void(0)"} Action
-              %li
-                %a{:href => "javascript:void(0)"} Another action
-              %li
-                %a{:href => "javascript:void(0)"} Something else here
-              %li.divider
-              %li.dropdown-header Dropdown header
-              %li
-                %a{:href => "javascript:void(0)"} Separated link
-              %li
-                %a{:href => "javascript:void(0)"} One more separated link
-          %li
-            %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
-              Films
-              %b.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "javascript:void(0)"} Action
-              %li
-                %a{:href => "javascript:void(0)"} Another action
-              %li
-                %a{:href => "javascript:void(0)"} Something else here
-              %li.divider
-              %li.dropdown-header Dropdown header
-              %li
-                %a{:href => "javascript:void(0)"} Separated link
-              %li
-                %a{:href => "javascript:void(0)"} One more separated link
-          %li.dropdown
-            %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
-              Other
-              %b.caret
-            %ul.dropdown-menu
-              %li
-                %a{:href => "javascript:void(0)"} Action
-              %li
-                %a{:href => "javascript:void(0)"} Another action
-              %li
-                %a{:href => "javascript:void(0)"} Something else here
-              %li.divider
-              %li.dropdown-header Dropdown header
-              %li
-                %a{:href => "javascript:void(0)"} Separated link
-              %li
-                %a{:href => "javascript:void(0)"} One more separated link
-      .col-lg-3.pull-right.visible-lg
-        .content-info
-          .total-publications Total publications: 72
-          .total-episodes Episodes: 1478
 .navbar.navbar-info
   .container
     .navbar-header
@@ -92,13 +5,11 @@
         %span.icon-bar
         %span.icon-bar
         %span.icon-bar
-      %a.navbar-brand{:href => "javascript:void(0)", style: 'padding-top: 3px;'}
-        = image_tag 'logo.png', height: 54
+      %a.navbar-brand{href: root_path, style: 'padding-top: 3px;'}
+        = image_tag 'logo.png'
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav
-        %li.active
-          %a{:href => "javascript:void(0)"}
-            %b Аніме
+        = nav_link 'Аніме', series_index_path
         %li
           %a{:href => "javascript:void(0)"}
             %b Серіали
@@ -119,23 +30,11 @@
               %a{:href => "javascript:void(0)"} Separated link
             %li
               %a{:href => "javascript:void(0)"} One more separated link
-      %form.navbar-form.navbar-left
-        %input.form-control.col-lg-8{:placeholder => "Search", :type => "text"}
-      %ul.nav.navbar-nav.navbar-right
-        %li
-          %a{:href => "javascript:void(0)"} Link
-        %li.dropdown
-          %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
-            Dropdown
-            %b.caret
-          %ul.dropdown-menu
-            %li
-              %a{:href => "javascript:void(0)"} Action
-            %li
-              %a{:href => "javascript:void(0)"} Another action
-            %li
-              %a{:href => "javascript:void(0)"} Something else here
-            %li.divider
-            %li
-              %a{:href => "javascript:void(0)"} Separated link
+      -#%form.navbar-form.navbar-left
+      -#= form_tag(series_path, :method => "get", id: "search-form")
+      -#  = text_field_tag :search, params[:search], placeholder: "Пошук"
+      -#  = submit_tag "Search", :name => nil
+      = form_tag series_index_path, :method => "get", class: ' navbar-form navbar-left' do
+        = text_field_tag :search, params[:search], placeholder: "Пошук", class: 'form-control col-lg-8'
+      = render 'layouts/navigation_links'
   = render 'layouts/site_top'

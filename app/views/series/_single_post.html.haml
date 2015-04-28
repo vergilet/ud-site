@@ -24,9 +24,3 @@
         .labels
           %i.mdi-action-loyalty.mdi-material-grey-700
           = series_presenter.categories
-
--#%tr
-  %td= series.name
-  %td= link_to 'Show', series
-  %td= link_to 'Edit', edit_series_path(series)
-  %td= link_to 'Destroy', series, :method => :delete, :data => { :confirm => 'Are you sure?' }

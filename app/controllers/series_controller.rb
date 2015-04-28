@@ -1,10 +1,21 @@
 class SeriesController < ApplicationController
   before_action :set_series, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!, except: [:show, :index]
+  before_filter :check_permissions, except: [:show, :index]
 
   # GET /series
   # GET /series.json
   def index
     @series = Series.all
+    @series_presenter = SeriesPresenter.instantiate(@series)
+  end
+
+  def index
+    if params[:search]
+      @series = Series.search(params[:search])
+    else
+      @series = Series.all
+    end
     @series_presenter = SeriesPresenter.instantiate(@series)
   end
 
@@ -19,17 +30,20 @@ class SeriesController < ApplicationController
   # GET /series/new
   def new
     @series = Series.new
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # GET /series/1/edit
   def edit
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
   end
 
   # POST /series
   # POST /series.json
   def create
+    @categories = Category.all.map{|c| [ c.name, c.id ] }
     @series = Series.new(series_params)
-
+    @series.category_id = params[:category_id]
     respond_to do |format|
       if @series.save
         format.html { redirect_to @series, notice: 'Series was successfully created.' }
@@ -45,6 +59,8 @@ class SeriesController < ApplicationController
   # PATCH/PUT /series/1.json
   def update
     respond_to do |format|
+      @categories = Category.all.map{|c| [ c.name, c.id ] }
+      @series.category_id = params[:category_id]
       if @series.update(series_params)
         format.html { redirect_to @series, notice: 'Series was successfully updated.' }
         format.json { render :show, status: :ok, location: @series }
@@ -82,6 +98,8 @@ class SeriesController < ApplicationController
           :sound_maker, :source_mirror,
           :source_mirror_additional,
           :tag_list,
+          :original_name,
+          :category_id,
           episodes_attributes: episode_params
       )
     end

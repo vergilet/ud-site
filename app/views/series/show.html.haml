@@ -1,114 +1,119 @@
-.col-sm-12
-  %ul.breadcrumb
-    %li
-      %a{:href => "javascript:void(0)"} Головна
-    %li
-      %a{:href => "javascript:void(0)"} Аніме
-    %li.active= @series_presenter.name
-
-.col-lg-9
-  .open-post
-    .panel.panel-default.top-round
-      .post-image.top-round
-        -#.sup=image_tag @series.cover, height: 350
-        -#.image.top-round{style: "background-image: url('#{@series.admit}')"}
-          .sign= @series.name
-      .post-content
-        .panel-body
-          .col-sm-4.plotter-left-5.plotter-right-5
-            = image_tag @series_presenter.cover, width: '100%'
-          .col-sm-8
-            .describe-items
-              .row
-                .col-sm-12
+.row
+  .col-sm-12
+    %ul.breadcrumb
+      %li
+        = link_to 'Головна', root_path
+      %li
+        = link_to 'Аніме', series_path
+      %li.active= @series_presenter.name
+.row
+  .col-lg-9
+    .open-post
+      .panel.panel-default.top-round
+        .post-image.top-round
+          -#.sup=image_tag @series.cover, height: 350
+          -#.image.top-round{style: "background-image: url('#{@series.admit}')"}
+            .sign= @series.name
+        .post-content
+          .panel-body
+            .col-sm-4.plotter-left-5.plotter-right-5
+              = image_tag @series_presenter.cover, width: '100%'
+            .col-sm-8
+              .describe-items
+                .row
                   .col-sm-12
-                    %h3
-                      %a
-                        %b
-                          = @series_presenter.name
-                    %span.pull-right
-                      = link_to 'Edit', edit_series_path(@series) if current_user
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Жанр:
-                  .col-sm-9
-                    %span
-                      = @series_presenter.categories
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Серій:
-                  .col-sm-9
-                    %span= @series_presenter.episodes_amount_and_time
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Рік виходу:
-                  .col-sm-9
-                    %span= @series_presenter.year
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Студія:
-                  .col-sm-9
-                    %span= @series_presenter.studio_name
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Відео:
-                  .col-sm-9
-                    %span= @series_presenter.video_info
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Звук:
-                  .col-sm-9
-                    %span= @series_presenter.audio_info
-
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Переклад:
-                  .col-sm-9
-                    %span= @series_presenter.translator
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Текст читали:
-                  .col-sm-9
-                    %span
-                      = @series_presenter.actors
-                .col-sm-12
-                  .col-sm-3
-                    %span.titles Робота зі звуком:
-                  .col-sm-9
-                    %span
-                      = @series_presenter.sound_maker
-
-                .col-sm-12.text-justify
-                  %p &nbsp;
-                  %p
                     .col-sm-12
-                      %p
-                        %span.titles Опис:
-                      %span= @series_presenter.description
+                      %h3
+                        %a
+                          %b
+                            = @series_presenter.name
+                      - if admin?
+                        %span.pull-right
+                          %span= link_to 'Редагувати', edit_series_path(@series)
+                          \|
+                          %span= link_to 'Видалити', @series, :method => :delete, :data => { :confirm => 'Впевнений?' }
 
-          %p.clearfix
-          %hr
-          .video-content
-            .col-sm-8.plotter-right.plotter-left-5
-              #task-form
-                %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"}
-            .col-sm-4.plotter-left
-              .list-of-episodes
-                - @episodes_presenter.each do |episode|
-                  = link_to(episode_path(episode.id), remote: true) do
-                    .panel.panel-default.btn
-                      .media
-                        .media-left
-                          %img.media-object{ :src => "http://placehold.it/85x70" }
-                        .media-body
-                          %h6.media-heading= episode.episode_number
-                          %span= episode.name
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Жанр:
+                    .col-sm-9
+                      %span
+                        = @series_presenter.categories
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Серій:
+                    .col-sm-9
+                      %span= @series_presenter.episodes_amount_and_time
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Рік виходу:
+                    .col-sm-9
+                      %span= @series_presenter.year
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Студія:
+                    .col-sm-9
+                      %span= @series_presenter.studio_name
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Відео:
+                    .col-sm-9
+                      %span= @series_presenter.video_info
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Звук:
+                    .col-sm-9
+                      %span= @series_presenter.audio_info
+
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Переклад:
+                    .col-sm-9
+                      %span= @series_presenter.translator
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Текст читали:
+                    .col-sm-9
+                      %span
+                        = @series_presenter.actors
+                  .col-sm-12
+                    .col-sm-3
+                      %span.titles Робота зі звуком:
+                    .col-sm-9
+                      %span
+                        = @series_presenter.sound_maker
+
+                  .col-sm-12.text-justify
+                    %p &nbsp;
+                    %p
+                      .col-sm-12
+                        %p
+                          %span.titles Опис:
+                        %span= @series_presenter.description
+
+            %p.clearfix
+            %hr
+            .video-content
+              .col-sm-8.plotter-right.plotter-left-5
+                #task-form
+                  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"}
+              .col-sm-4.plotter-left
+                .list-of-episodes
+                  - @episodes_presenter.each_with_index do |episode, index|
+                    = link_to(episode_path(episode.id), remote: true) do
+                      .panel.panel-default.btn{ class: "#{ "active_episode" if index == 0 }"}
+                        .media
+                          .media-left
+                            = image_tag episode.thumbnail, class: 'media-object', size: '85x70'
+                          .media-body
+                            %h6.media-heading= episode.episode_number
+                            %span= episode.name
 
 
 
-  .comments
-    = render 'layouts/last_comments'
+    .comments
+      = render 'layouts/last_comments'
 
 
-.col-lg-3
-  = render 'series/downloads_panel'
+  .col-lg-3
+    = render 'series/downloads_panel'

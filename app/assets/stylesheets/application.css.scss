@@ -21,7 +21,11 @@
 *= require open-post
 *= require series-edit
 *= require bootstrap-tagsinput
-//*/
+*= require nprogress-override
+*= require typeahead-rails
+*/
+
+main {}
 
 abbr[title="required"] {
   display: none;
@@ -66,7 +70,11 @@ main {
   margin-left: 0px!important;
 }
 
-
+.navbar-brand {
+  img {
+    height: 54px;
+  }
+}
 
 @media (min-width: 0px) {
   .container {
@@ -90,6 +98,16 @@ main {
     margin-right: auto!important;
     margin-left: auto!important;
     width: 1270px!important;
+  }
+}
+
+@media (max-width: 1270px) {
+  .navbar-brand {
+    img{
+      padding-top: 15px;
+      padding-bottom: 15px;
+//      height: 32px;
+    }
   }
 }
 
@@ -124,4 +142,11 @@ body {
   width:56px;
   margin-top:40px;
   margin-bottom: -28px
+}
+
+@media (max-width: 1199px) {
+  .navbar-nav > li > a:not(.profile) {
+    padding-top: 20px!important;
+    padding-bottom: 20px!important;
+  }
 }

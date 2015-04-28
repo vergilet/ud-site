@@ -24,9 +24,17 @@ class EpisodePresenter
     episode.name
   end
 
+  def thumbnail
+    video_info.try(:thumbnail_small).presence || '//placehold.it/85x70'
+  end
+
   def episode_number
     return episode.episode_number if not_episode?
    "Епізод ##{episode.episode_number}"
+  end
+
+  def created_at
+    episode.created_at
   end
 
   private

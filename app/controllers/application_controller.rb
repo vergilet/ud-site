@@ -4,6 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   helper_method :current_user
+  helper_method :admin?
   helper_method :user_signed_in?
   helper_method :correct_user?
 
@@ -31,6 +32,14 @@ class ApplicationController < ActionController::Base
       if !current_user
         redirect_to root_url, :alert => 'You need to sign in for access to this page.'
       end
+    end
+
+    def check_permissions
+      redirect_to root_url, :alert => "Access denied." unless admin?
+    end
+
+    def admin?
+      [3, 6, 5, 7].include? current_user.id
     end
 
 end

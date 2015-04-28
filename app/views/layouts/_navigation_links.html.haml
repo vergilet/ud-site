@@ -1,0 +1,30 @@
+%ul.nav.navbar-nav.navbar-right
+  -#%li
+    %a{:href => "javascript:void(0)"} Link
+
+  - if user_signed_in?
+    %li.dropdown
+      %a.dropdown-toggle.profile{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html", style: 'padding-top: 5px;padding-bottom: 5px'}
+        %img{style: "background-image:url('#{current_user.avatar}');vertical-align: middle;height:50px;width:50px;border-radius: 50%;"}
+        %b.caret
+      %ul.dropdown-menu
+        %li
+          %li
+            = link_to '#' do
+              %i.mdi-communication-email{style:'vertical-align: middle'}
+              = current_user.email
+          -#%li
+            = link_to users_path do
+              %i.mdi-social-group{style:'vertical-align: middle'}
+              Користувачі сайту
+          %li.divider
+          %li
+            = link_to signout_path do
+              %i.mdi-content-backspace{style:'vertical-align: middle'}
+              Вийти
+
+  - else
+    %li
+      = link_to signin_path do
+        %i.mdi-action-input{style:'vertical-align: middle;font-size: 18px'}
+        Увійти

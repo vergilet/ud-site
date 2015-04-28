@@ -14,13 +14,22 @@
 //= require jquery_ujs
 //= require jquery.turbolinks
 //= require turbolinks
+//= require nprogress
+//= require nprogress-turbolinks
 //= require_directory ./bootstrap
 //= require_directory ./material
+
+NProgress.configure({
+    showSpinner: true,
+    ease: 'ease',
+    speed: 1000
+});
 
 $(document).ready(function(){
     $.material.init();
     $("[data-toggle='tooltip']").tooltip();
     initHelperForTagInput();
+    episodeSelector();
 })
 
 
@@ -41,4 +50,11 @@ function initHelperForTagInput() {
     }).on('blur', function () {
         $(this).parent('div').removeClass('focused')
     });
+}
+
+function episodeSelector() {
+    $('.list-of-episodes .panel').on('click', function(){
+        $('.list-of-episodes .panel').removeClass('active_episode');
+        $(this).addClass('active_episode');
+    })
 }

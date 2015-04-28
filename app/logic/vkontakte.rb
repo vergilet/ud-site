@@ -1,6 +1,3 @@
-VideoInfo::PROVIDERS.push('Meta')
-
-
 VideoInfo::Providers::Vkontakte.class_eval do
 
   def thumbnail_small

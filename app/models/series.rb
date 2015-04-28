@@ -1,5 +1,6 @@
 class Series < ActiveRecord::Base
   has_many :episodes, dependent: :destroy
+  belongs_to :category
   acts_as_taggable
   accepts_nested_attributes_for :episodes, allow_destroy: true,  reject_if: lambda { |a| a.blank? }
   has_attached_file :cover,
@@ -16,7 +17,7 @@ class Series < ActiveRecord::Base
   validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
   validates_attachment_content_type :torrent, :content_type => 'application/x-bittorrent'
 
-  validates_presence_of(:name, :description, :cover)
+  validates_presence_of(:name, :description, :cover, :category_id)
 
   # :original_name, :episodes_amount, :episode_time
   # :year, :studio_name, :video_info, :audio_info,
@@ -33,5 +34,8 @@ class Series < ActiveRecord::Base
     "&#8600; #{cover_file_name}".html_safe if cover.present?
   end
 
+  def self.search(query)
+    joins(:episodes).where("lower(episodes.name) like ? OR lower(series.name) like ? OR series.original_name like ?", "%#{query.downcase}%", "%#{query.downcase}%", "%#{query.downcase}%").uniq
+  end
 
 end
