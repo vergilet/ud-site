@@ -27,6 +27,7 @@ NProgress.configure({
 
 $(document).ready(function(){
     $.material.init();
+    $('.carousel').carousel();
     $("[data-toggle='tooltip']").tooltip();
     initHelperForTagInput();
     episodeSelector();
