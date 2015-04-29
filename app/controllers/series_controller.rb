@@ -1,14 +1,10 @@
 class SeriesController < ApplicationController
-  before_action :set_series, only: [:show, :edit, :update, :destroy]
+  before_action :set_series, only: [:show, :edit, :update, :destroy, :load_tile]
   before_filter :authenticate_user!, except: [:show, :index]
   before_filter :check_permissions, except: [:show, :index]
 
   # GET /series
   # GET /series.json
-  def index
-    @series = Series.all
-    @series_presenter = SeriesPresenter.instantiate(@series)
-  end
 
   def index
     if params[:search]
@@ -17,6 +13,10 @@ class SeriesController < ApplicationController
       @series = Series.all
     end
     @series_presenter = SeriesPresenter.instantiate(@series)
+  end
+
+  def load_tile
+    @series_presenter = SeriesPresenter.new(@series)
   end
 
   # GET /series/1

@@ -2,8 +2,11 @@
   .panel.panel-default{style: 'border-radius: 5px;'}
     .panel-body.hover-tile{style: 'padding:0;border-radius:3px;display:inherit;margin:0;text-transform: none;white-space:normal;'}
       = link_to series_path(series.native) do
-        .cover-image
-          .inside-image{style: "background-image: url('#{series.cover}');background-size:cover;background-position: 100% 5%"}
+        .cover-image{class: "series_#{series.native.id}"}
+          :javascript
+            $(document).ready(function(){
+              $.getScript('#{ load_tile_path(series.native) }')
+            })
       .div{style: 'padding:15px'}
         %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
           %span
@@ -26,9 +29,11 @@
     border-top-right-radius: 5px;
     width: 100%;
     display: block;
+    height: 320px;
   }
   .inside-image {
       border-top-left-radius: 5px;
       border-top-right-radius: 5px;
       height: 320px;
+      display: none;
   }
