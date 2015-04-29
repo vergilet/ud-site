@@ -1,4 +1,4 @@
-$child = $(".series_<%= @series.id %>")
+$child = $(".series_<%= @series.id %>").empty()
         .append("<%= escape_javascript(render partial: 'series/cover_ajax', locals: { cover: @series_presenter.cover}) %>")
         .find('.inside-image');
 $child.fadeIn( 1000 );
