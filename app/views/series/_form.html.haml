@@ -8,7 +8,7 @@
           %p &nbsp;
           = f.label 'Категорія *', class: 'col-sm-2 control-label'
           .col-sm-10.col-md-4
-            = f.select :category_id, options_for_select(@categories, f.object.category_id), { prompt: 'Виберіть зі списку...'}, {class: 'form-control', label: false }
+            = f.select :category_id, grouped_options(f.object.category_id), { prompt: 'Виберіть зі списку...'}, {class: 'form-control', label: false }
           .clearfix
           %p &nbsp;
           = f.label 'Назва публікації *', class: 'col-sm-2 control-label'

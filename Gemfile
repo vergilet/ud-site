@@ -51,6 +51,7 @@ end
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'rmagick'
 gem 'acts-as-taggable-on'
+gem 'awesome_nested_set'
 gem 'video_info'
 gem 'ukrainian', :git => 'https://github.com/romanvbabenko/ukrainian.git'
 gem 'nprogress-rails'
