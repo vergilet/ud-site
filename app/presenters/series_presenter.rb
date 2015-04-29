@@ -87,7 +87,7 @@ class SeriesPresenter
   end
 
   def cover
-    series.cover
+    series.preloaded_cover || series.cover
   end
 
   def torrent

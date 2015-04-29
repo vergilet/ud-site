@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428213351) do
+ActiveRecord::Schema.define(version: 20150429212322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150428213351) do
     t.datetime "torrent_updated_at"
     t.integer  "season"
     t.string   "category_id"
+    t.string   "preloaded_cover"
   end
 
   create_table "taggings", force: :cascade do |t|

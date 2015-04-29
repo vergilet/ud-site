@@ -1,18 +1,22 @@
 .site-top
-  -##carousel-example-generic.carousel.slide
-  -#  %ol.carousel-indicators
-  -#    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
-  -#    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
-  -#    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
-  -#  .carousel-inner{:role => "listbox"}
-  -#    .item.active
-  -#      %img{src: 'http://fc04.deviantart.net/fs70/f/2012/212/1/0/png_cute_anime_6_by_candybubblesweety-d59c08i.png'}
-  -#  %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
-  -#    %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
-  -#    %span.sr-only Previous
-  -#  %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
-  -#    %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-  -#    %span.sr-only Next
+  #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+      %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+      %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+    .carousel-inner{:role => "listbox"}
+      .item.active
+        = image_tag "slider/img1.png"
+      .item
+        = image_tag "slider/img2.png"
+      .item
+        = image_tag "slider/img3.png"
+    %a.left.carousel-control{"data-slide" => "prev", :href => "#carousel-example-generic", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-left{"aria-hidden" => "true"}
+      %span.sr-only Previous
+    %a.right.carousel-control{"data-slide" => "next", :href => "#carousel-example-generic", :role => "button"}
+      %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
+      %span.sr-only Next
 
 
 

@@ -2,7 +2,8 @@
   .panel.panel-default{style: 'border-radius: 5px;'}
     .panel-body.hover-tile{style: 'padding:0;border-radius:3px;display:inherit;margin:0;text-transform: none;white-space:normal;'}
       = link_to series_path(series.native) do
-        %img{ :style => "border-top-left-radius: 5px;border-top-right-radius: 5px;height: 320px; width: 100%; display: block; background-image: url('#{series.cover}');background-size:cover;background-position: 100% 5%" }
+        .cover-image
+          .inside-image{style: "background-image: url('#{series.cover}');background-size:cover;background-position: 100% 5%"}
       .div{style: 'padding:15px'}
         %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
           %span
@@ -20,3 +21,14 @@
           %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{distance_of_time_in_words_to_now(series.last_episode.created_at)} тому"
 
 :css
+  .cover-image {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    display: block;
+  }
+  .inside-image {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      height: 320px;
+  }
