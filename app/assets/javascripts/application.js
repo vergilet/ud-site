@@ -33,6 +33,11 @@ $(document).ready(function(){
     episodeSelector();
 })
 
+function coverImageAppearing(){
+  $('.inside-image').on('webkitAnimationEnd', function(e) {
+    $(this).addClass('visible');
+  });
+}
 
 function removeFields(link) {
     $(link).closest(".field").find("input[type=hidden]").val("1");
