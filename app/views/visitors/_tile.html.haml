@@ -23,8 +23,3 @@
             %i.mdi-action-visibility{style: 'vertical-align:middle'}
             1,547
           %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{distance_of_time_in_words_to_now(series.last_episode.created_at)} тому"
-
-:javascript
-  $(document).ready(function(){
-    $(".series_#{series.native.id}").find('.inside-image').addClass('visible');
-  })
