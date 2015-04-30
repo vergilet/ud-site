@@ -25,7 +25,7 @@ class Series < ActiveRecord::Base
   # :source_mirror, :source_mirror_additional
   # :torrent
 
-  after_save :preload_image if :changed_cover?
+  # after_save :preload_image if :changed_cover?
 
   def torrent_name
     "&#8600; #{torrent_file_name}".html_safe if torrent.present?
@@ -45,9 +45,9 @@ class Series < ActiveRecord::Base
     self.cover_changed?
   end
 
-  def preload_image
-    preloaded_image = self.cover.url
-    self.update_column(:preloaded_cover, preloaded_image)
-  end
+  # def preload_image
+  #   preloaded_image = self.cover.url
+  #   self.update_column(:preloaded_cover, preloaded_image)
+  # end
 
 end
