@@ -22,33 +22,3 @@
             %i.mdi-action-visibility{style: 'vertical-align:middle'}
             1,547
           %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{distance_of_time_in_words_to_now(series.last_episode.created_at)} тому"
-
-:css
-  @-webkit-keyframes fade-in {
-    0%   { opacity: 0; }
-    100% { opacity: 1; }
-  }
-
-  .cover-image {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 100%;
-    display: block;
-    height: 320px;
-  }
-  .inside-image {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    height: 320px;
-    opacity: 0;
-    
-    -webkit-animation-name: fade-in;
-    -webkit-animation-duration: 1s;
-    -webkit-animation-timing-function: ease-in;
-    -webkit-animation-iteration-count: 1;
-    -webkit-animation-delay: 2s;
-    
-  }
-  .inside-image.visible {
-    opacity: 1;
-  }
