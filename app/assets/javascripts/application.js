@@ -31,6 +31,7 @@ $(document).ready(function(){
     $("[data-toggle='tooltip']").tooltip();
     initHelperForTagInput();
     episodeSelector();
+    coverImageAppearing();
 })
 
 function coverImageAppearing(){
