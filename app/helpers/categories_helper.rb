@@ -20,10 +20,7 @@ module CategoriesHelper
   def yyy(c, id)
     if c.children.present?
       cc = ''
-      c.children.each {|child| cc += "<option value='#{child.id}' #{ child.id == id ? 'selected' : '32'}>#{child.name}</option>" }
-
-      puts cc
-
+      c.children.each {|child| cc += "<option value='#{child.id}' #{ child.id == id ? 'selected' : '32'; puts 'child #{child.id}';puts 'selected #{id}';puts 'eq= #{child.id==id}';}>#{child.name}</option>" }
       "<optgroup label='#{c.name}'>#{cc}</optgroup>"
 
     else
