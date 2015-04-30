@@ -45,7 +45,7 @@ class SeriesPresenter
     series.description
   end
 
-  def categories
+  def categoriesc
     links = series.tag_list.map {|tag| "<a href='#' class='label label-success'>#{tag}</a>" }
     links.sort.join(' ').html_safe
   end
@@ -87,7 +87,8 @@ class SeriesPresenter
   end
 
   def cover
-    series.preloaded_cover || series.cover
+    # series.preloaded_cover || series.cover
+    series.cover
   end
 
   def torrent
