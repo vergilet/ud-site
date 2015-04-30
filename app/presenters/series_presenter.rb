@@ -45,7 +45,7 @@ class SeriesPresenter
     series.description
   end
 
-  def categoriesc
+  def categories
     links = series.tag_list.map {|tag| "<a href='#' class='label label-success'>#{tag}</a>" }
     links.sort.join(' ').html_safe
   end
