@@ -1,1 +1,4 @@
-$(".series_<%= @series.id %>").empty().append("<%= escape_javascript(render partial: 'series/cover_ajax', locals: { cover: @series_presenter.cover}) %>")
+$(".series_<%= @series.id %>")
+  .empty()
+  .append("<%= escape_javascript(render partial: 'series/cover_ajax', locals: { cover: @series_presenter.cover}) %>")
+  .fadeIn( 1000 );
