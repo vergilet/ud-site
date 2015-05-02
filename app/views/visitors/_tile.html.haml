@@ -4,6 +4,7 @@
       = link_to series_path(series.native) do
         .cover-image{class: "series_#{series.native.id}"}
           :javascript
+            window.series_#{series.native.id} = window.series_#{series.native.id};
             $(document).ready(function(){
               if (window.series_#{series.native.id} != '') {
                 $(".series_#{series.native.id}")
