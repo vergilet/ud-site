@@ -31,14 +31,7 @@ $(document).ready(function(){
     $("[data-toggle='tooltip']").tooltip();
     initHelperForTagInput();
     episodeSelector();
-    coverImageAppearing();
 })
-
-function coverImageAppearing(){
-  $('.inside-image').on('webkitAnimationEnd', function(e) {
-    $(this).addClass('visible');
-  });
-}
 
 function removeFields(link) {
     $(link).closest(".field").find("input[type=hidden]").val("1");
