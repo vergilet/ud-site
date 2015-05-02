@@ -27,8 +27,7 @@
 */
 
 main {}
-
-#twitter-widget-0 {
+.twitter-timeline-container iframe, [id^="twitter-widget-"], [id*="twitter-widget-"] {
   width: 100%!important;
 }
 
