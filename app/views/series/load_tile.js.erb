@@ -2,4 +2,5 @@ window.series_<%= @series.id %> = '<%= escape_javascript(render partial: 'series
 $(".series_<%= @series.id %>")
   .empty()
   .append(window.series_<%= @series.id %>)
+  .find('.inside-image')
   .fadeIn( 1000 );
