@@ -18,6 +18,7 @@
 //= require nprogress-turbolinks
 //= require_directory ./bootstrap
 //= require_directory ./material
+//= require twitter
 
 NProgress.configure({
     showSpinner: true,
