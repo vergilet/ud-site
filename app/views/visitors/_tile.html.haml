@@ -9,6 +9,7 @@
                 $(".series_#{series.native.id}")
                   .empty()
                   .append(window.series_#{series.native.id})
+                  .find('.inside-image')
                   .fadeIn( 1000 );
               } else {
                 $.getScript('#{ load_tile_path(series.native) }');
