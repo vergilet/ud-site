@@ -5,8 +5,11 @@
         .cover-image{class: "series_#{series.native.id}"}
           :javascript
             $(document).ready(function(){
-              $.getScript('#{ load_tile_path(series.native) }')
-              coverImageAppearing();
+              if ( window.series_#{series.native.id}" == false ){
+                $.getScript('#{ load_tile_path(series.native) }');
+                coverImageAppearing();
+                window.series_#{series.native.id}" = true;
+              }
             })
       .div{style: 'padding:15px'}
         %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
