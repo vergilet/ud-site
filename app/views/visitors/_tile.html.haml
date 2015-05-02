@@ -5,7 +5,7 @@
         .cover-image{class: "series_#{series.native.id}"}
           :javascript
             $(document).ready(function(){
-              if ( window.series_#{series.native.id}" != true ){
+              if ( window.series_#{series.native.id} != true ){
                 $.getScript('#{ load_tile_path(series.native) }');
                 window.series_#{series.native.id}" = true;
               }
