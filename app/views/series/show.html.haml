@@ -4,20 +4,26 @@
       %li
         = link_to 'Головна', root_path
       %li
-        = link_to 'Аніме', series_path
+        = link_to 'Аніме', series_index_path
       %li.active= @series_presenter.name
 .row
   .col-lg-9
     .open-post
       .panel.panel-default.top-round
-        .post-image.top-round
-          -#.sup=image_tag @series.cover, height: 350
-          -#.image.top-round{style: "background-image: url('#{@series.admit}')"}
-            .sign= @series.name
         .post-content
           .panel-body
             .col-sm-4.plotter-left-5.plotter-right-5
-              = image_tag @series_presenter.cover, width: '100%'
+              %div.post-cover{ class: "series_cover#{@series_presenter.native.id}" }
+              :javascript
+                $(document).ready(function(){
+                  if (window.series_cover#{@series_presenter.native.id} != undefined) {
+                    $('.series_cover#{@series_presenter.native.id}')
+                      .empty()
+                      .append('<img src=' + window.series_cover#{@series_presenter.native.id} + ' width="100%" />')
+                  } else {
+                    $.getScript('#{ load_tile_cover_path(@series_presenter.native) }');
+                  }
+                })
             .col-sm-8
               .describe-items
                 .row

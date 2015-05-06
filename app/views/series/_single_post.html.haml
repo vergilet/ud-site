@@ -2,7 +2,20 @@
   .panel.panel-default
     .post-image
       = link_to series_path(series_presenter.native) do
-        .image{style: "background-image: url('#{series_presenter.cover}')"}
+        .image{class: "series_#{series_presenter.native.id}"}
+        :javascript
+            $(document).ready(function(){
+              if (window.series_#{series_presenter.native.id} != undefined) {
+                $(".series_#{series_presenter.native.id}")
+                  .empty()
+                  .append(window.series_#{series_presenter.native.id})
+                  .find('.image, .inside-image')
+                  .fadeIn( 1000 );
+              } else {
+                $.getScript('#{ load_tile_path(series_presenter.native) }');
+              }
+            })
+
     .post-content
       .post-heading
         .title.col-xs-11

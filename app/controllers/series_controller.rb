@@ -1,7 +1,7 @@
 class SeriesController < ApplicationController
-  before_action :set_series, only: [:show, :edit, :update, :destroy, :load_tile]
-  before_filter :authenticate_user!, except: [:show, :index, :load_tile]
-  before_filter :check_permissions, except: [:show, :index, :load_tile]
+  before_action :set_series, only: [:show, :edit, :update, :destroy, :load_tile, :load_tile_cover]
+  before_filter :authenticate_user!, except: [:show, :index, :load_tile, :load_tile_cover]
+  before_filter :check_permissions, except: [:show, :index, :load_tile, :load_tile_cover]
 
   # GET /series
   # GET /series.json
@@ -16,6 +16,10 @@ class SeriesController < ApplicationController
   end
 
   def load_tile
+    @series_presenter = SeriesPresenter.new(@series)
+  end
+
+  def load_tile_cover
     @series_presenter = SeriesPresenter.new(@series)
   end
 

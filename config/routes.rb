@@ -11,5 +11,6 @@ Rails.application.routes.draw do
   get '/auth/failure' => 'sessions#failure'
 
   get '/load_tile/:id', to: 'series#load_tile', as: 'load_tile'
+  get '/load_tile_cover/:id', to: 'series#load_tile_cover', as: 'load_tile_cover'
 
 end
