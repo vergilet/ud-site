@@ -9,27 +9,45 @@
         = image_tag 'logo.png'
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav{ "data-hover"=>"dropdown", "data-animations"=>"fadeInDown fadeInRight fadeInUp fadeInLeft" }
-        = nav_link 'Аніме', series_index_path
-        %li
-          %a{:href => "javascript:void(0)"}
+        // = nav_link 'Аніме', series_index_path
+        %li.dropdown
+          %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
+            %b Аніме
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "javascript:void(0)"} Завершені
+            %li
+              %a{:href => "javascript:void(0)"} Онґоінґи
+            %li
+              %a{:href => "javascript:void(0)"} Неонґоіґи
+            // %li.divider
+            // %li.dropdown-header Dropdown header
+            %li
+              %a{:href => "javascript:void(0)"} ОВА
+            %li
+              %a{:href => "javascript:void(0)"} Аніме фільми
+        %li.dropdown
+          %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Серіали
+            %b.caret
+          %ul.dropdown-menu
+            %li
+              %a{:href => "javascript:void(0)"} Завершені
+            %li
+              %a{:href => "javascript:void(0)"} Онґоінґи
+            %li
+              %a{:href => "javascript:void(0)"} Неонґоіґи
         %li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Фільми
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{:href => "javascript:void(0)"} le costa
+              %a{:href => "javascript:void(0)"} Фантастика
             %li
-              %a{:href => "javascript:void(0)"} Another action
-            %li
-              %a{:href => "javascript:void(0)"} Something else here
-            %li.divider
-            %li.dropdown-header Dropdown header
-            %li
-              %a{:href => "javascript:void(0)"} Separated link
-            %li
-              %a{:href => "javascript:void(0)"} One more separated link
+              %a{:href => "javascript:void(0)"} Містика
+
       -#%form.navbar-form.navbar-left
       -#= form_tag(series_path, :method => "get", id: "search-form")
       -#  = text_field_tag :search, params[:search], placeholder: "Пошук"
