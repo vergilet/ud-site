@@ -7,12 +7,13 @@ class EpisodePresenter
   end
 
   def self.instantiate episodes
+    [] if episodes.blank?
     sorted_episodes = sort_my_episodes(episodes)
-    sorted_episodes.map{ |episode| EpisodePresenter.new(episode) }
+    sorted_episodes.map{ |episode| EpisodePresenter.new(episode) }.reverse
   end
 
   def id
-    episode.id
+    episode.try(:id)
   end
 
   def source_video
@@ -21,7 +22,7 @@ class EpisodePresenter
   end
 
   def name
-    episode.name
+    episode.try(:name)
   end
 
   def thumbnail
@@ -34,7 +35,7 @@ class EpisodePresenter
   end
 
   def created_at
-    episode.created_at
+    episode.try(:created_at)
   end
 
   private

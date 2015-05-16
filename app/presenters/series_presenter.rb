@@ -1,6 +1,7 @@
 class SeriesPresenter
 
   include SeriesHelper
+  include ActionView::Helpers
 
   attr_reader :series, :episodes
 
@@ -13,16 +14,21 @@ class SeriesPresenter
     series
   end
 
+  def amount_of_days
+    return 0 if last_episode.created_at.blank?
+    distance_of_time_in_words_to_now(last_episode.created_at)
+  end
+
   def self.instantiate few_series
     few_series.map { |series| SeriesPresenter.new(series) }.sort_by{ |series| last_update(series) }.reverse
   end
 
   def default_episode
-    @default_episode ||= EpisodePresenter.new(episodes.first)
+    @default_episode ||= EpisodePresenter.new(episodes.last)
   end
 
   def default_meta_video
-    default_episode.source_video
+    default_episode.source_video if default_episode.present?
   end
 
   def last_episode
@@ -122,7 +128,7 @@ class SeriesPresenter
   end
 
   def self.last_update(series)
-    series.try(:last_episode).try(:created_at) || series.created_at
+    series.try(:last_episode).try(:created_at) || series.try(:created_at)
   end
 
 end
