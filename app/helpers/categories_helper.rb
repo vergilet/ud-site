@@ -20,11 +20,11 @@ module CategoriesHelper
   def yyy(c, id)
     if c.children.present?
       cc = ''
-      c.children.each {|child| cc += "<option value='#{child.id}' #{ child.id == id ? 'selected' : '32'; puts 'child #{child.id}';puts 'selected #{id}';puts 'eq= #{child.id==id}';}>#{child.name}</option>" }
+      c.children.each {|child| cc += "<option value='#{child.id}' #{ child.id.to_i == id.to_i ? 'selected=selected' : '' }>#{child.name}</option>" }
       "<optgroup label='#{c.name}'>#{cc}</optgroup>"
 
     else
-      "<option value='#{c.id}' #{c.id==id ? 'selected' : ''}>#{c.name}</option>"
+      "<option value='#{c.id}' #{c.id.to_i == id.to_i ? 'selected=selected' : ''}>#{c.name}</option>"
     end
 
   end

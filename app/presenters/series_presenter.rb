@@ -121,7 +121,24 @@ class SeriesPresenter
     episodes.count
   end
 
+  def tile_last_ep_name
+    "\"#{last_episode_name}\"" if last_episode_name.present?
+  end
+
+  def tile_episode_counter
+    return 'Фільм' if film?
+    "Епізод ##{episodes_count}"
+  end
+
+  def category
+    series.category
+  end
+
   private
+
+  def film?
+    series.category_id == '3'
+  end
 
   def episode_time
     series.episode_time

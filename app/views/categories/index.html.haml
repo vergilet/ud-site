@@ -1,23 +1,17 @@
-%h1 Listing categories
+.row
+  .col-sm-12
+    %ul.breadcrumb
+      %li
+        = link_to 'Головна', root_path
+      %li.active Аніме
+.row
+  .col-lg-8
+    - @series_presenter.each do |series_presenter|
+      = render 'series/single_post', series_presenter: series_presenter
+    %br
+    = link_to 'New Series', new_series_path
 
-%table
-  %thead
-    %tr
-      %th Name
-      %th Desc
-      %th
-      %th
-      %th
 
-  %tbody
-    - @categories.each do |category|
-      %tr
-        %td= category.name
-        %td= category.desc
-        %td= link_to 'Show', category
-        %td= link_to 'Edit', edit_category_path(category)
-        %td= link_to 'Destroy', category, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
-%br
-
-= link_to 'New Category', new_category_path
+  .col-lg-4
+    = render 'layouts/last_comments'

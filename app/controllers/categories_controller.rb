@@ -10,6 +10,14 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    with_children_ids = children.map(&:id).push(@category.id).sort
+    puts with_children_ids.inspect
+    if params[:search]
+      @series = Series.where(category_id: with_children_ids).search(params[:search])
+    else
+      @series = Series.where(category_id: with_children_ids)
+    end
+    @series_presenter = SeriesPresenter.instantiate(@series)
   end
 
   # GET /categories/new
@@ -62,6 +70,10 @@ class CategoriesController < ApplicationController
   end
 
   private
+
+    def children
+      @category.children
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_category
       @category = Category.find(params[:id])

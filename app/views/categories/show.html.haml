@@ -1,12 +1,17 @@
-%p#notice= notice
+.row
+  .col-sm-12
+    %ul.breadcrumb
+      %li
+        = link_to 'Головна', root_path
+      - if @category.parent
+        %li
+          = link_to @category.parent.try(:name), category_path(@category.parent)
+      %li.active= @category.name
+.row
+  .col-lg-8
+    - @series_presenter.each do |series_presenter|
+      = render 'series/single_post', series_presenter: series_presenter
+    %br
 
-%p
-  %b Name:
-  = @category.name
-%p
-  %b Desc:
-  = @category.desc
-
-= link_to 'Edit', edit_category_path(@category)
-\|
-= link_to 'Back', categories_path
+  .col-lg-4
+    = render 'layouts/last_comments'

@@ -9,24 +9,23 @@
         = image_tag 'logo.png'
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav{ "data-hover"=>"dropdown", "data-animations"=>"zoomIn fadeInLeft fadeInUp fadeInRight" }
-        // = nav_link 'Аніме', series_index_path
         %li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Аніме
             %b.caret
           %ul.dropdown-menu
             %li
-              %a{:href => "javascript:void(0)"} Завершені
+              = link_to 'Завершені', category_path(4)
             %li
-              %a{:href => "javascript:void(0)"} Онґоінґи
+              = link_to 'Онґоінґи', category_path(5)
             %li
-              %a{:href => "javascript:void(0)"} Неонґоіґи
+              = link_to 'Неонґоіґи', category_path(6)
             // %li.divider
             // %li.dropdown-header Dropdown header
             %li
-              %a{:href => "javascript:void(0)"} ОВА
+              = link_to 'ОВА', category_path(7)
             %li
-              %a{:href => "javascript:void(0)"} Аніме фільми
+              = link_to 'Аніме фільми', category_path(8)
         %li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Серіали

@@ -3,8 +3,11 @@
     %ul.breadcrumb
       %li
         = link_to 'Головна', root_path
+      - if @series_presenter.category.parent
+        %li
+          = link_to @series_presenter.category.parent.try(:name), category_path(@series_presenter.category.parent)
       %li
-        = link_to 'Аніме', series_index_path
+        = link_to @series_presenter.category.name, category_path(@series_presenter.category)
       %li.active= @series_presenter.name
 .row
   .col-lg-9
