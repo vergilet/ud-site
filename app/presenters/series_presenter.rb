@@ -145,7 +145,7 @@ class SeriesPresenter
   end
 
   def self.last_update(series)
-    series.try(:last_episode).try(:created_at) || series.try(:created_at)
+    series.try(:updated_at)
   end
 
 end
