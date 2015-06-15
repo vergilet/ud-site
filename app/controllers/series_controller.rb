@@ -47,7 +47,7 @@ class SeriesController < ApplicationController
   def create
     @categories = Category.all.map{|c| [ c.name, c.id ] }
     @series = Series.new(series_params)
-    @series.category_id = params[:category_id]
+    @series.category_id = params[:series][:category_id]
     respond_to do |format|
       if @series.save
         format.html { redirect_to @series, notice: 'Series was successfully created.' }
