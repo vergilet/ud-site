@@ -39,7 +39,7 @@ class ApplicationController < ActionController::Base
     end
 
     def admin?
-      [3, 6, 5, 7].include? current_user.id if current_user.present?
+      [3, 6, 5, 7, 9].include? current_user.id if current_user.present?
     end
 
 end
