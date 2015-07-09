@@ -1,0 +1,7 @@
+$('#posts').append('<%= j render partial: 'visitors/slider' %>');
+<% if @series.next_page %>
+    $('.pagination').replaceWith('<%= j will_paginate @series %>');
+<% else %>
+    $(window).off('scroll');
+    $('.pagination').remove();
+<% end %>

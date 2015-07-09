@@ -1,4 +1,5 @@
 .container
   .row
-    - @series_presenter.each do |series|
-      = render 'visitors/tile', series: series
+    #posts
+      - @series_presenter.each do |series|
+        = render 'visitors/tile', series: series
