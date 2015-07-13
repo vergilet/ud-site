@@ -8,9 +8,9 @@ class SeriesController < ApplicationController
 
   def index
     if params[:search]
-      @series = Series.all_ordered_by_child.search(params[:search]).paginate(page: params[:page], per_page: 9)
+      @series = Series.all_ordered_by_child.search(params[:search]).to_a.paginate(page: params[:page], per_page: 9)
     else
-      @series = Series.all_ordered_by_child.paginate(page: params[:page], per_page: 9)
+      @series = Series.all_ordered_by_child.to_a.paginate(page: params[:page], per_page: 9)
     end
     @series_presenter = SeriesPresenter.instantiate(@series)
   end
