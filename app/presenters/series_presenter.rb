@@ -126,6 +126,7 @@ class SeriesPresenter
   end
 
   def tile_episode_counter
+    return 'Анімаційний фільм' if anime_film?
     return 'Фільм' if film?
     "Епізод ##{episodes_count}"
   end
@@ -138,6 +139,10 @@ class SeriesPresenter
 
   def film?
     series.category_id == '3'
+  end
+
+  def anime_film?
+    series.category_id == '8'
   end
 
   def episode_time
