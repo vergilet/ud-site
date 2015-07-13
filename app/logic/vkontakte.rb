@@ -17,7 +17,7 @@ VideoInfo::Providers::Vkontakte.class_eval do
   private
 
   def _video_thumbnail(id)
-    image_path 'vk-video.jpg'
+    '//pp.vk.me/c622130/v622130144/3c622/Oz-z1bfMEFI.jpg'
   end
 
 end
