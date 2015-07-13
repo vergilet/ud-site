@@ -15,7 +15,7 @@ VideoInfo::Providers::Vkontakte.class_eval do
   private
 
   def _video_thumbnail(id)
-    asset_path('vk-video.jpg')
+    "/images/vk-video.jpg"
   end
 
 end
