@@ -9,11 +9,11 @@
     = render 'visitors/slider'
     .center-block{style: 'width:143px; height: 78px'}
       #infinite-scrolling
-        = will_paginate @series, class: 'hidden-element'
-      -#.btn-group.pull-left
-      -#  %a#load_more_titles.btn.btn-default
-      -#    %i.mdi-notification-sync{style: 'vertical-align: middle'}
-      -#    %span Більше
+        = will_paginate @series
+      .btn-group.pull-left
+        %a#load_more_titles.btn.btn-default{onclick: 'loadMore()'}
+          %i.mdi-notification-sync{style: 'vertical-align: middle'}
+          %span Більше
   .col-lg-3
     .panel.panel-info
       .panel-body
