@@ -27,6 +27,10 @@ class Series < ActiveRecord::Base
 
   # after_save :preload_image if :changed_cover?
 
+  def self.all_ordered_by_child
+    includes(:episodes).order('episodes.created_at DESC, series.created_at DESC')
+  end
+
   def torrent_name
     "&#8600; #{torrent_file_name}".html_safe if torrent.present?
   end

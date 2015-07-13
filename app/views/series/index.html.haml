@@ -9,6 +9,8 @@
     - @series_presenter.each do |series_presenter|
       = render 'series/single_post', series_presenter: series_presenter
     %br
+    .center-block{style: 'height: 78px'}
+      = will_paginate @series, renderer: BootstrapPagination::Rails
 
   .col-lg-4
     = render 'layouts/last_comments'

@@ -249,3 +249,7 @@ uk:
       long: "%d %B %Y, %H:%M"
       short: "%d %b, %H:%M"
     pm: по полудні
+
+  will_paginate:
+    previous_label: 'Попередня'
+    next_label: 'Наступна'

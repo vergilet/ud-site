@@ -1,7 +1,2 @@
+$('.hidden-element.paginate').replaceWith('<%= j will_paginate @series, class: 'hidden-element paginate' %>');
 $('#posts').append('<%= j render partial: 'visitors/slider' %>');
-<% if @series.next_page %>
-    $('.pagination').replaceWith('<%= j will_paginate @series %>');
-<% else %>
-    $(window).off('scroll');
-    $('.pagination').remove();
-<% end %>

@@ -12,13 +12,12 @@ class CategoriesController < ApplicationController
   # GET /categories/1.json
   def show
     with_children_ids = children.map(&:id).push(@category.id).sort
-    puts with_children_ids.inspect
     if params[:search]
-      @series = Series.where(category_id: with_children_ids).search(params[:search])
+      @series = Series.all_ordered_by_child.where(category_id: with_children_ids).search(params[:search]).paginate(page: params[:page], per_page: 9)
     else
-      @series = Series.where(category_id: with_children_ids)
+      @series = Series.all_ordered_by_child.where(category_id: with_children_ids).paginate(page: params[:page], per_page: 9)
     end
-    @series_presenter = SeriesPresenter.instantiate(@series)
+    @series_presenter = SeriesPresenter.instantiate(@series.reverse)
   end
 
   # GET /categories/new
