@@ -14,3 +14,7 @@ class @Pagination
   constructor: ()  ->
     more_posts_url = $('.pagination a.next_page').attr('href')
     $('#load_more_titles').on('click', $.getScript(more_posts_url))
+
+$(document).ready ->
+  if $('#infinite-scrolling').length
+    new Pagination()
