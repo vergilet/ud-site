@@ -15,7 +15,7 @@ VideoInfo::Providers::Vkontakte.class_eval do
   private
 
   def _video_thumbnail(id)
-    '//placehold.it/85x70/5050ff/ffffff&text=Vk.com'
+    asset_path('vk-video.jpg')
   end
 
 end
