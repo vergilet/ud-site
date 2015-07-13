@@ -1,3 +1,5 @@
+include ActionView::Helpers::AssetUrlHelper
+
 VideoInfo::Providers::Vkontakte.class_eval do
 
   def thumbnail_small
@@ -15,7 +17,7 @@ VideoInfo::Providers::Vkontakte.class_eval do
   private
 
   def _video_thumbnail(id)
-    "/images/vk-video.jpg"
+    image_path 'vk-video.jpg'
   end
 
 end
