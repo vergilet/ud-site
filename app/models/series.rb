@@ -28,7 +28,7 @@ class Series < ActiveRecord::Base
   # after_save :preload_image if :changed_cover?
 
   def self.all_ordered_by_child
-    includes(:episodes).order('episodes.created_at DESC, series.created_at DESC')
+    includes(:episodes).order('episodes.created_at DESC')
   end
 
   def torrent_name
