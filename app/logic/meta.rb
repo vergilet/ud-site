@@ -24,7 +24,7 @@ class Meta < VideoInfo::Provider
   end
 
   def embed_url
-    "//video.meta.ua/iframe/#{video_id}"
+    "http://video.meta.ua/iframe/#{video_id}"
   end
 
   def date
