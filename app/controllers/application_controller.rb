@@ -7,12 +7,17 @@ class ApplicationController < ActionController::Base
   helper_method :admin?
   helper_method :user_signed_in?
   helper_method :correct_user?
-  
+
+  before_filter :redirect_to_http
   before_filter :reset_headers
   
   def reset_headers
     response.headers["Strict-Transport-Security"] = 'max-age=0'
-  end  
+  end
+
+  def redirect_to_http
+    redirect_to :protocol => "http://"
+  end
 
   private
     def current_user

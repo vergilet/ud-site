@@ -38,7 +38,6 @@ group :development, :test do
 end
 group :production do
   gem 'rails_12factor'
-  gem 'thin'
 end
 group :test do
   gem 'capybara'
@@ -47,7 +46,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-
+gem 'thin'
 gem "paperclip-dropbox", ">= 1.1.7"
 gem 'rmagick'
 gem 'acts-as-taggable-on'
