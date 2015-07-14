@@ -8,8 +8,8 @@ class ApplicationController < ActionController::Base
   helper_method :user_signed_in?
   helper_method :correct_user?
 
-  before_filter :redirect_to_http
   before_filter :reset_headers
+  before_filter :redirect_to_http
   
   def reset_headers
     response.headers["Strict-Transport-Security"] = 'max-age=0'
