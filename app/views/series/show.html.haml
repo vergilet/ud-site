@@ -108,7 +108,7 @@
                   %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"}
               .col-sm-4.plotter-left.plotter-right
                 .list-of-episodes
-                  - @episodes_presenter.each_with_index do |episode, index|
+                  - @episodes_presenter.reverse.each_with_index do |episode, index|
                     = link_to(episode_path(episode.id), remote: true) do
                       .panel.panel-default.btn{ class: "#{ "active_episode" if index == 0 }"}
                         .media

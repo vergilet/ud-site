@@ -9,7 +9,7 @@ class EpisodePresenter
   def self.instantiate episodes
     [] if episodes.blank?
     sorted_episodes = sort_my_episodes(episodes)
-    sorted_episodes.map{ |episode| EpisodePresenter.new(episode) }.reverse
+    sorted_episodes.map{ |episode| EpisodePresenter.new(episode) }
   end
 
   def id
