@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_to_http
-    redirect_to :protocol => "http://"
+    redirect_to :protocol => "http://" if request.protocol == 'https://'
   end
 
   private
