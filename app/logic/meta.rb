@@ -86,6 +86,6 @@ class Meta < VideoInfo::Provider
   end
 
   def _video_thumbnail(id)
-    "//video.meta.ua/#{video_id}/cadr/5.jpg"
+    "http://video.meta.ua/#{video_id}/cadr/5.jpg"
   end
 end
