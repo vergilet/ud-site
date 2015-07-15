@@ -16,7 +16,7 @@
             VK.init({apiId: 4878932, onlyWidgets: true});
           #vk_comments
           :javascript
-            VK.Widgets.Comments("vk_comments", {limit: 10, width: "665", attach: "*"});
+            VK.Widgets.Comments("vk_comments", {limit: 5, width: "auto", attach: "graffiti,photo,video,audio"});
       #google.tab-pane.fade
         %p
           %div#etalon{style: "width:100%;background-image: url('#{asset_path('add_comment.png')}');background-repeat: no-repeat;background-size: 61%;background-position: center bottom;"}
