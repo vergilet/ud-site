@@ -20,27 +20,27 @@
       #google.tab-pane.fade
         %p
           %div#etalon{style: "width:100%;background-image: url('#{asset_path('add_comment.png')}');background-repeat: no-repeat;background-size: 61%;background-position: center bottom;"}
-                %script{:src => "https://apis.google.com/js/plusone.js"}
-                #comments
-                :javascript
-                  window.___gcfg = {lang: 'uk'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = '//apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
-          
-                  $(document).ready(function(){
-                    if ($('#etalon').length == 0)
-                      return null;
-                    setTimeout(function() {
-                     var w=document.getElementById('etalon').offsetWidth;
-          
-                     gapi.comments.render('comments', {
-                        href: window.location,
-                        width: w,
-                        height: '200',
-                        first_party_property: 'BLOGGER',
-                        view_type: 'FILTERED_POSTMOD'
-                     });
-          
-                    }, 1000);
-                  })
+            %script{:src => "https://apis.google.com/js/plusone.js"}
+            #comments
+            :javascript
+              window.___gcfg = {lang: 'uk'};(function() {var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;po.src = '//apis.google.com/js/plusone.js';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);})();
+      
+              $(document).ready(function(){
+                if ($('#etalon').length == 0)
+                  return null;
+                setTimeout(function() {
+                 var w=document.getElementById('etalon').offsetWidth;
+      
+                 gapi.comments.render('comments', {
+                    href: window.location,
+                    width: w,
+                    height: '200',
+                    first_party_property: 'BLOGGER',
+                    view_type: 'FILTERED_POSTMOD'
+                 });
+      
+                }, 1000);
+              })
     
       #facebook.tab-pane.fade
         %p В розробці
