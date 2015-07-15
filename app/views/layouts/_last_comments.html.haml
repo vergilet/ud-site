@@ -2,10 +2,8 @@
   .panel-body
     %ul.nav.nav-tabs{:style => "margin-bottom: 15px;"}
       %li.active
-        %a{"data-toggle" => "tab", :href => "#vk"} Вконтакті
-      %li
-        %a{"data-toggle" => "tab", :href => "#facebook"} Facebook
-    
+        %a{"data-toggle" => "tab", :href => "#vk"} Коментарі Вк
+
     #myTabContent.tab-content
       #vk.tab-pane.fade.active.in
         %p
@@ -15,20 +13,6 @@
           #vk_comments
           :javascript
             VK.Widgets.Comments("vk_comments", {autoPublish: 0, limit: 5, width: "auto", attach: "graffiti,photo,video,audio"});
-      #facebook.tab-pane.fade
-        %p
-          #fb-root
-          :javascript
-            (function(d, s, id) {
-              var js, fjs = d.getElementsByTagName(s)[0];
-              if (d.getElementById(id)) return;
-              js = d.createElement(s); js.id = id;
-              js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.4&appId=1378234352418003";
-              fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-          .fb-comments{"data-href" => "#{request.original_url}", "data-numposts" => "5", "data-width" => "auto"}
-          .fb-comments{"data-colorscheme" => "light", "data-href" => "#{request.original_url}", "data-numposts" => "5", "data-width" => "100%"}
-
 :css
   #comments div[id^='___comments_'], #comments div[id^='___comments_'] iframe {
     width: 100% !important;
