@@ -16,7 +16,7 @@
               }
             })
       .div{style: 'padding:15px'}
-        %h4{style: 'margin-top: 0px;  white-space: normal'}
+        %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
           %span
             = link_to series.name, series_path(series.native)
         %div
@@ -26,7 +26,7 @@
         %div{style:'height:24px;'}
           %span= "#{series.tile_last_ep_name}"
         %div{style:'height:20px;'}
-          %span.pull-left{style: 'color: #a0a0a0;font-size:16px;padding-top:6px;height:36px'}
+          %span.pull-left{style: 'color: #a0a0a0;font-size:16px;padding-top:6px'}
             %i.mdi-action-visibility{style: 'vertical-align:middle'}
             \--
           %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{series.amount_of_days} тому"
