@@ -43,7 +43,17 @@
               })
     
       #facebook.tab-pane.fade
-        %p В розробці
+        %p
+        #fb-root
+        :javascript
+          (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/uk_UA/sdk.js#xfbml=1&version=v2.4&appId=1378234352418003";
+            fjs.parentNode.insertBefore(js, fjs);
+          }(document, 'script', 'facebook-jssdk'));
+        .fb-comments{"data-href" => "#{request.original_url}", "data-numposts" => "5"}  
 
 :css
   #comments div[id^='___comments_'], #comments div[id^='___comments_'] iframe {
