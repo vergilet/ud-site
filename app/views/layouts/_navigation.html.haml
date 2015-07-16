@@ -26,7 +26,9 @@
               = link_to 'ОВА', category_path(7)
             %li
               = link_to 'Аніме фільми', category_path(8)
-        %li.dropdown
+        %li
+          %b= link_to 'Серіали', category_path(2)
+        -#%li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Серіали
             %b.caret
@@ -37,7 +39,9 @@
               %a{:href => "javascript:void(0)"} Онґоінґи
             %li
               %a{:href => "javascript:void(0)"} Неонґоіґи
-        %li.dropdown
+        %li
+          %b= link_to 'Фільми', category_path(3)
+        -#%li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Фільми
             %b.caret
