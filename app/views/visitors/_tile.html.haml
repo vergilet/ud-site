@@ -1,5 +1,5 @@
 .col-sm-6.col-md-4
-  .panel.panel-default{style: 'border-radius: 5px;'}
+  .panel.panel-default.tile-block{style: 'border-radius: 5px;'}
     .panel-body.hover-tile{style: 'padding:0;border-radius:3px;display:inherit;margin:0;text-transform: none;white-space:normal;'}
       = link_to series_path(series.native) do
         .cover-image{class: "series_#{series.native.id}"}
@@ -30,3 +30,15 @@
             %i.mdi-action-visibility{style: 'vertical-align:middle'}
             \--
           %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{series.amount_of_days} тому"
+
+:css
+  .tile-block {
+    opacity: 0.7;
+    background-color: #eee;
+    transition: all .2s ease-in-out;
+  }
+  .tile-block:hover {
+    opacity: 1;
+    background-color: #fff;
+    transform: scale(1.08);
+  }
