@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<url>
+	<loc>http://www.ukrdub.net/</loc>
+	<lastmod>2015-07-18T15:39:26+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/1</loc>
+	<lastmod>2015-07-18T15:39:27+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/4</loc>
+	<lastmod>2015-07-18T15:39:28+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/5</loc>
+	<lastmod>2015-07-18T15:39:29+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/6</loc>
+	<lastmod>2015-07-18T15:39:29+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/7</loc>
+	<lastmod>2015-07-18T15:39:30+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/8</loc>
+	<lastmod>2015-07-18T15:39:31+01:00</lastmod>
+	<priority>0.7</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/2</loc>
+	<lastmod>2015-07-18T15:39:32+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+<url>
+	<loc>http://www.ukrdub.net/categories/3</loc>
+	<lastmod>2015-07-18T15:39:33+01:00</lastmod>
+	<priority>0.8</priority>
+</url>
+</urlset>
