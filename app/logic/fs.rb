@@ -26,6 +26,6 @@ class FS < VideoInfo::Provider
   end
 
   def _video_thumbnail
-    "https://pp.vk.me/c629116/v629116144/9123/xs8EpgOz87c.jpg"
+    "http://pp.vk.me/c629116/v629116144/9134/ZIemSi3kdTw.jpg"
   end
 end
