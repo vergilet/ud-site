@@ -5,6 +5,7 @@
     %title= content_for?(:title) ? yield(:title) : 'Укрдаб.нет / UkrDub.net'
     = favicon_link_tag
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Ud Site'}"}
+    %meta{:content => asset_path('fav.png'), :property => "og:image"}/
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     %script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript"}
