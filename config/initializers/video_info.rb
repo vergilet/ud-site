@@ -1,4 +1,5 @@
 VideoInfo::PROVIDERS.push('Meta')
+VideoInfo::PROVIDERS.push('FS')
 
 
 VideoInfo::Providers::Vkontakte.class_eval do
