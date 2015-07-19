@@ -37,7 +37,6 @@
   position: absolute;
   z-index: 2;
   top: -9px;
-  background-image: url("/assets/corner.png");
   width: 200px;
   height: 200px;
   background-repeat: no-repeat;
@@ -46,31 +45,31 @@
 
 //Anime ongoing
 .corner-category_4 {
-  background-image: url("/assets/corner/ongoing.png");
+  background-image: url(asset-path("/ongoing.png");
 }
 //Anime not ongoing
 .corner-category_5 {
-  background-image: url("/assets/corner/not-ongoing.png");
+  background-image: url(asset-path("not-ongoing.png");
 }
 //Anime OVA
 .corner-category_6 {
-  background-image: url("/assets/corner/ova.png");
+  background-image: url(asset-path("ova.png");
 }
 //Anime movie
 .corner-category_7 {
-  background-image: url("/assets/corner/a-movie.png");
+  background-image: url(asset-path("a-movie.png");
 }
 //Movie
 .corner-category_3 {
-  background-image: url("/assets/corner/movie.png");
+  background-image: url(asset-path("movie.png");
 }
 //Series
 .corner-category_2 {
-  background-image: url("/assets/corner/series.png");
+  background-image: url(asset-path("series.png");
 }
 
 //Short movie
 .corner-category_8 {
-  background-image: url("/assets/corner/s-movie.png");
+  background-image: url(asset-path("s-movie.png");
 }
 
