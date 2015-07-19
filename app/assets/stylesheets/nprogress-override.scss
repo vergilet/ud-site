@@ -1,4 +1,4 @@
-$nprogress-color: #f1f1f1;
+$nprogress-color: yellow;
 $nprogress-height: 4px;
 $nprogress-zindex: 100;
 
@@ -8,4 +8,7 @@ $nprogress-zindex: 100;
 #nprogress .bar,
 #nprogress .spinner {
   z-index: 999999;
+}
+#nprogress .bar {
+  border-bottom: 1px solid #e4e4e4;
 }

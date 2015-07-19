@@ -17,30 +17,16 @@
             })
       .div{style: 'padding:15px'}
         %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
-          %span
+          %span{style: 'font-size:20px'}
             = link_to series.name, series_path(series.native)
         %div
           %i.mdi-av-movie.mdi-material-grey-700{style: 'vertical-align: middle;'}
           %span
             %b= series.tile_episode_counter
-        %div{style:'height:24px;line-height: 16px'}
+        %div{style:'height:28px;line-height: 26px'}
           %span= "#{series.tile_last_ep_name}"
         %div{style:'height:20px;'}
           %span.pull-left{style: 'color: #a0a0a0;font-size:16px;padding-top:6px'}
             %i.mdi-action-visibility{style: 'vertical-align:middle'}
             \--
           %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{series.amount_of_days} тому"
-
-:css
-  .tile-block {
-    opacity: 1;
-    background-color: #fefefe;
-    transition: all .1s ease-in-out;
-  }
-  .tile-block:hover {
-    opacity: 1;
-    background-color: #fff;
-    transition: all .1s ease-in-out;
-    transform: scale(1.005);
-    box-shadow: 0px 0px 25px #000000;
-  }

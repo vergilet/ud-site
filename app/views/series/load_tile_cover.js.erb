@@ -1,5 +1,5 @@
 window.series_cover<%= @series.id %> = '<%= escape_javascript(render partial: 'series/cover_url_ajax', locals: { cover: @series_presenter.cover}) %>';
 $(".series_cover<%= @series.id %>")
   .empty()
-  .append('<img src=' + window.series_cover<%= @series.id %> + ' width="100%" />')
+  .append('<img src=' + window.series_cover<%= @series.id %> + ' width="100%" />');
 

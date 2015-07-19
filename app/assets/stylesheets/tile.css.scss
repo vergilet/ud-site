@@ -19,3 +19,58 @@
     height: 320px;
   }
 }
+
+.tile-block {
+  opacity: 1;
+  background-color: #fefefe;
+  transition: all .1s ease-in-out;
+}
+.tile-block:hover {
+  opacity: 1;
+  background-color: #fff;
+  transition: all .1s ease-in-out;
+  transform: scale(1.005);
+  box-shadow: 0px 0px 25px #000000;
+}
+
+.corner {
+  position: absolute;
+  z-index: 2;
+  top: -9px;
+  background-image: url("/assets/corner.png");
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  margin-left: -12px;
+}
+
+//Anime ongoing
+.corner-category_4 {
+  background-image: url("/assets/corner/ongoing.png");
+}
+//Anime not ongoing
+.corner-category_5 {
+  background-image: url("/assets/corner/not-ongoing.png");
+}
+//Anime OVA
+.corner-category_6 {
+  background-image: url("/assets/corner/ova.png");
+}
+//Anime movie
+.corner-category_7 {
+  background-image: url("/assets/corner/a-movie.png");
+}
+//Movie
+.corner-category_3 {
+  background-image: url("/assets/corner/movie.png");
+}
+//Series
+.corner-category_2 {
+  background-image: url("/assets/corner/series.png");
+}
+
+//Short movie
+.corner-category_8 {
+  background-image: url("/assets/corner/s-movie.png");
+}
+
