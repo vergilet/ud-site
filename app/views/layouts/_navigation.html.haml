@@ -10,8 +10,10 @@
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav{ "data-hover"=>"dropdown", "data-animations"=>"zoomIn fadeInLeft fadeInUp fadeInRight" }
         %li.dropdown
-          %a.dropdown-toggle{"data-target" => "#", "data-toggler" => "dropdown", :href => category_path(1), class: 'visible-xs visible-sm'}
-          %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => category_path(1), class: 'hidden-xs hidden-sm'}
+          %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => category_path(1), class: 'visible-xs visible-sm'}
+            %b Аніме
+            %b.caret
+          %a.dropdown-toggle{"data-target" => "#", "data-toggler" => "dropdown", :href => category_path(1), class: 'hidden-xs hidden-sm'}
             %b Аніме
             %b.caret
           %ul.dropdown-menu
