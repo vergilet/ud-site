@@ -18,19 +18,9 @@
       = render 'layouts/navigation'
     %main{:role => "main"}
       .container
-        .alert.alert-dismissable.alert-warning
-          %button.close{"data-dismiss" => "alert", :type => "button"} ×
-          %h4 Увага!
-          %p
-            На сайті ведуться технічні роботи по збільшенню швидкості підвантаження елементів сайту, тому
-            = succeed "." do
-              %a.alert-link{:href => "javascript:void(0)"} зображення, деякий час, можуть бути не доступні
-            Робота сайту відновиться найближчим часом.
         = render 'layouts/messages'
         = yield
-
         .clearfix
-
     %footer.footer
       %div{style: 'background-color: #385762;height: 125px;width:100%;'}
         .container
