@@ -3,6 +3,7 @@ class Series < ActiveRecord::Base
   belongs_to :category
   acts_as_taggable
   accepts_nested_attributes_for :episodes, allow_destroy: true,  reject_if: lambda { |a| a.blank? }
+
   # has_attached_file :cover,
   #                   styles: { :original => ["373x525>", 'jpeg'] },
   #                   storage: :dropbox,
