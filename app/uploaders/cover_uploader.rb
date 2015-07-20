@@ -51,7 +51,7 @@ class CoverUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
   cloudinary_transformation :transformation => [
-                                {:width => 373, :height => 525, :crop => :limit}, {:quality => 85}
+                                {:width => 373, :height => 525, :crop => :fit}, {:quality => 85}
                             ]
   process :convert => "jpeg"
   process :tags => ['post_cover']
