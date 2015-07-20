@@ -87,6 +87,7 @@
                   = image_tag (@series.cover.url)
               %p
                 %input.form-control.floating-label.pointer{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.cover_name }
+                = f.hidden_field(:cover_cache)
                 = f.file_field :cover, placeholder: 'Select the cover', class: 'pointer'
           .clearfix
           .col-sm-12
