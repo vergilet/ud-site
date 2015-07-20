@@ -49,9 +49,4 @@ class Series < ActiveRecord::Base
     self.cover_changed?
   end
 
-  # def preload_image
-  #   preloaded_image = self.cover.url
-  #   self.update_column(:preloaded_cover, preloaded_image)
-  # end
-
 end
