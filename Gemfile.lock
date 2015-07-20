@@ -123,6 +123,8 @@ GEM
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
     hashie (3.4.2)
+    heroku-deflater (0.5.3)
+      rack (>= 1.4.5)
     high_voltage (2.3.0)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -352,6 +354,7 @@ DEPENDENCIES
   factory_girl_rails
   faker
   haml-rails
+  heroku-deflater
   high_voltage
   html2haml
   hub
