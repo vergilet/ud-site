@@ -7,13 +7,13 @@ class CoverUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  # storage :file
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
-    "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
+    "uploads/files/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -51,7 +51,7 @@ class CoverUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
 
   cloudinary_transformation :transformation => [
-                                {:width => 373, :height => 525, :crop => :fit}, {:quality => 85}
+                                {:width => 373, :height => 525, :crop => :fill}, {:quality => 85}
                             ]
   process :convert => "jpeg"
   process :tags => ['post_cover']
