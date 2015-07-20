@@ -51,14 +51,14 @@ class CoverUploader < CarrierWave::Uploader::Base
   include Cloudinary::CarrierWave
   
   def public_id
-    return "*files/series/#{model.id}/cover.jpeg"
+    return "files/series/#{model.id}/cover"
   end
 
   cloudinary_transformation :transformation => [
     {:width => 373, :height => 525, :crop => :scale}, {:quality => 85}
   ]
   
-  process :convert => "jpeg"
+  process :convert => "jpg"
   process :tags => ['post_cover']
 
 end
