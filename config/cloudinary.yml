@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ukrdub
+  api_key: '333786116113515'
+  api_secret: ZYU7pEDViMqJBn6F0RGGoSn07Pk
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ukrdub
+  api_key: '333786116113515'
+  api_secret: ZYU7pEDViMqJBn6F0RGGoSn07Pk
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ukrdub
+  api_key: '333786116113515'
+  api_secret: ZYU7pEDViMqJBn6F0RGGoSn07Pk
+  enhance_image_tag: true
+  static_image_support: false
