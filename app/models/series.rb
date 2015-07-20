@@ -9,14 +9,13 @@ class Series < ActiveRecord::Base
   #                   dropbox_credentials: Rails.root.join('config/dropbox.yml'),
   #                   dropbox_options: {path: proc { |style| "files/series/#{id}/cover.jpeg" } }
 
-  mount_uploader :cover, CloudinaryCoversUploader
+  mount_uploader :cover, CoverUploader
 
   has_attached_file :torrent,
                     storage: :dropbox,
                     dropbox_credentials: Rails.root.join('config/dropbox.yml'),
                     dropbox_options: {path: proc { |style| "files/series/#{id}/torrent.torrent" } }
 
-  validates_attachment_content_type :cover, :content_type => /\Aimage\/.*\Z/
   validates_attachment_content_type :torrent, :content_type => 'application/x-bittorrent'
 
   validates_presence_of(:name, :description, :cover, :category_id)

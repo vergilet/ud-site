@@ -1,6 +1,6 @@
 # encoding: utf-8
 
-class CloudinaryCoversUploader < CarrierWave::Uploader::Base
+class CoverUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -50,14 +50,11 @@ class CloudinaryCoversUploader < CarrierWave::Uploader::Base
 
   include Cloudinary::CarrierWave
 
+  cloudinary_transformation :transformation => [
+                                {:width => 373, :height => 525, :crop => :limit}, {:quality => 85}
+                            ]
   process :convert => "jpeg"
   process :tags => ['post_cover']
-
-  version :standard do
-    process :resize_to_fill => [373, 525, :fill]
-    process :convert => 'jpg'
-    cloudinary_transformation :quality => 80
-  end
 
 
 end
