@@ -7,7 +7,6 @@
     #myTabContent.tab-content
       #vk.tab-pane.fade.active.in{ "data-turbolinks-eval" => "always" }
         %p
-          %script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", "data-turbolinks-eval" => "always", :async => true}
           :javascript
             VK.init({apiId: 4878932, onlyWidgets: true});
           #vk_comments{"data-turbolinks-eval" => "always"}
