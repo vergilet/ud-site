@@ -19,16 +19,7 @@
           .panel-body
             .col-sm-4.plotter-left-5.plotter-right-5
               %div.post-cover{ class: "series_cover#{@series_presenter.native.id}" }
-              :javascript
-                $(document).ready(function(){
-                  if (window.series_cover#{@series_presenter.native.id} != undefined) {
-                    $('.series_cover#{@series_presenter.native.id}')
-                      .empty()
-                      .append('<img src=' + window.series_cover#{@series_presenter.native.id} + ' width="100%" />')
-                  } else {
-                    $.getScript('#{ load_tile_cover_path(@series_presenter.native) }');
-                  }
-                })
+                %img{:src => @series_presenter.cover, :width => "100%"}/
             .col-sm-8
               .describe-items
                 .row
