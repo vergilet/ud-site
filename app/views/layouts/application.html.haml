@@ -1,6 +1,5 @@
 - content_for :description do
   = "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою."
-
 !!!
 %html
   %head
@@ -9,8 +8,8 @@
     = favicon_link_tag
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Ud Site'}"}
     %meta{:content => asset_path('fav.png'), :property => "og:image"}/
-    = stylesheet_link_tag 'init', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'waiterLoad', 'data-turbolinks-track' => true
+    = render 'layouts/init_css'
+    = javascript_include_tag 'waiterLoad', 'data-turbolinks-track' => true, :async => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
     %script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", :async => true}
     = csrf_meta_tags
