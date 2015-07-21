@@ -1,4 +1,4 @@
-header, main {
+header, main, footer{
     opacity:0;
 }
 .init-loader {  }
