@@ -9,7 +9,8 @@
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Ud Site'}"}
     %meta{:content => asset_path('fav.png'), :property => "og:image"}/
     = render 'layouts/init_css'
-    = javascript_include_tag 'waiterLoad', 'data-turbolinks-track' => true, :async => true
+    = render 'layouts/init_js'
+
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
     %script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", :async => true}
     = csrf_meta_tags
