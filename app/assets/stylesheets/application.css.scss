@@ -26,12 +26,19 @@
 *= require tile
 */
 
+header, main {
+  transition: all 0.5s ease;
+  opacity: 1!important;
+}
+.init-loader {
+  transition: all 0.5s ease;
+  opacity: 0!important;
+}
 
 .hidden-element {
   display: none;
 }
 
-main {}
 .twitter-timeline-container iframe, [id^="twitter-widget-"], [id*="twitter-widget-"] {
   width: 100%!important;
 }
@@ -59,6 +66,7 @@ main {}
 //   transition: all 0.2s linear;
 //   -webkit-transition: all 0.2s linear;
 // }
+
 
 abbr[title="required"] {
   display: none;
