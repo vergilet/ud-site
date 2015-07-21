@@ -4,7 +4,7 @@
       = link_to series_path(series.native) do
         .cover-image{class: "series_#{series.native.id}"}
           :javascript
-            $(document).ready(function(){
+            addPostponedFunc(['allScriptsReady'],'someEnigmaticName',function(){
               if (window.series_#{series.native.id} != undefined) {
                 $(".series_#{series.native.id}")
                   .empty()

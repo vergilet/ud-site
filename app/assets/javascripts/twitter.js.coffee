@@ -1,4 +1,4 @@
-$ ->
+addPostponedFunc [ 'allScriptsReady' ], 'someEnigmaticName', ->
   loadTwitterSDK()
   $(document).on 'page:change', renderTimelines
 

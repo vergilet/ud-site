@@ -60,3 +60,5 @@ function episodeSelector() {
         $(this).addClass('active_episode');
     })
 }
+
+addInitializationFlag('allScriptsReady');
