@@ -20,7 +20,7 @@
             .col-sm-4.plotter-left-5.plotter-right-5
               %div.post-cover{ class: "series_cover#{@series_presenter.native.id}" }
               :javascript
-                $(document).ready(function(){
+                addPostponedFunc(['allScriptsReady'],'full_post#{series.native.id}',function(){
                   if (window.series_cover#{@series_presenter.native.id} != undefined) {
                     $('.series_cover#{@series_presenter.native.id}')
                       .empty()
