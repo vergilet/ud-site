@@ -19,6 +19,7 @@
 //= require_directory ./bootstrap
 //= require_directory ./material
 //= require twitter
+//= require vk
 //= require pagination
 
 NProgress.configure({
