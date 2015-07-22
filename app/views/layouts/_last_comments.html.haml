@@ -7,16 +7,8 @@
     #myTabContent.tab-content
       #vk.tab-pane.fade.active.in{ "data-turbolinks-eval" => "always" }
         %p
-          :javascript
-            addPostponedFunc(['allScriptsReady'],'someEnigmaticName',function(){
-              VK.init({apiId: 4878932, onlyWidgets: true});
-            })
-
           #vk_comments{"data-turbolinks-eval" => "always"}
-            :javascript
-              addPostponedFunc(['allScriptsReady'],'someEnigmaticName',function(){
-                VK.Widgets.Comments("vk_comments", {autoPublish: 0, limit: 5, width: "auto", attach: "graffiti,photo,video,audio"}, "#{ request.original_url }");
-              })
+
 :css
   #comments div[id^='___comments_'], #comments div[id^='___comments_'] iframe {
     width: 100% !important;
