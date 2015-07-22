@@ -1,7 +1,7 @@
 :javascript
 	window.tryFirePostponedFunc = function(requiredFlags, func) {
 	
-	    if (Object.prototype.toString.call(window.initializationFlags) === '[object Array]')
+	    if (!(Object.prototype.toString.call(window.initializationFlags) === '[object Array]'))
 	        return;
 	    var i, len = requiredFlags.length;
 	    for (i = 0; i < len; i++)
