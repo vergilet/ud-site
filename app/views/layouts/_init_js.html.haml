@@ -14,7 +14,7 @@
 	window.addPostponedFunc = function(requiredFlags, func) {
 	    if (tryFirePostponedFunc(requiredFlags, func))
 	        return;
-	    window.funcRequirements = window.funcRequirements || {};
+	    window.funcRequirements = window.funcRequirements || [];
 	    window.funcRequirements.push({
 	        flags: requiredFlags,
 	        func: func
