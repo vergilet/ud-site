@@ -10,4 +10,15 @@ class VisitorsController < ApplicationController
       format.js
     end
   end
+
+  def comments
+    page_error_or_missing unless admin?
+  end
+
+  private
+
+  def page_error_or_missing
+    render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
+  end
+
 end

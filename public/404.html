@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
   body {
-    background-color: #EFEFEF;
+    background-color: #fafafa;
     color: #2E2F30;
     text-align: center;
     font-family: arial, sans-serif;
@@ -14,7 +14,7 @@
 
   div.dialog {
     width: 95%;
-    max-width: 33em;
+    max-width: 53em;
     margin: 4em auto 0;
   }
 
@@ -51,17 +51,24 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+  a {
+    margin-right: 30px;
+    color: #90c21d;
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 2px dashed #90c21d;
+    cursor: pointer;
+  }
   </style>
 </head>
 
 <body>
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <div>
-      <h1>The page you were looking for doesn't exist.</h1>
-      <p>You may have mistyped the address or the page may have moved.</p>
-    </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <img src="http://res.cloudinary.com/ukrdub/image/upload/v1437673840/public/404.png"  width="100%"/>
+    <br>
+    <br>
+    <a onclick="history.back()">Повернутись назад</a>
   </div>
 </body>
 </html>

@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  # TODO /admin/comments-management
+  get '/comments' => 'visitors#comments'
+
   resources :categories
   resources :episodes
   resources :series
