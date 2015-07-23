@@ -4,10 +4,11 @@ addPostponedFunc [ 'allScriptsReady' ], ->
 
 loadTwitterSDK = ->
   $.getScript "//vk.com/js/api/openapi.js?116", ->
-    renderTimelines()
+    setTimeout (->
+      renderTimelines()
+    ), 2000
 
 renderTimelines = ->
-  console.log('123')
   VK.init({apiId: 4878932, onlyWidgets: true});
   if $('#vk_comments').length
     console.log(location.href)
