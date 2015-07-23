@@ -35,6 +35,10 @@ header, main, footer {
   opacity: 0!important;
 }
 
+.carousel .item img {
+    width: inherit!important;
+}
+
 .hidden-element {
   display: none;
 }
