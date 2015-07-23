@@ -1,4 +1,4 @@
-addPostponedFunc [ 'allScriptsReady' ], 'vkWidget', ->
+addPostponedFunc [ 'allScriptsReady' ], ->
   loadTwitterSDK()
   $(document).on 'page:change', renderTimelines
 
