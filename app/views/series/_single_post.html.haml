@@ -4,7 +4,7 @@
       = link_to series_path(series_presenter.native) do
         .image{class: "series_#{series_presenter.native.id}"}
         :javascript
-            addPostponedFunc(['allScriptsReady'],'single_post#{series_presenter.native.id}',function(){
+            addPostponedFunc(['allScriptsReady'], function(){
               if (window.series_#{series_presenter.native.id} != undefined) {
                 $(".series_#{series_presenter.native.id}")
                   .empty()

@@ -11,20 +11,20 @@
 	    return true;
 	};
 	
-	window.addPostponedFunc = function(requiredFlags, funcName, func) {
+	window.addPostponedFunc = function(requiredFlags, func) {
 	    if (tryFirePostponedFunc(requiredFlags, func))
 	        return;
-	    window.funcRequirements = window.funcRequirements || {};
-	    window.funcRequirements[funcName] = {
+	    window.funcRequirements = window.funcRequirements || [];
+	    window.funcRequirements.push({
 	        flags: requiredFlags,
 	        func: func
-	    };
+	    });
 	};
 	
 	window.firePostponedFuncs = function() {
-	    for (var funcName in window.funcRequirements) {
-	        if (tryFirePostponedFunc(window.funcRequirements[funcName].flags, window.funcRequirements[funcName].func))
-	            delete window.funcRequirements[funcName];
+	    for (var funcIndex in window.funcRequirements) {
+	        if (tryFirePostponedFunc(window.funcRequirements[funcIndex].flags, window.funcRequirements[funcIndex].func))
+	            delete window.funcRequirements[funcIndex];
 	    }
 	}
 	
