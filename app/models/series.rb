@@ -42,7 +42,7 @@ class Series < ActiveRecord::Base
   end
 
   def self.search(query)
-    joins(:episodes).where("lower(episodes.name) like ? OR lower(series.name) like ? OR series.original_name like ?", "%#{query.downcase}%", "%#{query.downcase}%", "%#{query.downcase}%").uniq
+    joins(:episodes).where("lower(episodes.name) like lower(?) OR lower(series.name) like lower(?) OR lower(series.original_name) like lower(?)", "%#{query.downcase}%", "%#{query.downcase}%", "%#{query.downcase}%").uniq
   end
 
   private
