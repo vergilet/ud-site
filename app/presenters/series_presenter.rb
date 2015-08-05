@@ -52,8 +52,8 @@ class SeriesPresenter
   end
 
   def categories
-    # links = series.tag_list.map {|tag| "<a href='#{}' class='label label-success'>#{tag}</a>" }
-    links = series.tag_list.map {|tag| link_to tag.name, { :action => :tag, :id => tag.name } }
+    links = series.tag_list.map {|tag| "<a href='#{}' class='label label-success'>#{tag}</a>" }
+    # links = series.tag_list.map {|tag| link_to tag.name, { :action => :tag, :id => tag.name } }
     links.sort.join(' ').html_safe
   end
 
