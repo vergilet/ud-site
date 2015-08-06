@@ -38,7 +38,8 @@
                         %a
                           %b
                             = @series_presenter.name
-                      %span= @series_presenter.original_name      
+                      %span= @series_presenter.original_name
+                      %br
                       - if admin?
                         %span.pull-right
                           %span= link_to 'Редагувати', edit_series_path(@series)
