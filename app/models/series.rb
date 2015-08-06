@@ -45,6 +45,10 @@ class Series < ActiveRecord::Base
     joins(:episodes).where("lower(episodes.name) like lower(?) OR lower(series.name) like lower(?) OR lower(series.original_name) like lower(?)", "%#{query.downcase}%", "%#{query.downcase}%", "%#{query.downcase}%").uniq
   end
 
+  def self.genre(query)
+    tagged_with(query.downcase)
+  end
+
   private
 
   def changed_cover?

@@ -1,3 +1,5 @@
+require 'will_paginate/array'
+
 class SeriesController < ApplicationController
   before_action :set_series, only: [:show, :edit, :update, :destroy, :load_tile, :load_tile_cover]
   #before_filter :authenticate_user!, except: [:show, :index, :load_tile, :load_tile_cover]
@@ -29,6 +31,16 @@ class SeriesController < ApplicationController
     @episodes = @series.episodes
     @series_presenter = SeriesPresenter.new(@series)
     @episodes_presenter = EpisodePresenter.instantiate(@series.episodes)
+  end
+
+  def genre
+    if params[:search]
+      @series = Series.all_ordered_by_child.genre(params[:search]).to_a.paginate(page: params[:page], per_page: 9)
+    else
+      @series = Series.all_ordered_by_child.to_a.paginate(page: params[:page], per_page: 9)
+    end
+    @series_presenter = SeriesPresenter.instantiate(@series)
+    render :index
   end
 
   # GET /series/new

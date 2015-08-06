@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   resources :categories
   resources :episodes
   resources :series
+
+  get '/series/genre/:search' => 'series#genre', :as => :genre
+
   resources :users
   root to: 'visitors#index'
   get '/auth/:provider/callback' => 'sessions#create'
