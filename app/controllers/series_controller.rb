@@ -31,6 +31,7 @@ class SeriesController < ApplicationController
     @episodes = @series.episodes
     @series_presenter = SeriesPresenter.new(@series)
     @episodes_presenter = EpisodePresenter.instantiate(@series.episodes)
+    @series.increment
   end
 
   def genre

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720061648) do
+ActiveRecord::Schema.define(version: 20150806071254) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,8 +39,8 @@ ActiveRecord::Schema.define(version: 20150720061648) do
 
   create_table "series", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
     t.string   "original_name"
     t.text     "description"
     t.string   "episodes_amount"
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 20150720061648) do
     t.string   "category_id"
     t.string   "preloaded_cover"
     t.string   "cover"
+    t.integer  "views",                    default: 0
   end
 
   create_table "taggings", force: :cascade do |t|

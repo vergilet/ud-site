@@ -10,6 +10,10 @@ class SeriesPresenter
     @episodes = EpisodePresenter.sort_my_episodes(series.episodes)
   end
 
+  def views
+    series.views
+  end
+
   def native
     series
   end

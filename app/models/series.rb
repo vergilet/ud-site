@@ -49,6 +49,12 @@ class Series < ActiveRecord::Base
     tagged_with(query.downcase)
   end
 
+  def increment(by = 1)
+    self.views ||= 0
+    self.views += by
+    self.save
+  end
+  
   private
 
   def changed_cover?
