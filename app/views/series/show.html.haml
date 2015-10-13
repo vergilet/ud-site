@@ -1,5 +1,12 @@
 - content_for :title do
   = "#{@series_presenter.name} / #{@series_presenter.native.original_name}" 
+- content_for :url do
+  = series_path(@series_presenter.native.id)
+- content_for :description do
+  = @series_presenter.description 
+- content_for :image do
+  = "http://res.cloudinary.com/ukrdub/image/upload/c_thumb,h_240,w_537/v1444595190/files/series/#{@series_presenter.native.id}/cover.jpg"
+
 .row
   .col-sm-12
     %ul.breadcrumb
