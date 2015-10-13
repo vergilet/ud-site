@@ -4,12 +4,12 @@
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
     %title= content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською'
     = favicon_link_tag
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою."}"}
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.'}/
     %meta{:content => asset_path('fav.png'), :property => "og:image"}/
     
-    %meta{:content => content_for?(:url) ? yield(:url) : 'http://www.ukrdub.net', :property => "og:url"}
-    %meta{:content => content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською', :property => "og:title"}
-    %meta{:content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.", :property => "og:description"}
+    %meta{:content => content_for?(:url) ? yield(:url) : 'http://www.ukrdub.net', :property => "og:url"}/
+    %meta{:content => content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською', :property => "og:title"}/
+    %meta{:content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.", :property => "og:description"}/
     %meta{:content => content_for?(:image) ? yield(:image) : asset_path('fav.png')', :property => "og:image"}/
     
     
