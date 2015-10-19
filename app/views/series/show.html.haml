@@ -5,7 +5,7 @@
 - content_for :description do
   = @series_presenter.description 
 - content_for :image do
-  = cl_image_tag("files/series/#{@series_presenter.native.id}/cover.jpg", :width=>537, :height=>240, :crop=>:thumb)
+  = cl_image_path("files/series/#{@series_presenter.native.id}/cover.jpg", :width=>537, :height=>240, :crop=>:thumb)
   -#"http://res.cloudinary.com/ukrdub/image/upload/c_thumb,h_240,w_537/v1444595190/files/series/#{@series_presenter.native.id}/cover.jpg"
 
 .row
