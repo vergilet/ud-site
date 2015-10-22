@@ -134,7 +134,7 @@
             = f.button :submit, 'Зберегти', class: 'btn btn-primary'
 
 :javascript
-  $(document).ready(function(){
+  addPostponedFunc(['allScriptsReady'],function(){
     var preview = $(".upload-preview img");
 
     $("#series_cover").change(function(event){
@@ -149,7 +149,7 @@
     });
   });
 
-  $(document).ready(function(){
+  addPostponedFunc(['allScriptsReady'],function(){
     var preview = $(".torrent-preview img");
 
     $("#series_torrent").change(function(event){
