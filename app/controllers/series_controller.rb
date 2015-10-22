@@ -62,7 +62,7 @@ class SeriesController < ApplicationController
     @series = Series.new(series_params)
     @series.category_id = params[:series][:category_id]
     respond_to do |format|
-      if @series.save
+      if @series.valid? && @series.save
         format.html { redirect_to @series, notice: 'Series was successfully created.' }
         format.json { render :show, status: :created, location: @series }
       else
