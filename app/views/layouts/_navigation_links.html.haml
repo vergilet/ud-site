@@ -9,6 +9,11 @@
         %b.caret
       %ul.dropdown-menu
         %li
+          - if current_user.admin?
+            %li
+              = link_to new_series_path do
+                %i.mdi-communication-email{style:'vertical-align: middle'}
+                = Додати новий реліз
           %li
             = link_to '#' do
               %i.mdi-communication-email{style:'vertical-align: middle'}
