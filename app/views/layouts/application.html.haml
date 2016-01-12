@@ -41,7 +41,7 @@
       var cb = function() {
         var l = document.createElement('link'); l.rel = 'stylesheet';
         l.href = '#{asset_path("application.css")}';
-        var h = document.getElementsByTagName('head')[0]; h.insertAfter(l, h);
+        var h = document.getElementsByTagName('head')[0]; h.insertBefore(l, h);
       };
       var raf = requestAnimationFrame || mozRequestAnimationFrame ||
           webkitRequestAnimationFrame || msRequestAnimationFrame;
