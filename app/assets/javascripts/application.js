@@ -21,6 +21,7 @@
 //= require twitter
 //= require vk
 //= require pagination
+//= require smooth_scroll
 
 NProgress.configure({
     showSpinner: true,
