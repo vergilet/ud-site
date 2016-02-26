@@ -11,9 +11,8 @@
     %meta{:content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.", :property => "og:description"}
     %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "og:image"}/
     
-    
-    = render 'layouts/init_css'
     = render 'layouts/init_js'
+    = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
     -#%script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", :async => true}
     = csrf_meta_tags
@@ -36,14 +35,3 @@
           = render 'layouts/footer'
           .center-block.top-me-please{style: 'width:56px;margin-top:-26px;'}
             %a.btn.btn-info.btn-fab.btn-raised.mdi-navigation-expand-less.scroll-to-top{:href => "#"}
-
-    :javascript
-      var cb = function() {
-        var l = document.createElement('link'); l.rel = 'stylesheet';
-        l.href = '#{asset_path("application.css")}';
-        var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
-      };
-      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
-          webkitRequestAnimationFrame || msRequestAnimationFrame;
-      if (raf) raf(cb);
-      else window.addEventListener('load', cb);
