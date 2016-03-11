@@ -114,7 +114,7 @@ class SeriesController < ApplicationController
           :audio_info, :translator, :actors,
           :sound_maker, :source_mirror,
           :source_mirror_additional,
-          :tag_list,
+          :tag_list, :executer,
           :original_name,
           :category_id,
           episodes_attributes: episode_params
