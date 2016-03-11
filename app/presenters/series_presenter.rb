@@ -95,6 +95,10 @@ class SeriesPresenter
     #links = series.sound_maker.map {|sm| "<a href='#' class=''>#{sm}</a>" }
     #links.sort.join(', ').html_safe
   end
+  
+  def sound_maker
+    series.executer.html_safe
+  end
 
   def cover
     # series.preloaded_cover || series.cover
