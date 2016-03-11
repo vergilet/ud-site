@@ -4,7 +4,7 @@
       %h4 Інші джерела
       .list-group
         - if @series_presenter.torrent
-          = link_to @series_presenter.torrent_url, class: 'btn special-button', download: true do
+          = link_to @series_presenter.torrent, class: 'btn special-button', target: '_blank' do
             .list-group-item
               .row-action-primary
                 %i.mdi-file-cloud-circle.torrent
@@ -12,8 +12,8 @@
                 .action-secondary
                   %i.mdi-file-file-download
                 %h4.list-group-item-heading
-                  \.torrent
-                %p.list-group-item-text Гуртом.нет
+                  \посилання на .torrent
+                %p.list-group-item-text Торрент трекер
           .list-group-separator
         - if @series_presenter.source_mirror
           = link_to @series_presenter.source_mirror, target: '_blank', class: 'btn special-button' do
