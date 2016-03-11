@@ -12,13 +12,6 @@ class Series < ActiveRecord::Base
 
   mount_uploader :cover, CoverUploader
 
-  has_attached_file :torrent,
-                    storage: :dropbox,
-                    dropbox_credentials: Rails.root.join('config/dropbox.yml'),
-                    dropbox_options: {path: proc { |style| "files/series/#{id}/torrent.torrent" } }
-
-  validates_attachment_content_type :torrent, :content_type => 'application/x-bittorrent'
-
   validates_presence_of(:name, :description, :cover, :category_id)
 
   # :original_name, :episodes_amount, :episode_time
@@ -31,10 +24,6 @@ class Series < ActiveRecord::Base
 
   def self.all_ordered_by_child
     includes(:episodes).order('episodes.created_at DESC, series.created_at DESC')
-  end
-
-  def torrent_name
-    "&#8600; #{torrent_file_name}".html_safe if torrent.present?
   end
 
   def cover_name
