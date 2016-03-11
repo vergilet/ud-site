@@ -96,7 +96,7 @@ class SeriesPresenter
     #links.sort.join(', ').html_safe
   end
   
-  def sound_maker
+  def executer
     series.executer.html_safe
   end
 
