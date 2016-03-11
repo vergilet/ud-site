@@ -98,25 +98,21 @@
           .col-sm-12
             .poster-holder
               %p
-                %b Торент файл
+                %b Посилання на торрент трекер
               %p
-                .torrent-preview
-                  = image_tag (@series.torrent.presence ? asset_path('success.png') : asset_path('torrent_empty.jpg') ), size: '36x36'
-              %p
-                %input.form-control.floating-label.pointer{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.torrent_name }
-                = f.file_field :torrent, placeholder: 'Torrent file', class: 'pointer'
+                = f.text_field :torrent, class: 'form-control', placeholder: 'Torrent tracker'
           .col-sm-12
             .poster-holder
               %p
                 %b Реліз на Ex.ua
               %p
-                = f.text_field :source_mirror, class: 'form-control', placeholder: 'Torrent file'
+                = f.text_field :source_mirror, class: 'form-control', placeholder: 'Ex.ua посилання'
           .col-sm-12
             .poster-holder
               %p
                 %b Реліз в Vk.com
               %p
-                = f.text_field :source_mirror_additional, class: 'form-control', placeholder: 'Torrent file'
+                = f.text_field :source_mirror_additional, class: 'form-control', placeholder: 'Вк посилання'
 
         .clearfix
         .col-sm-12
