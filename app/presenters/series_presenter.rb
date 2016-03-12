@@ -97,7 +97,7 @@ class SeriesPresenter
   end
   
   def executer
-    series.executer.html_safe
+    series.executer.to_s.html_safe
   end
 
   def cover
