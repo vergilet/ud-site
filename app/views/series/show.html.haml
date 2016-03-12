@@ -103,12 +103,13 @@
                     .col-sm-9
                       %span
                         = @series_presenter.sound_maker
-                  .col-sm-12
-                    .col-sm-3
-                      %span.titles Виконавець:
-                    .col-sm-9
-                      %span
-                        = @series_presenter.executer                        
+                  - if @series_presenter.executer.present?
+                    .col-sm-12
+                      .col-sm-3
+                        %span.titles Виконавець:
+                      .col-sm-9
+                        %span
+                          = @series_presenter.executer                        
 
                   .col-sm-12.text-justify
                     %p &nbsp;
