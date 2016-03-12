@@ -1,5 +1,5 @@
-class RemoveDefault < ActiveRecord::Migration
+class ChangeDefaultInSeries < ActiveRecord::Migration
   def change
-    change_column :series, :executer, :string, :default => nil
+    change_column :series, :executer, :string, default: nil
   end
 end
