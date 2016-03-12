@@ -3,18 +3,8 @@
     .panel-body.hover-tile{style: 'padding:0;border-radius:3px;display:inherit;margin:0;text-transform: none;white-space:normal;'}
       = link_to series_path(series.native) do
         .cover-image{class: "series_#{series.native.id}"}
-          :javascript
-            addPostponedFunc(['allScriptsReady'],function(){
-              if (window.series_#{series.native.id} != undefined) {
-                $(".series_#{series.native.id}")
-                  .empty()
-                  .append(window.series_#{series.native.id})
-                  .find('.inside-image')
-                  .fadeIn( 1000 );
-              } else {
-                $.getScript('#{ load_tile_path(series.native) }');
-              }
-            })
+          .inside-image{style: "background-image: url('#{series.cover.url.sub('/upload/', '/upload/c_scale,w_320/')}');background-size:cover;background-position: 100% 5%"}
+          .corner{class: "corner-category_#{series.native.category_id}"}
       .div{style: 'padding:15px'}
         %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
           %span{style: 'font-size:20px'}
