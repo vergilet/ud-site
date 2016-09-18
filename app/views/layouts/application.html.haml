@@ -10,7 +10,8 @@
     %meta{:content => content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською', :property => "og:title"}
     %meta{:content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.", :property => "og:description"}
     %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "og:image"}/
-    
+    %meta{:content => "#03a9f4", :name => "theme-color"}
+
     = render 'layouts/init_js'
     = stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
