@@ -46,14 +46,18 @@
 .corner-category_4 {
   background-image: url(asset-path("corner/finished.png"));
 }
-//Anime ongoing
+//Anime current
 .corner-category_5 {
-  background-image: url(asset-path("corner/ongoing.png"));
+  background-image: url(asset-path("corner/a-current.png"));
 }
+//Anime ongoing
+//.corner-category_5 {
+//  background-image: url(asset-path("corner/ongoing.png"));
+//}
 //Anime not ongoing
-.corner-category_6 {
-  background-image: url(asset-path("corner/not-ongoing.png"));
-}
+//.corner-category_6 {
+//  background-image: url(asset-path("corner/not-ongoing.png"));
+//}
 //Anime OVA
 .corner-category_7 {
   background-image: url(asset-path("corner/ova.png"));
