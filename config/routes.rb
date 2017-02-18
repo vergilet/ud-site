@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  
+constraints(host: /^(?!www\.)/i) do
+  get '' => redirect { |params, request|
+    URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
+  }
+end
 
   # TODO /admin/comments-management
   get '/comments' => 'visitors#comments'
@@ -18,12 +24,4 @@ Rails.application.routes.draw do
 
   get '/load_tile/:id', to: 'series#load_tile', as: 'load_tile'
   get '/load_tile_cover/:id', to: 'series#load_tile_cover', as: 'load_tile_cover'
-
-  constraints(subdomain: '') do
-    constraints(host: /^(?!www\.)/i) do
-      get '' => redirect { |params, request|
-        URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
-      }
-    end
-  end
 end
