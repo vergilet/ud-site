@@ -5,6 +5,12 @@ Rails.application.routes.draw do
       URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
     }
   end
+  
+  constraints subdomain: "" do   
+    get "/" => redirect { |params, request|
+      URI.parse(request.url).tap { |uri| uri.host = "www.#{uri.host}" }.to_s
+    }
+  end
 
   # TODO /admin/comments-management
   get '/comments' => 'visitors#comments'
