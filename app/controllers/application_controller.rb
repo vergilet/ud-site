@@ -10,6 +10,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :reset_headers
   before_filter :redirect_to_http
+  before_filter :change_sub_domain
   
   def reset_headers
     response.headers["Strict-Transport-Security"] = 'max-age=0'
@@ -17,6 +18,12 @@ class ApplicationController < ActionController::Base
 
   def redirect_to_http
     redirect_to :protocol => "http://" if request.protocol == 'https://'
+  end
+  
+  def change_sub_domain
+    if request.subdomain != 'www'
+      redirect_to root_url(subdomain: 'www')
+    end
   end
 
   private
