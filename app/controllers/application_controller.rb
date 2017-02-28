@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :correct_user?
 
   before_filter :reset_headers
-  before_filter :redirect_to_http
+#   before_filter :redirect_to_http
   before_filter :change_sub_domain
   
   def reset_headers
@@ -21,8 +21,8 @@ class ApplicationController < ActionController::Base
   end
   
   def change_sub_domain
-    if request.subdomain != 'www'
-      redirect_to root_url(subdomain: 'www')
+    if request.subdomain == ''
+      redirect_to request.url.sub('', 'www')
     end
   end
 
