@@ -1,4 +1,6 @@
 User-Agent: *
 Allow: /
 Disallow: /admin
+Disallow: /episodes
+Sitemap: http://www.ukrdub.net/all.xml
 Sitemap: http://www.ukrdub.net/sitemap.xml
