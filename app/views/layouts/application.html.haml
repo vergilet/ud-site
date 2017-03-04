@@ -13,7 +13,8 @@
     %meta{:content => "#03a9f4", :name => "theme-color"}
 
     = render 'layouts/init_js'
-    = stylesheet_link_tag 'application', media: 'all'
+    = render 'layouts/init_css'
+    =# stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
     -#%script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", :async => true}
     = csrf_meta_tags
