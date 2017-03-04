@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -8,182 +9,422 @@
 
 <url>
   <loc>http://www.ukrdub.net/</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/1</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://www.ukrdub.net/categories/4</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/5</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/categories/6</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/categories/4</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/7</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/8</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/2</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/3</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/23</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/68</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/37</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/72</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/38</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/49</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/71</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/42</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/39</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/36</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/70</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/35</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/69</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/34</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://www.ukrdub.net/series/33</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://www.ukrdub.net/series/32</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/63</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/?page=2</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/?page=3</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/?page=4</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/27</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/?page=5</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/26</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/?page=6</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/?page=7</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/24</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/21</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://www.ukrdub.net/series/3</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://www.ukrdub.net/series/19</loc>
-  <changefreq>daily</changefreq>
-</url>
-<url>
-  <loc>http://www.ukrdub.net/series/22</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/23</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/1?page=2</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/1?page=3</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/1?page=4</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/1?page=5</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/61</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/48</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/57</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/43</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/3</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/64</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/58</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/54</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/46</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/14</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/13</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/categories/4?page=2</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/12</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/67</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/2</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/66</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/1</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/47</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/17</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/15</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/20</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/65</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/5</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/60</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/51</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/45</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/44</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/41</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/27</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/26</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/8?page=2</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/62</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/30</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/29</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/28</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/series/25</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.ukrdub.net/series/31</loc>
-  <changefreq>daily</changefreq>
+  <loc>http://www.ukrdub.net/series/52</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/50</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/37</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/38</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/36</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/35</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/34</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/33</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/32</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/3?page=2</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/?page=1</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/31</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/21</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/19</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/22</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/20</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/13</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/12</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/5</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/2</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/series/1</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
 </url>
 <url>
   <loc>http://www.ukrdub.net/categories/1?page=1</loc>
-  <changefreq>daily</changefreq>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/4?page=1</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/8?page=1</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.ukrdub.net/categories/3?page=1</loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.51</priority>
 </url>
 </urlset>
