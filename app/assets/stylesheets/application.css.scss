@@ -48,6 +48,12 @@ header, main, footer {
   width: 100%!important;
 }
 
+.inside-image {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
 
 // dropdown on hover
 // ul.nav li.dropdown:hover > ul.dropdown-menu {
