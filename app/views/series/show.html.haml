@@ -124,7 +124,7 @@
             .video-content
               .col-sm-8.plotter-right.plotter-left-5
                 #task-form
-                  %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"}
+
               .col-sm-4.plotter-left.plotter-right
                 .list-of-episodes
                   - @episodes_presenter.reverse.each_with_index do |episode, index|
@@ -145,3 +145,10 @@
 
   .col-lg-3
     = render 'series/downloads_panel'
+  
+  :javascript
+    addPostponedFunc(['allScriptsReady'],function(){
+      $('#task-form').html('#{ %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"} }')
+      var preview = $(".torrent-preview img"); 
+    }
+  
