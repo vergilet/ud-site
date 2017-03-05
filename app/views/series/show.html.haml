@@ -147,8 +147,8 @@
     = render 'series/downloads_panel'
   
   :javascript
+    var url = '#{ @series_presenter.default_meta_video }'
     addPostponedFunc(['allScriptsReady'],function(){
-      $('#task-form').html('#{ %iframe{:allowfullscreen => "", :frameborder => "0", :height => "428", :mozallowfullscreen => "", :scrolling => "no", :src => "#{@series_presenter.default_meta_video}", :webkitallowfullscreen => "", :width => "100%"} }')
-      var preview = $(".torrent-preview img"); 
+      $('#task-form').html('<iframe frameborder="0" height="428" scrolling="no" src="' + url + " width="100%"></iframe>
     }
   
