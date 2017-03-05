@@ -12,8 +12,8 @@
 
     = render 'layouts/init_js'
     -#= javascript_include_tag 'lazyLoad'
-    -#= render 'layouts/init_css'
-    = stylesheet_link_tag 'init', media: 'all'
+    = render 'layouts/init_css'
+    -#= stylesheet_link_tag 'init', media: 'all'
     -#= stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
     -#%script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", :async => true}
