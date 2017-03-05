@@ -10,9 +10,11 @@
     %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "og:image"}/
     %meta{:content => "#03a9f4", :name => "theme-color"}
 
-    = render 'layouts/init_js'
-    = render 'layouts/init_css'
-    = stylesheet_link_tag 'application', media: 'all'
+    -#= render 'layouts/init_js'
+    = javascript_include_tag 'application'
+    -#= render 'layouts/init_css'
+    = stylesheet_link_tag 'init', media: 'all'
+    -#= stylesheet_link_tag 'application', media: 'all'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true, :async => true
     -#%script{:src => "//vk.com/js/api/openapi.js?116", :type => "text/javascript", :async => true}
     = csrf_meta_tags
