@@ -6,21 +6,23 @@
         %span.icon-bar
         %span.icon-bar
       %a.navbar-brand{href: root_path, style: 'padding-top: 3px;'}
-        = image_tag 'logo.png'
+        %h1= image_tag 'logo.png', alt: 'UkrDub.net - аніме та серіали українською'
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav{ "data-hover"=>"dropdown", "data-animations"=>"zoomIn fadeInLeft fadeInUp fadeInRight" }
         %li.dropdown
-          %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => category_path(1), class: 'visible-xs visible-sm'}
-            %b Аніме
-            %b.caret
-          %a.dropdown-toggle{"data-target" => "#", "data-toggler" => "dropdown", :href => category_path(1), class: 'hidden-xs hidden-sm'}
-            %b Аніме
-            %b.caret
+          %h2
+            %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => category_path(1), class: 'visible-xs visible-sm'}
+              %b
+                Аніме
+              %b.caret
+            %a.dropdown-toggle{"data-target" => "#", "data-toggler" => "dropdown", :href => category_path(1), class: 'hidden-xs hidden-sm'}
+              %b Аніме
+              %b.caret
           %ul.dropdown-menu
             %li
-              = link_to 'Поточні', category_path(5)
+              = link_to '<h3>Поточні</h3>'.html_safe, category_path(5)
             %li
-              = link_to 'Завершені', category_path(4)
+              = link_to '<h3>Завершені</h3>'.html_safe, category_path(4)
             -#%li
               = link_to 'Онґоінґи', category_path(5)
             -#%li
@@ -28,11 +30,11 @@
             // %li.divider
             // %li.dropdown-header Dropdown header
             %li
-              = link_to 'ОВА', category_path(7)
+              = link_to '<h3>ОВА</h3>'.html_safe, category_path(7)
             %li
-              = link_to 'Аніме фільми', category_path(8)
+              = link_to '<h3>Аніме фільми</h3>'.html_safe, category_path(8)
         %li
-          = link_to '<b>Серіали</b>'.html_safe, category_path(2)
+          = link_to '<b><h2>Серіали</h2></b>'.html_safe, category_path(2)
         -#%li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Серіали
@@ -45,7 +47,7 @@
             %li
               %a{:href => "javascript:void(0)"} Неонґоіґи
         %li
-          = link_to '<b>Фільми</b>'.html_safe, category_path(3)
+          = link_to '<b><h2>Фільми</h2></b>'.html_safe, category_path(3)
         -#%li.dropdown
           %a.dropdown-toggle{"data-target" => "#", "data-toggle" => "dropdown", :href => "bootstrap-elements.html"}
             %b Фільми
