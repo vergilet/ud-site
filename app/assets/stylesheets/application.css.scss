@@ -12,8 +12,8 @@
  *
  *= require_self
  *= require fonts
- *= require_directory ./bootstrap
  *= require_directory ./material
+ *= require_directory ./bootstrap
 *= require material-patch
 *= require site-top
 *= require placeholders
