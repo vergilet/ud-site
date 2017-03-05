@@ -49,6 +49,7 @@ header, main, footer {
 }
 
 .inside-image {
+  opacity: 1!important;
   -webkit-transition: opacity 1s ease-in-out;
   -moz-transition: opacity 1s ease-in-out;
   -o-transition: opacity 1s ease-in-out;
