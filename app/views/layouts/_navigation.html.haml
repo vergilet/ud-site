@@ -6,7 +6,10 @@
         %span.icon-bar
         %span.icon-bar
       %a.navbar-brand{href: root_path, style: 'padding-top: 3px;'}
-        %h1= image_tag 'logo.png', alt: 'UkrDub.net - аніме та серіали українською'
+        %h1
+          = image_tag 'logo.png', alt: 'UkrDub.net - аніме та серіали українською'
+          %span{style: 'position:relative;z-index:-1;top:-20px;'} UkrDub.net - аніме та серіали українською
+        
     .navbar-collapse.collapse.navbar-responsive-collapse
       %ul.nav.navbar-nav{ "data-hover"=>"dropdown", "data-animations"=>"zoomIn fadeInLeft fadeInUp fadeInRight" }
         %li.dropdown
