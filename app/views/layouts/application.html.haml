@@ -10,8 +10,8 @@
     %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "og:image"}/
     %meta{:content => "#03a9f4", :name => "theme-color"}
 
-    -#= render 'layouts/init_js'
-    = javascript_include_tag 'lazyLoad'
+    = render 'layouts/init_js'
+    -#= javascript_include_tag 'lazyLoad'
     -#= render 'layouts/init_css'
     = stylesheet_link_tag 'init', media: 'all'
     -#= stylesheet_link_tag 'application', media: 'all'
