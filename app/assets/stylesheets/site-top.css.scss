@@ -16,6 +16,16 @@
     }
   }
 }
+
+@media (min-width: @screen-sm-min) { 
+  .site-top .item img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-height: 150px;
+  }
+}
+
 //.site-top {
 //  background-color: #03a9f4;
 //  max-height: 320px;
