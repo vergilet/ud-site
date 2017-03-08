@@ -17,7 +17,7 @@
   }
 }
 
-@media (min-width: @screen-sm-min) { 
+@media (max-width: @screen-sm-min) { 
   .site-top .item img {
       display: block;
       margin-left: auto;
