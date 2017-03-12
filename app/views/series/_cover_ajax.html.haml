@@ -1,15 +1,2 @@
-:javascript
-  eval('var oUrl#{cover.id} = #{cover.url}')
-  if(window.innerWidth < 1200) {
-    eval("url#{cover.id} = oUrl#{cover.id}.replace('/upload/', '/upload/c_scale,w_320,q_auto:low/')")
-  } else {
-    eval("url#{cover.id} = oUrl#{cover.id}.replace('/upload/', '/upload/c_scale,w_320/')")
-  }
-
-// background-image: url('#{cover.url.sub('/upload/', '/upload/c_scale,w_320,q_auto:low/')}');
-.inside-image{style: "background-size:cover;background-position: 100% 5%"}
-:javascript
-  addPostponedFunc(['allScriptsReady'],function(){
-    $('.inside-image').css('background-image', 'url(' + eval("url#{cover.id}") + ')');
-  })
+.inside-image{style: "background-image: url('#{cover.url.sub('/upload/', '/upload/c_scale,w_320,q_auto:eco/')}');background-size:cover;background-position: 100% 5%"}
 .corner{class: "corner-category_#{category_id}"}
