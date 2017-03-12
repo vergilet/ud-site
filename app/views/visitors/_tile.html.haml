@@ -3,7 +3,18 @@
     .panel-body.hover-tile{style: 'padding:0;border-radius:3px;display:inherit;margin:0;text-transform: none;white-space:normal;'}
       = link_to series_path(series.native) do
         .cover-image{class: "series_#{series.native.id}"}
-          .inside-image{style: "background-image: url('#{series.cover.url}');background-size:cover;background-position: 100% 5%"}
+          :javascript
+              addPostponedFunc(['allScriptsReady'],function(){
+                if (window.series_#{series.native.id} != undefined) {
+                  $(".series_#{series.native.id}")
+                    .empty()
+                    .append(window.series_#{series.native.id})
+                    .find('.inside-image')
+                    .fadeIn( 1000 );
+                } else {
+                  $.getScript('#{ load_tile_path(series.native) }');
+                }
+              })
           .corner{class: "corner-category_#{series.native.category_id}"}
       .div{style: 'padding:15px'}
         %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
