@@ -1,15 +1,15 @@
 :javascript
-  var oUrl = '#{cover.url}'
-  if(window.screen.width < 1200) {
-    url = oUrl.replace('/upload/', '/upload/c_scale,w_320,q_auto:low/')
+  var oUrl#{cover.id} = '#{cover.url}'
+  if(window.innerWidth < 1200) {
+    url#{cover.id} = oUrl#{cover.id}.replace('/upload/', '/upload/c_scale,w_320,q_auto:low/')
   } else {
-    url = oUrl.replace('/upload/', '/upload/c_scale,w_320/')
+    url#{cover.id} = oUrl#{cover.id}.replace('/upload/', '/upload/c_scale,w_320/')
   }
 
 // background-image: url('#{cover.url.sub('/upload/', '/upload/c_scale,w_320,q_auto:low/')}');
 .inside-image{style: "background-size:cover;background-position: 100% 5%"}
 :javascript
   addPostponedFunc(['allScriptsReady'],function(){
-    $('.inside-image').css('background-image', 'url(' + url + ')');
+    $('.inside-image').css('background-image', 'url(' + url#{cover.id} + ')');
   })
 .corner{class: "corner-category_#{category_id}"}
