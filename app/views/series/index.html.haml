@@ -1,3 +1,10 @@
+- content_for :title do
+  = 'Всі релізи'
+- content_for :description do
+  = "Всі релізи - UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою." 
+- content_for :url do
+  = request.original_url  
+
 .row
   .col-sm-12
     %ul.breadcrumb
