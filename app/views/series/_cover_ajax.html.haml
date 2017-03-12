@@ -1,2 +1,15 @@
-.inside-image{style: "background-image: url('#{cover.url.sub('/upload/', '/upload/c_scale,w_320,q_auto:low/')}');background-size:cover;background-position: 100% 5%"}
+:javascript
+  var url = '';
+  if(window.screen.width < 1200) {
+    url = '/upload/c_scale,w_320,q_auto:low/'
+  } else {
+    url = '/upload/c_scale,w_320/'
+  }
+
+// background-image: url('#{cover.url.sub('/upload/', '/upload/c_scale,w_320,q_auto:low/')}');
+.inside-image{style: "background-size:cover;background-position: 100% 5%"}
+:javascript
+  addPostponedFunc(['allScriptsReady'],function(){
+    $('.inside-image').css('background-image', 'url(' + '#{cover.url.sub("/upload/", "/upload/c_scale,w_320,q_auto:low/")}' + ')');
+  })
 .corner{class: "corner-category_#{category_id}"}
