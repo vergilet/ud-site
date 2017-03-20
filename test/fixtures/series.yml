@@ -1,25 +1,45 @@
 sailor:
-    id: 39
-    name: "Красуня-воїн Сейлор Мун Кришталева",
-    original_name: "Bishoujo Senshi Sailor Moon Crystal",
-    description: "Нове аніме \"Сейлор Мун\" присвячене 20-річчю із дня виходу серіалу. \r\nУсаґі Цукіно - учениця середньої школи. Вони трохи плаксива і незграбна, проте надзвичайно енергійна! Одного дня вона зустрічає чорну кішку із півмісяцем на лобі, яка говорить дівинці, що та є воїном у матросці, борцем за любов і справедливість. Її місія - знайти Срібний Кристал і захистити принцесу від злої королеви Берил. Та чи впорається вона із цим завданням?",
-    episodes_amount: "26",
-    episode_time: "24:00",
-    year: "2015",
-    studio_name: "Toei Animation",
-    video_info: "HDTVRip, 1280 х 720, AVC, ~1800 кб/с ",
-    audio_info: "AAC 2.0, ~160 кб/с",
-    translator: "bills_spirit",
-    actors: "Русалка, Deity, Cast77iel",
-    sound_maker: "Deity",
-    source_mirror: "http://www.ex.ua/79382774",
-    source_mirror_additional: "",
-    cover_file_name: "Sailor_Moon.jpg",
-    cover_content_type: "image/jpeg",
+    id: 132548
+    name: "Красуня-воїн Сейлор Мун Кришталева"
+    original_name: "Bishoujo Senshi Sailor Moon Crystal"
+    description: "Нове аніме \"Сейлор Мун\" присвячене 20-річчю із дня виходу серіалу. \r\nУсаґі Цукіно - учениця середньої школи. Вони трохи плаксива і незграбна, проте надзвичайно енергійна! Одного дня вона зустрічає чорну кішку із півмісяцем на лобі, яка говорить дівинці, що та є воїном у матросці, борцем за любов і справедливість. Її місія - знайти Срібний Кристал і захистити принцесу від злої королеви Берил. Та чи впорається вона із цим завданням?"
+    episodes_amount: "26"
+    episode_time: "24:00"
+    year: "2015"
+    studio_name: "Toei Animation"
+    video_info: "HDTVRip, 1280 х 720, AVC, ~1800 кб/с "
+    audio_info: "AAC 2.0, ~160 кб/с"
+    translator: "bills_spirit"
+    actors: "Русалка, Deity, Cast77iel"
+    sound_maker: "Deity"
+    source_mirror: "http://www.ex.ua/79382774"
+    source_mirror_additional: ""
+    cover_file_name: "Sailor_Moon.jpg"
+    cover_content_type: "image/jpeg"
     cover_file_size: 189112,
-    torrent_file_name: "_HorribleSubs__Sailor_Moon_Crystal_-_26__720p_.mkv.torrent",
-    torrent_content_type: "application/x-bittorrent",
-    torrent_file_size: 26830,
-    season: nil,
-    category_id: "6",
+    season: nil
+    category_id: "6"
     cover: "image/upload/v1437422531/files/series/39/cover.jpg"
+
+sailor2:
+    id: 132549
+    name: "Красуня-воїн Сейлор Мун Кришталева"
+    original_name: "Bishoujo Senshi Sailor Moon Crystal"
+    description: "Нове аніме \"Сейлор Мун\" присвячене 20-річчю із дня виходу серіалу. \r\nУсаґі Цукіно - учениця середньої школи. Вони трохи плаксива і незграбна, проте надзвичайно енергійна! Одного дня вона зустрічає чорну кішку із півмісяцем на лобі, яка говорить дівинці, що та є воїном у матросці, борцем за любов і справедливість. Її місія - знайти Срібний Кристал і захистити принцесу від злої королеви Берил. Та чи впорається вона із цим завданням?"
+    episodes_amount: "26"
+    episode_time: "24:00"
+    year: "2015"
+    studio_name: "Toei Animation"
+    video_info: "HDTVRip, 1280 х 720, AVC, ~1800 кб/с "
+    audio_info: "AAC 2.0, ~160 кб/с"
+    translator: "bills_spirit"
+    actors: "Русалка, Deity, Cast77iel"
+    sound_maker: "Deity"
+    source_mirror: "http://www.ex.ua/79382774"
+    source_mirror_additional: ""
+    cover_file_name: "Sailor_Moon.jpg"
+    cover_content_type: "image/jpeg"
+    cover_file_size: 189112,
+    season: nil
+    category_id: "6"
+    cover: "image/upload/v1437422531/files/series/41/cover.jpg"

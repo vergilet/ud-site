@@ -1,4 +1,10 @@
 GIT
+  remote: https://github.com/hazg/sape-rails.git
+  revision: fa9726ab860714bec8fe9f9dc8ec21fb7da9f8a9
+  specs:
+    sape-rails (0.0.1)
+
+GIT
   remote: https://github.com/romanvbabenko/ukrainian.git
   revision: 6926aef16ab9a5ff590c2f3ff22b5f9c74832deb
   specs:
@@ -376,6 +382,7 @@ DEPENDENCIES
   rmagick
   rspec-rails
   rubocop
+  sape-rails!
   sass-rails (~> 5.0)
   selenium-webdriver
   simple_form
