@@ -48,7 +48,9 @@
       var raf = requestAnimationFrame || mozRequestAnimationFrame ||
           webkitRequestAnimationFrame || msRequestAnimationFrame;
       if (raf)
-        raf(cb);
+        if(document.getElementsByTagName('head')[0].parentNode.getElementsByTagName('link')[0].href != '#{asset_path("application.css")}') {
+          raf(cb);
+        }
       else
         window.addEventListener('load', cb);
         addInitializationFlag('cssLoaded');
