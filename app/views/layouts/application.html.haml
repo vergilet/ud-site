@@ -43,7 +43,7 @@
       var cb = function() {
         var l = document.createElement('link'); l.rel = 'stylesheet';
         l.href = '#{asset_path("application.css")}';
-        if(document.getElementsByTagName('head')[0].parentNode.getElementsByTagName('link')[0].href != '#{asset_path("application.css")}') {
+        if(document.getElementsByTagName('head')[0].parentNode.getElementsByTagName('link')[0].href != 'http://' + location.hostname + '#{asset_path("application.css")}') {
           var h = document.getElementsByTagName('head')[0]; h.parentNode.insertBefore(l, h);
         } else {
           console.log('css already loaded')
@@ -53,7 +53,7 @@
       var raf = requestAnimationFrame || mozRequestAnimationFrame ||
           webkitRequestAnimationFrame || msRequestAnimationFrame;
       if (raf)
-        if(document.getElementsByTagName('head')[0].parentNode.getElementsByTagName('link')[0].href != '#{asset_path("application.css")}') {
+        if(document.getElementsByTagName('head')[0].parentNode.getElementsByTagName('link')[0].href != 'http://' + location.hostname + '#{asset_path("application.css")}') {
           raf(cb);
         }
       else
