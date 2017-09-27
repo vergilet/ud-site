@@ -4,7 +4,7 @@
 
 FBInit = ->
   FB.init
-    appId: ''
+    appId: '4878932'
     xfbml: true
     version: 'v2.8'
   return
