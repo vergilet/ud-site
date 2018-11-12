@@ -1,7 +1,7 @@
 - content_for :title do
   = "#{@series_presenter.name} / #{@series_presenter.native.original_name}" 
 - content_for :url do
-  = series_path(@series_presenter.native)
+  = series_url(@series_presenter.native)
 - content_for :description do
   = @series_presenter.description 
 - content_for :image do
