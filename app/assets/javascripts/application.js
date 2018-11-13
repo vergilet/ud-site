@@ -19,7 +19,7 @@
 //= require_directory ./bootstrap
 //= require_directory ./material
 //= require twitter
-//= require vk
+//= require facebook
 //= require pagination
 //= require smooth_scroll
 

@@ -2,9 +2,9 @@
   .panel-body
     %ul.nav.nav-tabs{:style => "margin-bottom: 15px;"}
       %li.active
-        %a{"data-toggle" => "tab", :href => "#vk"} Коментарі Фб
+        %a{"data-toggle" => "tab", :href => "#fb"} Коментарі Фб
 
     #myTabContent.tab-content
-      #vk.tab-pane.fade.active.in{ "data-turbolinks-eval" => "always" }
+      #fb.tab-pane.fade.active.in{ "data-turbolinks-eval" => "always" }
         %p
           .fb-comments{"data-href" => "#{request.url}", "data-numposts" => "5"}
