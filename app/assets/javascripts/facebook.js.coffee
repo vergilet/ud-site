@@ -24,7 +24,7 @@
 #
 #
 
-$ ->
+addPostponedFunc [ 'allScriptsReady' ], ->
   loadFacebookSDK()
   bindFacebookEvents() unless window.fbEventsBound
 
