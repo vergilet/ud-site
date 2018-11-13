@@ -17,7 +17,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-gem 'pg'
+gem 'pg', '0.21'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 group :development do
