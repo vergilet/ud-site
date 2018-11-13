@@ -147,12 +147,11 @@
     = render 'series/downloads_panel'
   
   :javascript
-    var url = '#{ @series_presenter.default_meta_video }'
+    var url = '#{ @series_presenter.default_meta_video }';
     addPostponedFunc(['cssLoaded'], function(){
       var frameHolder = document.getElementById('task-form');
       setTimeout(function(){
         frameHolder.innerHTML = '<iframe frameborder="0" height="428" scrolling="no" src="' + url + '" width="100%"></iframe>'
       }, 2000);
-      // $('#task-form').html('<iframe frameborder="0" height="428" scrolling="no" src="' + url + '" width="100%"></iframe>')
     })
   
