@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.5.1'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.10'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
@@ -17,7 +17,7 @@ gem 'haml-rails'
 gem 'high_voltage'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
-gem 'pg'
+gem 'pg', '0.21'
 gem 'simple_form'
 gem 'therubyracer', :platform=>:ruby
 group :development do
