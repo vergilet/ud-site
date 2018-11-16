@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_to_http
-    redirect_to :protocol => "http://" if request.protocol == 'https://'
+    redirect_to :protocol => "https://" if request.protocol == 'http://'
   end
   
   def change_sub_domain
