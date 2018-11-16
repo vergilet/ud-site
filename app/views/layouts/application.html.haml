@@ -7,22 +7,22 @@
     = favicon_link_tag
     %meta{:name => "title", :content => content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською'}
     %meta{:name => "description", :content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою."}
-    %meta{:content => content_for?(:url) ? yield(:url) : 'http://www.ukrdub.net'}
-    %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png'}/
+    %meta{:content => content_for?(:url) ? yield(:url) : 'https://www.ukrdub.net'}
+    %meta{:content => content_for?(:image) ? yield(:image) : 'https://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png'}/
     %meta{:content => "#03a9f4", :name => "theme-color"}
     / Open Graph / Facebook
     %meta{:content => "website", :property => "og:type"}/
     %meta{:content => "UkrDub.net", :property => "og:site_name"}/
-    %meta{:content => content_for?(:url) ? yield(:url) : 'http://www.ukrdub.net', :property => "og:url"}/
+    %meta{:content => content_for?(:url) ? yield(:url) : 'https://www.ukrdub.net', :property => "og:url"}/
     %meta{:content => content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською', :property => "og:title"}/
     %meta{:content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.", :property => "og:description"}/
-    %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "og:image"}/
+    %meta{:content => content_for?(:image) ? yield(:image) : 'https://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "og:image"}/
     / Twitter
     %meta{:content => "summary_large_image", :property => "twitter:card"}/
-    %meta{:content => content_for?(:url) ? yield(:url) : 'http://www.ukrdub.net', :property => "twitter:url"}/
+    %meta{:content => content_for?(:url) ? yield(:url) : 'https://www.ukrdub.net', :property => "twitter:url"}/
     %meta{:content => content_for?(:title) ? yield(:title) : 'UkrDub.net - аніме та серіали українською', :property => "twitter:title"}/
     %meta{:content => content_for?(:description) ? yield(:description) : "UkrDub - це вітчизняний фандаб проект, що займається перекладом і озвученням аніме та серіалів українською мовою.", :property => "twitter:description"}/
-    %meta{:content => content_for?(:image) ? yield(:image) : 'http://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "twitter:image"}/
+    %meta{:content => content_for?(:image) ? yield(:image) : 'https://res.cloudinary.com/ukrdub/image/upload/v1444766589/public/newlogo.png', :property => "twitter:image"}/
 
     = render 'layouts/init_js'
     -#= javascript_include_tag 'lazyLoad'
