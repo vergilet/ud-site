@@ -89,7 +89,7 @@
                 %b Постер *
               %p
                 .upload-preview
-                  = image_tag (@series.cover.url)
+                  = image_tag (@series.cover.url(secure: true))
               %p
                 %input.form-control.floating-label.pointer{:placeholder => "Browse...", :readonly => "", :type => "text", value: @series.cover_name }
                 = f.file_field :cover, placeholder: 'Select the cover', class: 'pointer'

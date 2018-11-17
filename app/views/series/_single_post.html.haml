@@ -3,7 +3,7 @@
     .post-image
       = link_to series_path(series_presenter.native) do
         .image{class: "series_#{series_presenter.native.id}"}
-          .inside-image{style: "background-image: url('#{series_presenter.cover.url.sub('/upload/', '/upload/c_scale,w_320/')}');background-size:cover;background-position: 100% 5%"}
+          .inside-image{style: "background-image: url('#{series_presenter.cover.url(secure: true).sub('/upload/', '/upload/c_scale,w_320/')}');background-size:cover;background-position: 100% 5%"}
     .post-content
       .post-heading
         .title.col-xs-11
