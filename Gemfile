@@ -47,7 +47,7 @@ group :test do
   gem 'selenium-webdriver'
 end
 
-gem "ffi", ">= 1.9.24"
+gem "ffi", ">= 1.9.25"
 gem 'thin'
 gem 'rmagick'
 gem 'acts-as-taggable-on'
