@@ -48,7 +48,6 @@ group :test do
 end
 
 gem 'thin'
-gem "paperclip-dropbox", ">= 1.1.7"
 gem 'rmagick'
 gem 'acts-as-taggable-on'
 gem 'awesome_nested_set'
