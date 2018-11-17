@@ -1,7 +1,7 @@
 addPostponedFunc [ 'allScriptsReady' ], ->
-  loadTwitterSDK()
+  @loadTwitterSDK()
   $(document).on 'page:change', ->
-    loadTwitterSDK()
+    @loadTwitterSDK()
 
-loadTwitterSDK = ->
+loadTwitterSDK: ->
   $.getScript "//platform.twitter.com/widgets.js", ->
