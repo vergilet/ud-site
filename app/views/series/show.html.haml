@@ -149,12 +149,12 @@
     {
     "@context": "http://schema.org",
     "@type": "TVSeries",
-    "image": "\#{yield(:image)}",
+    "image": "#{yield(:image)}",
     "author": {
     "@type": "Organization",
-    "name": "\#{@series_presenter.studio_name}"
+    "name": "#{@series_presenter.studio_name}"
     },
-    "name": "\#{@series_presenter.name}"
+    "name": "#{@series_presenter.name}"
     }
 
   
