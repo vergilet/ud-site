@@ -5,14 +5,6 @@ GIT
     sape-rails (0.0.1)
 
 GIT
-  remote: https://github.com/jalada/platform-api
-  revision: 4a06e57bd32d805248f3b8e1358ed4833296c659
-  branch: master
-  specs:
-    platform-api (0.8.0)
-      heroics (~> 0.0.17)
-
-GIT
   remote: https://github.com/romanvbabenko/ukrainian.git
   revision: 6926aef16ab9a5ff590c2f3ff22b5f9c74832deb
   specs:
@@ -218,6 +210,9 @@ GEM
     parser (2.5.3.0)
       ast (~> 2.4.0)
     pg (0.21.0)
+    platform-api (2.2.0)
+      heroics (~> 0.0.25)
+      moneta (~> 1.0.0)
     powerpack (0.1.2)
     pry (0.12.2)
       coderay (~> 1.1.0)
@@ -404,7 +399,7 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   pg (= 0.21)
-  platform-api!
+  platform-api
   pry-rails
   pry-rescue
   quiet_assets
