@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.middleware.insert_before ActionDispatch::SSL, Letsencrypt::Middleware
+  config.middleware.use Letsencrypt::Middleware
 
   # Settings specified here will take precedence over those in config/application.rb.
 
