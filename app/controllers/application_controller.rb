@@ -21,6 +21,9 @@ class ApplicationController < ActionController::Base
   end
   
   def change_sub_domain
+    puts 'request.subdomain'
+    puts request.subdomain
+    puts request.subdomain == ''
     if request.subdomain == ''
       redirect_to request.url.sub('', 'www')
     end
