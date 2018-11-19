@@ -145,17 +145,19 @@
 
   .col-lg-3
     = render 'series/downloads_panel'
-  %script{type: "application/ld+json"}
-    {
+  %script{:type => "application/ld+json"}
+    :cdata
+      {
       "@context": "http://schema.org",
       "@type": "TVSeries",
-      "image": "#{yield(:image)}",
+      "image": "\#{yield(:image)}",
       "author": {
-        "@type": "Organization",
-        "name": "#{@series_presenter.studio_name}"
+      "@type": "Organization",
+      "name": "\#{@series_presenter.studio_name}"
       },
-      "name": "#{@series_presenter.name}"
-    }
+      "name": "\#{@series_presenter.name}"
+      }
+
   
   :javascript
     var url = '#{ @series_presenter.default_meta_video }';
