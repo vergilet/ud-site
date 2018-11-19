@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   helper_method :correct_user?
 
   before_filter :reset_headers
-  before_filter :redirect_to_http
+  # before_filter :redirect_to_http
   before_filter :change_sub_domain
   
   def reset_headers
