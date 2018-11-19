@@ -1,6 +1,6 @@
 .col-sm-6.col-md-4.col-mlg-4.col-lg-3
-  .panel.panel-default.tile-block{style: 'border-radius: 5px;'}
-    .panel-body.hover-tile{style: 'padding:0;border-radius:3px;display:inherit;margin:0;text-transform: none;white-space:normal;'}
+  .panel.panel-default.tile-block.border-radius-5
+    .panel-body.hover-tile
       = link_to series_path(series.native) do
         .cover-image{class: "series_#{series.native.id}"}
           :javascript
@@ -16,18 +16,18 @@
                 }
               })
           .corner{class: "corner-category_#{series.native.category_id}"}
-      .div{style: 'padding:15px'}
-        %h4{style: 'margin-top: 0px;  white-space: normal;height:36px'}
-          %span{style: 'font-size:20px'}
+      .padding-div
+        %h4.tall
+          %span.big
             = link_to series.name, series_path(series.native)
         %div
-          %i.mdi-av-movie.mdi-material-grey-700{style: 'vertical-align: middle;'}
+          %i.mdi-av-movie.mdi-material-grey-700.vertical-middle
           %span
             %b= series.tile_episode_counter
-        %div{style:'height:28px;line-height: 18px'}
+        %div.last-ep-name
           %span= "#{series.tile_last_ep_name}"
-        %div{style:'height:20px;'}
-          %span.pull-left{style: 'color: #a0a0a0;font-size:14px;padding-top:6px'}
-            %i.mdi-action-visibility{style: 'vertical-align:middle'}
+        %div.views-section
+          %span.pull-left.views-span
+            %i.mdi-action-visibility.vertical-middle
             = series.views
-          %span.pull-right{style: 'color: #a0a0a0;font-size:12px;padding-top:10px'}= "#{series.amount_of_days} тому"
+          %span.pull-right.days-span= "#{series.amount_of_days} тому"

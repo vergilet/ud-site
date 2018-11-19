@@ -4,7 +4,12 @@
   }
 
 .hover-tile {
-
+  padding:0;
+  border-radius:3px;
+  display:inherit;
+  margin:0;
+  text-transform: none;
+  white-space:normal;
   .cover-image {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -41,6 +46,34 @@
   background-repeat: no-repeat;
   background-size: 75%;
   margin-left: -15px;
+}
+.padding-div{
+  padding:15px;
+}
+h4.tall{
+  margin-top: 0;
+  white-space: normal;
+  height:36px
+}
+span.big{
+  font-size:20px
+}
+.last-ep-name {
+  height:28px;
+  line-height: 18px
+}
+.views-section {
+  height:20px;
+}
+.views-span {
+  color: #a0a0a0;
+  font-size:14px;
+  padding-top:6px
+}
+.days-span {
+  color: #a0a0a0;
+  font-size:12px;
+  padding-top:10px
 }
 //Anime finished
 .corner-category_4 {

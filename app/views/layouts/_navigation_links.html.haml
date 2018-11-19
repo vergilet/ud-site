@@ -12,11 +12,11 @@
           - if admin?
             %li
               = link_to new_series_path do
-                %i.mdi-content-add-box{style:'vertical-align: middle'}
+                %i.mdi-content-add-box.vertical-middle
                 Додати новий реліз
           %li
             = link_to '#' do
-              %i.mdi-communication-email{style:'vertical-align: middle'}
+              %i.mdi-communication-email.vertical-middle
               = current_user.email
           -#%li
             = link_to users_path do
@@ -25,11 +25,11 @@
           %li.divider
           %li
             = link_to signout_path do
-              %i.mdi-content-backspace{style:'vertical-align: middle'}
+              %i.mdi-content-backspace.vertical-middle
               Вийти
 
   - else
     %li
       = link_to signin_path do
-        %i.mdi-action-input{style:'vertical-align: middle;font-size: 18px'}
+        %i.mdi-action-input.vertical-middle.font-size-18px
         Увійти
